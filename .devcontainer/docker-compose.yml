@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
+    env_file: devcontainer.env
+    volumes:
+      - ..:/workspace:cached
+      - /workspace/src/bin
+      - /workspace/src/obj
+      - /workspace/tests/JadeX.AllegroAPI.Tests.Integration/bin
+      - /workspace/tests/JadeX.AllegroAPI.Tests.Integration/obj
+      - /workspace/tests/JadeX.AllegroAPI.Tests.Unit/bin
+      - /workspace/tests/JadeX.AllegroAPI.Tests.Unit/obj
+    command: sleep infinity

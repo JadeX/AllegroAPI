@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <RootNamespace>JadeX.AllegroAPI</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnablePackageValidation>true</EnablePackageValidation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Xeevis</Authors>
+    <Company>JadeX</Company>
+    <Copyright>Copyright (c) JadeX 2024</Copyright>
+    <Description>Unofficial implementation of Allegro.pl commerce platform REST API for .NET</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>ecommerce allegro shopping marketplace</PackageTags>
+    <RepositoryUrl>https://github.com/JadeX/AllegroAPI</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/JadeX/AllegroAPI</PackageProjectUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1" PrivateAssets="All"/>
+  </ItemGroup>
+</Project>

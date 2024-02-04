@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JadeX.AllegroAPI", "src\JadeX.AllegroAPI.csproj", "{C2DA449F-520A-4FFB-8944-DDF1A17FC4EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{87F97589-929F-4E1E-AB22-C528D3995E92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JadeX.AllegroAPI.Tests.Integration", "tests\JadeX.AllegroAPI.Tests.Integration\JadeX.AllegroAPI.Tests.Integration.csproj", "{B6AC0B54-3259-43D0-A67F-78F318F0A60A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JadeX.AllegroAPI.Tests.Unit", "tests\JadeX.AllegroAPI.Tests.Unit\JadeX.AllegroAPI.Tests.Unit.csproj", "{430C6FBA-D8DD-4829-92DE-EFF9DEC25573}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2DA449F-520A-4FFB-8944-DDF1A17FC4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DA449F-520A-4FFB-8944-DDF1A17FC4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DA449F-520A-4FFB-8944-DDF1A17FC4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DA449F-520A-4FFB-8944-DDF1A17FC4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AC0B54-3259-43D0-A67F-78F318F0A60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AC0B54-3259-43D0-A67F-78F318F0A60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AC0B54-3259-43D0-A67F-78F318F0A60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AC0B54-3259-43D0-A67F-78F318F0A60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430C6FBA-D8DD-4829-92DE-EFF9DEC25573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430C6FBA-D8DD-4829-92DE-EFF9DEC25573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430C6FBA-D8DD-4829-92DE-EFF9DEC25573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430C6FBA-D8DD-4829-92DE-EFF9DEC25573}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6AC0B54-3259-43D0-A67F-78F318F0A60A} = {87F97589-929F-4E1E-AB22-C528D3995E92}
+		{430C6FBA-D8DD-4829-92DE-EFF9DEC25573} = {87F97589-929F-4E1E-AB22-C528D3995E92}
+	EndGlobalSection
+EndGlobal
