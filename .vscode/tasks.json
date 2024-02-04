@@ -12,6 +12,29 @@
 				"/consoleloggerparameters:NoSummary"
 			],
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "dotnet-tool-restore",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"tool",
+				"restore"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "update-dependecies",
+			"dependsOn": [
+				"dotnet-tool-restore"
+			],
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"outdated",
+				"-u"
+			],
+			"problemMatcher": []
 		}
 	]
 }
