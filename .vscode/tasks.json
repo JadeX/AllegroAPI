@@ -35,6 +35,17 @@
 				"-u"
 			],
 			"problemMatcher": []
+		},
+		{
+			"label": "refitter-codegen",
+			"dependsOn": [
+				"dotnet-tool-restore"
+			],
+			"command": "pwsh",
+			"args": [
+				"./AllegroAPI.refitter.ps1",
+			],
+			"problemMatcher": []
 		}
 	]
 }

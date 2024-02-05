@@ -1,0 +1,20 @@
+{
+    "namespace": "JadeX.AllegroAPI",
+    "openApiPath": "swagger.yaml",
+    "outputFolder": "./src",
+    "outputFilename": "IAllegroApi.generated.cs",
+    "naming": {
+        "useOpenApiTitle": false,
+        "interfaceName": "AllegroAPI"
+    },
+    "optionalParameters": true,
+    "generateDefaultAdditionalProperties": false,
+    "operationNameGenerator": "SingleClientFromOperationId",
+    "codeGeneratorSettings": {
+        "requiredPropertiesMustBeDefined": true,
+        "generateOptionalPropertiesAsNullable": true,
+        "generateNullableReferenceTypes": true,
+        "generateNativeRecords": false,
+        "generateDefaultValues": true
+    }
+}

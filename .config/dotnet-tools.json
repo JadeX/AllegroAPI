@@ -7,6 +7,12 @@
       "commands": [
         "dotnet-outdated"
       ]
+    },
+    "refitter": {
+      "version": "0.9.6",
+      "commands": [
+        "refitter"
+      ]
     }
   }
 }
