@@ -24,7 +24,7 @@
 			"problemMatcher": "$msCompile"
 		},
 		{
-			"label": "update-dependecies",
+			"label": "update-nuget-dependecies",
 			"dependsOn": [
 				"dotnet-tool-restore"
 			],

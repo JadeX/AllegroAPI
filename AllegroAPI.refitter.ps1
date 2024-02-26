@@ -11,6 +11,8 @@ Get-ChildItem -Recurse -Filter "*.refitter" -ErrorAction "SilentlyContinue" | Fo
     Write-Host "Postprocessing output for $($generatedFilePath) ..." -ForegroundColor Yellow -NoNewline
     # Use improved String Enum converter that can handle underscores, spaces and hyphens
     (Get-Content -Path $generatedFilePath) -Replace 'JsonStringEnumConverter', 'JsonStringEnumMemberConverter' | Set-Content -Path $generatedFilePath
+    # Make relative links absolute
+    (Get-Content -Path $generatedFilePath) -Replace '(<a href=")(\.\.\/\.\.)(\/.+?\<\/a>)', '$1https://developer.allegro.pl$3' | Set-Content -Path $generatedFilePath
     Write-Host "Done ✅" -ForegroundColor Green
 }
 
