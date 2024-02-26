@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 #nullable enable
 namespace JadeX.AllegroAPI
 {
-    [System.CodeDom.Compiler.GeneratedCode("Refitter", "0.9.6.0")]
-    public partial interface IAllegroApi
+    [System.CodeDom.Compiler.GeneratedCode("Refitter", "0.9.7.0")]
+    public partial interface IAllegroAPI
     {
         /// <summary>Create offer based on product</summary>
-        /// <remarks>Use this resource to create offer based on product. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-wystawic-oferte-z-produktem-za-pomoca-zasobu-sale-product-offers" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-list-an-offer-with-a-product-via-sale-product-offers-resource" target="_blank">EN</a>. Note that requests may be limited.</remarks>
+        /// <remarks>Use this resource to create offer based on product. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-wystawic-oferte-z-produktem-za-pomoca-zasobu-sale-product-offers" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-list-an-offer-with-a-product-via-sale-product-offers-resource" target="_blank">EN</a>. Note that requests may be limited.</remarks>
         /// <returns>Offer created successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -29,7 +29,7 @@ namespace JadeX.AllegroAPI
         Task<SaleProductOfferResponseV1> CreateProductOffers([Body] SaleProductOfferRequestV1 body);
 
         /// <summary>Edit an offer</summary>
-        /// <remarks>Use this resource to edit offer. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#edycja-pojedynczej-oferty" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#editing-single-offer" target="_blank">EN</a>. Note that requests may be limited.</remarks>
+        /// <remarks>Use this resource to edit offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#edycja-pojedynczej-oferty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#editing-single-offer" target="_blank">EN</a>. Note that requests may be limited.</remarks>
         /// <param name="offerId">The offer identifier.</param>
         /// <returns>Offer edited successfully.</returns>
         /// <throws cref="ApiException">
@@ -46,7 +46,7 @@ namespace JadeX.AllegroAPI
         Task<SaleProductOfferResponseV1> EditProductOffers(string offerId, [Body] SaleProductOfferPatchRequestV1 body);
 
         /// <summary>Get all data of the particular product-offer</summary>
-        /// <remarks>Use this resource to retrieve all data of the particular product-offer. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#publikacja-oferty-w-asynchronicznym-api" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-publication-in-asynchronous-api" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve all data of the particular product-offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#publikacja-oferty-w-asynchronicznym-api" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-publication-in-asynchronous-api" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <returns>Offer returned successfully</returns>
         /// <throws cref="ApiException">
@@ -61,7 +61,7 @@ namespace JadeX.AllegroAPI
         Task<SaleProductOfferResponseV1> GetProductOffer(string offerId);
 
         /// <summary>Check the processing status of a POST or PATCH request</summary>
-        /// <remarks>The URI for the resource given by Location header of POST /sale/product-offers and PATCH /sale/product-offers/{offerId}. Use this resource to check processing status of a POST or PATCH request. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#publikacja-oferty-w-asynchronicznym-api" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-publication-in-asynchronous-api" target="_blank">EN</a>.</remarks>
+        /// <remarks>The URI for the resource given by Location header of POST /sale/product-offers and PATCH /sale/product-offers/{offerId}. Use this resource to check processing status of a POST or PATCH request. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#publikacja-oferty-w-asynchronicznym-api" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-publication-in-asynchronous-api" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <param name="operationId">Operation identifier provided in location header of POST or PATCH request.</param>
         /// <returns>The request processing has not been completed.</returns>
@@ -78,7 +78,7 @@ namespace JadeX.AllegroAPI
         Task GetProductOfferProcessingStatus(string offerId, string operationId);
 
         /// <summary>Get seller's offers</summary>
-        /// <remarks>Use this resource to get the list of the seller's offers. You can use different query parameters to filter the list. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-moje-oferty-w-rest-api" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#list-of-offers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the list of the seller's offers. You can use different query parameters to filter the list. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-moje-oferty-w-rest-api" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#list-of-offers" target="_blank">EN</a>.</remarks>
         /// <param name="offer_id">Offer ID.</param>
         /// <param name="name">The text to search in the offer title.</param>
         /// <param name="sellingMode_price_amount_gte">
@@ -124,10 +124,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/sale/offers")]
-        Task<OffersSearchResultDto> SearchOffersUsingGET([Query, AliasAs("offer.id")] string? offer_id = default, [Query] string? name = default, [Query, AliasAs("sellingMode.price.amount.gte")] double? sellingMode_price_amount_gte = default, [Query, AliasAs("sellingMode.price.amount.lte")] double? sellingMode_price_amount_lte = default, [Query(CollectionFormat.Multi), AliasAs("publication.status")] IEnumerable<Anonymous>? publication_status = default, [Query, AliasAs("publication.marketplace")] MarketplaceId? publication_marketplace = default, [Query(CollectionFormat.Multi), AliasAs("sellingMode.format")] IEnumerable<Anonymous2>? sellingMode_format = default, [Query(CollectionFormat.Multi), AliasAs("external.id")] IEnumerable<string>? external_id = default, [Query, AliasAs("delivery.shippingRates.id")] System.Guid? delivery_shippingRates_id = default, [Query, AliasAs("delivery.shippingRates.id.empty")] bool? delivery_shippingRates_id_empty = default, [Query] Sort? sort = default, [Query] int? limit = default, [Query] int? offset = default, [Query, AliasAs("category.id")] string? category_id = default, [Query, AliasAs("product.id.empty")] bool? product_id_empty = default, [Query] bool? productizationRequired = default, [Query, AliasAs("b2b.buyableOnlyByBusiness")] bool? b2b_buyableOnlyByBusiness = default, [Query, AliasAs("fundraisingCampaign.id")] System.Guid? fundraisingCampaign_id = default, [Query, AliasAs("fundraisingCampaign.id.empty")] bool? fundraisingCampaign_id_empty = default);
+        Task<OffersSearchResultDto> SearchOffersUsingGET([Query, AliasAs("offer.id")] string? offer_id = default, [Query] string? name = default, [Query, AliasAs("sellingMode.price.amount.gte")] double? sellingMode_price_amount_gte = default, [Query, AliasAs("sellingMode.price.amount.lte")] double? sellingMode_price_amount_lte = default, [Query(CollectionFormat.Multi), AliasAs("publication.status")] IEnumerable<Anonymous>? publication_status = default, [Query, AliasAs("publication.marketplace")] string? publication_marketplace = default, [Query(CollectionFormat.Multi), AliasAs("sellingMode.format")] IEnumerable<Anonymous2>? sellingMode_format = default, [Query(CollectionFormat.Multi), AliasAs("external.id")] IEnumerable<string>? external_id = default, [Query, AliasAs("delivery.shippingRates.id")] System.Guid? delivery_shippingRates_id = default, [Query, AliasAs("delivery.shippingRates.id.empty")] bool? delivery_shippingRates_id_empty = default, [Query] Sort? sort = default, [Query] int? limit = default, [Query] int? offset = default, [Query, AliasAs("category.id")] string? category_id = default, [Query, AliasAs("product.id.empty")] bool? product_id_empty = default, [Query] bool? productizationRequired = default, [Query, AliasAs("b2b.buyableOnlyByBusiness")] bool? b2b_buyableOnlyByBusiness = default, [Query, AliasAs("fundraisingCampaign.id")] System.Guid? fundraisingCampaign_id = default, [Query, AliasAs("fundraisingCampaign.id.empty")] bool? fundraisingCampaign_id_empty = default);
 
         /// <summary>Delete a draft offer</summary>
-        /// <remarks>Use this resource to delete a draft offer. Read more: <a href="../../news/nowy-zasob-do-usuwania-draftow-ofert-aMDnGka2RuL" target="_blank">PL</a> / <a href="../../news/new-resource-draft-delete-yPy9lq6myh0" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete a draft offer. Read more: <a href="https://developer.allegro.pl/news/nowy-zasob-do-usuwania-draftow-ofert-aMDnGka2RuL" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resource-draft-delete-yPy9lq6myh0" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -140,7 +140,7 @@ namespace JadeX.AllegroAPI
         Task DeleteOfferUsingDELETE(string offerId);
 
         /// <summary>Modify the Buy Now price in an offer</summary>
-        /// <remarks>Use this resource to change the Buy Now price in a single offer. Read more: <a href="../../news/mozliwosc-zmiany-ceny-kup-teraz-2YzrKRrr3Sl" target="_blank">PL</a> / <a href="../../news/possibility-to-change-the-buy-it-now-price-q018mq8D2hW" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to change the Buy Now price in a single offer. Read more: <a href="https://developer.allegro.pl/news/mozliwosc-zmiany-ceny-kup-teraz-2YzrKRrr3Sl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/possibility-to-change-the-buy-it-now-price-q018mq8D2hW" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">The offer identifier.</param>
         /// <param name="commandId">The unique command id generated by you.</param>
         /// <returns>The command was created successfully and is queued for processing.</returns>
@@ -150,7 +150,7 @@ namespace JadeX.AllegroAPI
         Task<ChangePrice> CreateChangePriceCommandUsingPUT(string offerId, System.Guid commandId, [Body] ChangePriceWithoutOutput body);
 
         /// <summary>Get offer translations</summary>
-        /// <remarks>Get offer translation for given language or all present. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-ofert" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#offer-translations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Get offer translation for given language or all present. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-ofert" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#offer-translations" target="_blank">EN</a>.</remarks>
         /// <param name="language">Language for translation to retrieve. If not provided, all translations as well as base content for offer will be returned.</param>
         /// <param name="offerId">Offer identifier.</param>
         /// <returns>The list of offer translations returned successfully.</returns>
@@ -165,7 +165,7 @@ namespace JadeX.AllegroAPI
         Task<OfferTranslations> GetOfferTranslationUsingGET(string offerId, [Query] string? language = default);
 
         /// <summary>Update offer translation</summary>
-        /// <remarks>Update manual translation for offer. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-ofert" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#offer-translations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Update manual translation for offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-ofert" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#offer-translations" target="_blank">EN</a>.</remarks>
         /// <param name="language">Language of the provided translation.</param>
         /// <param name="offerId">Offer identifier.</param>
         /// <param name="body">Request with manual translation for offer, must contain at least one translated offer element (title or description).</param>
@@ -181,7 +181,7 @@ namespace JadeX.AllegroAPI
         Task UpdateOfferTranslationUsingPATCH(string language, string offerId, [Body] ManualTranslationUpdateRequest body);
 
         /// <summary>Delete offer translation</summary>
-        /// <remarks>Delete single element or entire manual translation. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-ofert" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#offer-translations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Delete single element or entire manual translation. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-ofert" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#offer-translations" target="_blank">EN</a>.</remarks>
         /// <param name="language">Language of the translation to delete.</param>
         /// <param name="offerId">Offer identifier.</param>
         /// <param name="element">Offer element for which translation should be deleted. If not provided, translations for all elements will be deleted.</param>
@@ -196,7 +196,7 @@ namespace JadeX.AllegroAPI
         Task DeleteManualTranslationUsingDELETE(string language, string offerId, [Query] Element? element = default);
 
         /// <summary>Get the seller's advertisements daily statistics</summary>
-        /// <remarks>This endpoint returns daily statistics collected for a list of advertisements in a given date range for logged user. Read more: <a href="../../tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#statystyki-wszystkich-ogloszen-sprzedawcy" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#statistics-of-seller-s-classified-ads" target="_blank">EN</a>.</remarks>
+        /// <remarks>This endpoint returns daily statistics collected for a list of advertisements in a given date range for logged user. Read more: <a href="https://developer.allegro.pl/tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#statystyki-wszystkich-ogloszen-sprzedawcy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#statistics-of-seller-s-classified-ads" target="_blank">EN</a>.</remarks>
         /// <param name="date_gte">The minimum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time and greater than date.lte. The difference between date.gte and date.lte should be less than 3 months.</param>
         /// <param name="date_lte">The maximum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time. The difference between date.gte and date.lte should be less than 3 months.</param>
         /// <returns>Returns offer's statistics list</returns>
@@ -213,7 +213,7 @@ namespace JadeX.AllegroAPI
         Task<SellerOfferStatsResponseDto> ClassifiedSellerOfferStatsGET([Query, AliasAs("date.gte")] System.DateTimeOffset? date_gte = default, [Query, AliasAs("date.lte")] System.DateTimeOffset? date_lte = default);
 
         /// <summary>Get the advertisements daily statistics</summary>
-        /// <remarks>This endpoint returns daily statistics collected for a list of advertisements in a given date range. Read more: <a href="../../tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#statystyki-wybranych-ogloszen" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#statistics-of-selected-classified-ads" target="_blank">EN</a>.</remarks>
+        /// <remarks>This endpoint returns daily statistics collected for a list of advertisements in a given date range. Read more: <a href="https://developer.allegro.pl/tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#statystyki-wybranych-ogloszen" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#statistics-of-selected-classified-ads" target="_blank">EN</a>.</remarks>
         /// <param name="offer_id">List of offer Ids, maximum 50 values.</param>
         /// <param name="date_gte">The minimum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time and greater than date.lte. The difference between date.gte and date.lte should be less than 3 months.</param>
         /// <param name="date_lte">The maximum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time. The difference between date.gte and date.lte should be less than 3 months.</param>
@@ -231,7 +231,7 @@ namespace JadeX.AllegroAPI
         Task<OfferStatsResponseDto> ClassifiedOffersStatsGET([Query(CollectionFormat.Multi), AliasAs("offer.id")] IEnumerable<string> offer_id, [Query, AliasAs("date.gte")] System.DateTimeOffset? date_gte = default, [Query, AliasAs("date.lte")] System.DateTimeOffset? date_lte = default);
 
         /// <summary>Batch offer publish / unpublish</summary>
-        /// <remarks>Use this resource to modify multiple offers publication at once. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#publikacja-oferty" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-publication" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
+        /// <remarks>Use this resource to modify multiple offers publication at once. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#publikacja-oferty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-publication" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="body">publicationChangeCommandDto</param>
         /// <returns>Command was registered</returns>
@@ -249,7 +249,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> ChangePublicationStatusUsingPUT(string commandId, [Body] PublicationChangeCommandDto body);
 
         /// <summary>Publish command summary</summary>
-        /// <remarks>Use this resource to retrieve information about the offer listing statuses. You will receive a summary with a number of correctly listed offers and errors. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zestawienie-zadan" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#task-list" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Use this resource to retrieve information about the offer listing statuses. You will receive a summary with a number of correctly listed offers and errors. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zestawienie-zadan" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#task-list" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <returns>Report was generated and successfully returned</returns>
         /// <throws cref="ApiException">
@@ -263,7 +263,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> GetPublicationReportUsingGET(string commandId);
 
         /// <summary>Publish command detailed report</summary>
-        /// <remarks>Use this resource to retrieve information about the offer statuses on the site (Defaults: limit = 100, offset = 0). Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#informacje-o-publikacji" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#information-about-publication" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Use this resource to retrieve information about the offer statuses on the site (Defaults: limit = 100, offset = 0). Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#informacje-o-publikacji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#information-about-publication" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
@@ -280,7 +280,7 @@ namespace JadeX.AllegroAPI
         Task<TaskReport> GetPublicationTasksUsingGET(string commandId, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Get classified packages assigned to an offer</summary>
-        /// <remarks>Use this resource to retrieve classified packages currently assigned to an offer. Read more: <a href="../../tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#dodatkowe-opcje-promowania" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#additional-promo-options" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve classified packages currently assigned to an offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#dodatkowe-opcje-promowania" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#additional-promo-options" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer ID.</param>
         /// <returns>Packages returned successfully</returns>
         /// <throws cref="ApiException">
@@ -295,7 +295,7 @@ namespace JadeX.AllegroAPI
         Task<ClassifiedResponse> GetClassifiedPackagesUsingGET(string offerId);
 
         /// <summary>Assign packages to a classified</summary>
-        /// <remarks>Use this resource to assign classified packages to an offer. Read more: <a href="../../tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#dodatkowe-opcje-promowania" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#additional-promo-options" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to assign classified packages to an offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#dodatkowe-opcje-promowania" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#additional-promo-options" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">The offer ID.</param>
         /// <param name="body">Packages that should be assigned to the classified.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -312,7 +312,7 @@ namespace JadeX.AllegroAPI
         Task AssignClassifiedPackagesUsingPUT(string offerId, [Body] ClassifiedPackages body);
 
         /// <summary>Get configurations of packages</summary>
-        /// <remarks>Use this resource to retrieve configurations of classifieds packages for a category. Read more: <a href="../../tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#lista-pakietow-i-opcji-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#list-of-promo-options" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve configurations of classifieds packages for a category. Read more: <a href="https://developer.allegro.pl/tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#lista-pakietow-i-opcji-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#list-of-promo-options" target="_blank">EN</a>.</remarks>
         /// <param name="category_id">The category ID.</param>
         /// <returns>Package configurations for the category returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -325,7 +325,7 @@ namespace JadeX.AllegroAPI
         Task<ClassifiedPackageConfigs> GetClassifiedPackageConfigurationsForCategoryUsingGET([Query, AliasAs("category.id")] string category_id);
 
         /// <summary>Get the configuration of a package</summary>
-        /// <remarks>Use this resource to retrieve the configuration of a classifieds package. Read more: <a href="../../tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#lista-pakietow-i-opcji-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#list-of-promo-options" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve the configuration of a classifieds package. Read more: <a href="https://developer.allegro.pl/tutorials/jak-wystawic-i-zarzadzac-ogloszeniem-K6r3Z47dKcy#lista-pakietow-i-opcji-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-classified-ads-5Ln0r6wkWs7#list-of-promo-options" target="_blank">EN</a>.</remarks>
         /// <param name="packageId">The classifieds package ID.</param>
         /// <returns>The package's configuration returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -339,7 +339,7 @@ namespace JadeX.AllegroAPI
         Task<ClassifiedPackageConfig> GetClassifiedPackageConfigurationUsingGET(string packageId);
 
         /// <summary>Get any user's ratings summary</summary>
-        /// <remarks>Use this resource to receive feedback statistics. Read more: <a href="../../news/nowe-zasoby-ktorymi-pobierzesz-informacje-o-ocenach-ZM9L1WPBbUb" target="_blank">PL</a> / <a href="../../news/new-resources-to-download-sales-feedback-d2VYERBMRiz" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to receive feedback statistics. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-ktorymi-pobierzesz-informacje-o-ocenach-ZM9L1WPBbUb" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-to-download-sales-feedback-d2VYERBMRiz" target="_blank">EN</a>.</remarks>
         /// <param name="userId">The ID of the user.</param>
         /// <returns>Feedback statistics returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -353,7 +353,7 @@ namespace JadeX.AllegroAPI
         Task<UserRatingSummaryResponse> GetUserSummaryUsingGET(string userId);
 
         /// <summary>Get the user's ratings</summary>
-        /// <remarks>Use this resource to receive your sales ratings sorted by last change date, starting from the latest. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-informacje-o-ocenie-sprzedazy" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-user-s-ratings-data" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to receive your sales ratings sorted by last change date, starting from the latest. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-informacje-o-ocenie-sprzedazy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-user-s-ratings-data" target="_blank">EN</a>.</remarks>
         /// <param name="recommended">Filter by recommended.</param>
         /// <param name="lastChangedAt_gte">Last change (creation or latest edition) date time in ISO 8601 format. The lower bound of date time range from which ratings will be fetched.</param>
         /// <param name="lastChangedAt_lte">Last change (creation or latest edition) date time in ISO 8601 format. The upper bound of date time range from which ratings will be fetched.</param>
@@ -371,7 +371,7 @@ namespace JadeX.AllegroAPI
         Task<UserRatingListResponse> GetUserRatingsUsingGET([Query] Recommended? recommended = default, [Query, AliasAs("lastChangedAt.gte")] System.DateTimeOffset? lastChangedAt_gte = default, [Query, AliasAs("lastChangedAt.lte")] System.DateTimeOffset? lastChangedAt_lte = default, [Query] int? offset = default, [Query] int? limit = default);
 
         /// <summary>Answer for user's rating</summary>
-        /// <remarks>Use this resource to answer for received rating. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-dodac-odpowiedz-na-ocene" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-answer-for-user-rating" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to answer for received rating. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-dodac-odpowiedz-na-ocene" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-answer-for-user-rating" target="_blank">EN</a>.</remarks>
         /// <param name="ratingId">ID of the rating.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -386,7 +386,7 @@ namespace JadeX.AllegroAPI
         Task<Answer> AnswerUserRatingUsingPUT(string ratingId, [Body] object? body = default);
 
         /// <summary>Request removal of user's rating</summary>
-        /// <remarks>Use this resource to request removal of received rating. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-wyslac-prosbe-o-usuniecie-oceny" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-send-a-request-to-remove-user-rating" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to request removal of received rating. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-wyslac-prosbe-o-usuniecie-oceny" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-send-a-request-to-remove-user-rating" target="_blank">EN</a>.</remarks>
         /// <param name="ratingId">ID of the rating.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -401,7 +401,7 @@ namespace JadeX.AllegroAPI
         Task<Removal> UserRatingRemovalUsingPUT(string ratingId, [Body] object? body = default);
 
         /// <summary>Get basic information about user</summary>
-        /// <remarks>Use this resource when you need basic information about authenticated user. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#informacje-o-uzytkowniku" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#information-about-user" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource when you need basic information about authenticated user. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#informacje-o-uzytkowniku" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#information-about-user" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -413,7 +413,7 @@ namespace JadeX.AllegroAPI
         Task<MeResponse> MeGET();
 
         /// <summary>Create additional services group</summary>
-        /// <remarks>Use this resource to create a group of additional services. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-nowa-grupe-uslug-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-a-new-additional-service-group" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a group of additional services. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-nowa-grupe-uslug-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-a-new-additional-service-group" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -425,7 +425,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalServicesGroupResponse> CreateAdditionalServicesGroupUsingPOST([Body] object? body = default);
 
         /// <summary>Get the user's additional services groups</summary>
-        /// <remarks>Use this resource to retrieve a list of groups with additional services available to a given user which you may assign to offers. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-liste-grup-uslug-dodatkowych-na-koncie" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-a-list-of-additional-services-groups-for-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve a list of groups with additional services available to a given user which you may assign to offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-liste-grup-uslug-dodatkowych-na-koncie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-a-list-of-additional-services-groups-for-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <returns>OK</returns>
@@ -441,12 +441,12 @@ namespace JadeX.AllegroAPI
         /// <summary>Create a new promotion</summary>
         /// <remarks>
         /// This endpoint creates a new promotion. You can create promotions only if your base marketplace is `allegro-pl`. Created promotions are visible only on the `allegro-pl` marketplace. You can define the following types of promotions:
-        /// 1. Large order discount <br> Only company users will see and be eligible for this type of promotion. In order to create a large order discount, you also have to be a company user. Furthermore, you are allowed to have only one active order discount at a time. Define a promotion with a single benefit of type **LARGE_ORDER_DISCOUNT** and a single criterion of type **ALL_OFFERS**. The benefit specification should contain a list of order value based discount thresholds. Threshold's order value defines the minimum total value of an order for which the threshold is applicable (`lowerBound`). Threshold's discount defines the discount percentage applied when the threshold is applied. The percentage's fractional part must be equal to 0. Only the highest applicable threshold (if any) will be applied to the total value of the order. A threshold with a higher order value than another threshold in the order discount must also have a higher discount. Large order discount is assigned automatically to all seller's offers. Moreover, it will be assigned to all newly added seller's offers once activated. Please note that it may take some time to propagate this type of promotion to all of your offers. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-rabat" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-large-order-discount" target="_blank">EN</a>.
-        /// 2. Wholesale price list <br> Only company users will see and be eligible for this type of promotion. In order to create a wholesale price list, you also have to be a company user. Define a promotion with a single benefit of type **WHOLESALE_PRICE_LIST** and a single criterion of type **OFFERS_ASSIGNED_EXTERNALLY**. The benefit specification should contain a name (it will be visible to you only) and a list of quantity based discount thresholds. Threshold's quantity defines the minimum number of units of an offer for which the threshold is applicable (`lowerBound`). Threshold's discount defines the discount percentage applied when the threshold is applied. The percentage's fractional part must be equal to 0. Only the highest applicable threshold (if any) will be applied to the total price of units of the offer bought. A threshold with a higher quantity than another threshold in the price list must also have a higher discount. In order to assign offers to a wholesale price list, use `discounts` field in <a href="#operation/modificationCommandUsingPUT">batch offer modification</a>. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-cennik-hurtowy" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-wholesale-price-list" target="_blank">EN</a>.
+        /// 1. Large order discount <br> Only company users will see and be eligible for this type of promotion. In order to create a large order discount, you also have to be a company user. Furthermore, you are allowed to have only one active order discount at a time. Define a promotion with a single benefit of type **LARGE_ORDER_DISCOUNT** and a single criterion of type **ALL_OFFERS**. The benefit specification should contain a list of order value based discount thresholds. Threshold's order value defines the minimum total value of an order for which the threshold is applicable (`lowerBound`). Threshold's discount defines the discount percentage applied when the threshold is applied. The percentage's fractional part must be equal to 0. Only the highest applicable threshold (if any) will be applied to the total value of the order. A threshold with a higher order value than another threshold in the order discount must also have a higher discount. Large order discount is assigned automatically to all seller's offers. Moreover, it will be assigned to all newly added seller's offers once activated. Please note that it may take some time to propagate this type of promotion to all of your offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-rabat" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-large-order-discount" target="_blank">EN</a>.
+        /// 2. Wholesale price list <br> Only company users will see and be eligible for this type of promotion. In order to create a wholesale price list, you also have to be a company user. Define a promotion with a single benefit of type **WHOLESALE_PRICE_LIST** and a single criterion of type **OFFERS_ASSIGNED_EXTERNALLY**. The benefit specification should contain a name (it will be visible to you only) and a list of quantity based discount thresholds. Threshold's quantity defines the minimum number of units of an offer for which the threshold is applicable (`lowerBound`). Threshold's discount defines the discount percentage applied when the threshold is applied. The percentage's fractional part must be equal to 0. Only the highest applicable threshold (if any) will be applied to the total price of units of the offer bought. A threshold with a higher quantity than another threshold in the price list must also have a higher discount. In order to assign offers to a wholesale price list, use `discounts` field in <a href="#operation/modificationCommandUsingPUT">batch offer modification</a>. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-cennik-hurtowy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-wholesale-price-list" target="_blank">EN</a>.
         /// 3. Bundle <br> In order to create a new bundle, you have to define a
-        /// promotion with a single benefit of type **ORDER_FIXED_DISCOUNT** and a single criterion of type **CONTAINS_OFFERS**. In the benefit specification you have to declare the discount amount that you want to be deducted from the sum of bundled offers prices. In the offer criterion you need to pass a list of offers that are to be grouped as a bundle. For each offer you have to define a fixed quantity (that many pieces of your offer will be part of the bundle) and you also have to set a promotionEntryPoint flag (offers with this flag set to true will have a section that allows the users to purchase your bundle). Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-promocyjny-zestaw" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-promotional-set-of-offers" target="_blank">EN</a>
+        /// promotion with a single benefit of type **ORDER_FIXED_DISCOUNT** and a single criterion of type **CONTAINS_OFFERS**. In the benefit specification you have to declare the discount amount that you want to be deducted from the sum of bundled offers prices. In the offer criterion you need to pass a list of offers that are to be grouped as a bundle. For each offer you have to define a fixed quantity (that many pieces of your offer will be part of the bundle) and you also have to set a promotionEntryPoint flag (offers with this flag set to true will have a section that allows the users to purchase your bundle). Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-promocyjny-zestaw" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-promotional-set-of-offers" target="_blank">EN</a>
         /// 
-        /// 4. Multipack <br> In order to create a new multipack, you have to define a promotion with a single benefit of type **UNIT_PERCENTAGE_DISCOUNT** and a single criterion of type **CONTAINS_OFFERS**. The benefit specification should contain a configuration section with a percentage which indicates the specific discount for the discounted offer. This percentage should be an integer value greater than 15 for quantity 2, greater than 30 for quantity 3, greater than 40 for quantity 4, greater than 50 for quantity 5 and lower than or equal to 100. The specification should also contain a trigger section with a field forEachQuantity that defines the amount of items in the multipack which is necessary to trigger the benefit. Additionally, the discountedNumber field must be set to 1 by default as you can only discount one unit in a multipack. Finally, the offer criterion specifies the offer for which the multipack promotion will take effect. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-rabat-ilosciowy" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-quantitative-discount" target="_blank">EN</a>
+        /// 4. Multipack <br> In order to create a new multipack, you have to define a promotion with a single benefit of type **UNIT_PERCENTAGE_DISCOUNT** and a single criterion of type **CONTAINS_OFFERS**. The benefit specification should contain a configuration section with a percentage which indicates the specific discount for the discounted offer. This percentage should be an integer value greater than 15 for quantity 2, greater than 30 for quantity 3, greater than 40 for quantity 4, greater than 50 for quantity 5 and lower than or equal to 100. The specification should also contain a trigger section with a field forEachQuantity that defines the amount of items in the multipack which is necessary to trigger the benefit. Additionally, the discountedNumber field must be set to 1 by default as you can only discount one unit in a multipack. Finally, the offer criterion specifies the offer for which the multipack promotion will take effect. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-rabat-ilosciowy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-quantitative-discount" target="_blank">EN</a>
         /// 5. Cross-offer multipack <br> A cross-offer multipack is created in the same fashion as a standard multipack. The only difference is that you need to pass more than 1 offer in the offer criterion section. This group of offers is then considered as a pool from which users can pick and choose forEachQuantity offers and the cheapest of them gets a discount.
         /// </remarks>
         /// <returns>Successfully created the requested promotion</returns>
@@ -467,7 +467,7 @@ namespace JadeX.AllegroAPI
         /// <remarks>
         /// <p>Get a list of promotions defined by the authorized user.</p>
         /// <p>Restrictions:</p> <p>Sum of limit and offset must be equal to or lower than 50000. Limit must be equal to or lower than 5000.</p> <p>Example:</p> <p>offset = 49950 and limit = 50 will return promotions</p> <p>offset = 49950 and limit = 51 will return 422 http error</p> <p>offset = 0 and limit = 5000 will return promotions</p> <p>offset = 0 and limit = 5001 will return 422 http error</p>
-        /// <p>Read more about: Large order discount <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-dostepne-rabaty" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-large-order-discount" target="_blank">EN</a>, Wholesale price list <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-dostepne-cenniki" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-wholesale-price-lists" target="_blank">EN</a>, Bundles and Multipack <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-dostepne-rabaty-ilosciowe" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-promotional-sets" target="_blank">EN</a>.</p>
+        /// <p>Read more about: Large order discount <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-dostepne-rabaty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-large-order-discount" target="_blank">EN</a>, Wholesale price list <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-dostepne-cenniki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-wholesale-price-lists" target="_blank">EN</a>, Bundles and Multipack <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-dostepne-rabaty-ilosciowe" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-promotional-sets" target="_blank">EN</a>.</p>
         /// </remarks>
         /// <param name="limit">Limit of promotions per page.</param>
         /// <param name="offset">Distance between the beginning of the document and the point from which promotions are returned.</param>
@@ -485,7 +485,7 @@ namespace JadeX.AllegroAPI
         Task<SellerRebatesDto> ListSellerPromotionsUsingGET1([Query] int? limit = default, [Query] int? offset = default, [Query, AliasAs("offer.id")] string? offer_id = default, [Query] PromotionType? promotionType = default);
 
         /// <summary>Get a promotion data by id</summary>
-        /// <remarks>Use this resource to returns the requested promotion. You need to use its unique id. Read more about: Large order discount <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-rabacie" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-information-about-large-order-discount" target="_blank">EN</a>, Wholesale price list <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-cenniku" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-information-about-wholesale-price-list" target="_blank">EN</a>, Bundles <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-promocyjnym-zestawie" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-information-about-a-promotional-set-of-offers" target="_blank">EN</a>, Multipack <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-rabacie-ilosciowym" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#information-about-an-quantitative-discount" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to returns the requested promotion. You need to use its unique id. Read more about: Large order discount <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-rabacie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-information-about-large-order-discount" target="_blank">EN</a>, Wholesale price list <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-cenniku" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-information-about-wholesale-price-list" target="_blank">EN</a>, Bundles <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-promocyjnym-zestawie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-information-about-a-promotional-set-of-offers" target="_blank">EN</a>, Multipack <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-informacje-o-rabacie-ilosciowym" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#information-about-an-quantitative-discount" target="_blank">EN</a>.</remarks>
         /// <param name="promotionId">Promotion identifier.</param>
         /// <returns>Successfully returned the requested promotion</returns>
         /// <throws cref="ApiException">
@@ -498,7 +498,7 @@ namespace JadeX.AllegroAPI
         Task<SellerRebateDto> GetPromotionUsingGET(string promotionId);
 
         /// <summary>Modify a promotion</summary>
-        /// <remarks>Use this resource to update a promotion by its unique id. It supports editing bundle's discount, wholesale price lists and large order discounts. Amount of the discount in a bundle can be edited, but cannot change the offers a bundle consists of. Read more about: Bundles <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-promocyjny-zestaw" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-promotional-set-of-offers" target="_blank">EN</a>, Large order discount <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#edytuj-progi-rabatowe" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#edit-discount-thresholds" target="_blank">EN</a>, Wholesale price list <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#edytuj-cennik" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#edit-wholesale-price-list" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to update a promotion by its unique id. It supports editing bundle's discount, wholesale price lists and large order discounts. Amount of the discount in a bundle can be edited, but cannot change the offers a bundle consists of. Read more about: Bundles <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#dodaj-promocyjny-zestaw" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#add-promotional-set-of-offers" target="_blank">EN</a>, Large order discount <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#edytuj-progi-rabatowe" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#edit-discount-thresholds" target="_blank">EN</a>, Wholesale price list <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#edytuj-cennik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#edit-wholesale-price-list" target="_blank">EN</a>.</remarks>
         /// <param name="promotionId">Promotion identifier.</param>
         /// <returns>Successfully updated the requested promotion</returns>
         /// <throws cref="ApiException">
@@ -514,7 +514,7 @@ namespace JadeX.AllegroAPI
         Task<SellerRebateDto> UpdatePromotionUsingPUT(string promotionId, [Body] SellerCreateRebateRequestDto body);
 
         /// <summary>Deactivate a promotion by id</summary>
-        /// <remarks>Use this resource to deactivate the requested promotion. You need to use its unique id. Read more about: Large order discount <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-rabat" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-large-order-discount" target="_blank">EN</a>, Wholesale price list <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-cennik" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-wholesale-price-list" target="_blank">EN</a>, Bundles <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-promocyjny-zestaw" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-a-promotional-set-of-offers" target="_blank">EN</a>, Multipack <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-rabat-ilosciowy" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-an-quantitative-discount" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to deactivate the requested promotion. You need to use its unique id. Read more about: Large order discount <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-rabat" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-large-order-discount" target="_blank">EN</a>, Wholesale price list <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-cennik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-wholesale-price-list" target="_blank">EN</a>, Bundles <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-promocyjny-zestaw" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-a-promotional-set-of-offers" target="_blank">EN</a>, Multipack <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-rabat-ilosciowy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-an-quantitative-discount" target="_blank">EN</a>.</remarks>
         /// <param name="promotionId">Promotion identifier.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -526,30 +526,8 @@ namespace JadeX.AllegroAPI
         [Delete("/sale/loyalty/promotions/{promotionId}")]
         Task DeactivatePromotionUsingDELETE(string promotionId);
 
-        /// <summary>Create an application for a promotion campaign</summary>
-        /// <remarks>
-        /// For an additional fee, you can place a discount mark on a list of offers.
-        /// You have to define promotion id and campaign section giving LISTING_BADGE as the id.
-        /// Your promotion campaign application will be verified and you will be notified about the verification status via e-mail.
-        /// Fees will be charged in accordance with Annex No. 1 to the Daily deals zone regulations.
-        /// Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#zloz-wniosek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#submit-an-application" target="_blank">EN</a>.
-        /// </remarks>
-        /// <param name="body">request</param>
-        /// <returns>Promotion campaign application created successfully</returns>
-        /// <throws cref="ApiException">
-        /// Thrown when the request returns a non-success status code:
-        /// 400: Bad request
-        /// 401: Unauthorized
-        /// 403: Forbidden
-        /// 422: Validation failed - your request was correct, but the promotion campaign application could not be created.
-        /// </throws>
-        [System.Obsolete]
-        [Headers("Accept: application/vnd.allegro.public.v1+json")]
-        [Post("/sale/loyalty/promotion-campaigns")]
-        Task AddPromotionToCampaignUsingPOST([Body] PromotionCampaignRequestDto body);
-
         /// <summary>Get the user's promotion campaigns</summary>
-        /// <remarks>Use this resource to retrieve promotion campaigns. You can find promotion campaign by promotion id. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-liste-kampanii" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-promotional-campaigns" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve promotion campaigns. You can find promotion campaign by promotion id. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#pobierz-liste-kampanii" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#retrieve-promotional-campaigns" target="_blank">EN</a>.</remarks>
         /// <param name="promotion_id">The promotion unique id.</param>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
@@ -566,7 +544,7 @@ namespace JadeX.AllegroAPI
         Task<PromotionCampaignsResponseDto> GetPromotionCampaignsUsingGET([Query, AliasAs("promotion.id")] string? promotion_id = default, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Delete a campaign in a promotion</summary>
-        /// <remarks>Use this resource to delete campaign from promotion by promotion id and campaign id. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-kampanie" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-a-promotional-campaign" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete campaign from promotion by promotion id and campaign id. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-kampanie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#remove-a-promotional-campaign" target="_blank">EN</a>.</remarks>
         /// <param name="promotion_id">The promotion unique id.</param>
         /// <param name="campaign_id">The campaign unique id.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -583,7 +561,7 @@ namespace JadeX.AllegroAPI
         Task DeleteCampaignFromPromotionUsingDELETE([Query, AliasAs("promotion.id")] string promotion_id, [Query, AliasAs("campaign.id")] string campaign_id);
 
         /// <summary>Get an application for promotion campaign</summary>
-        /// <remarks>Use this resource to retrieve promotion campaign application. You need to use its unique id. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#sprawdz-status-wniosku" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#check-application-status" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve promotion campaign application. You need to use its unique id. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#sprawdz-status-wniosku" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#check-application-status" target="_blank">EN</a>.</remarks>
         /// <param name="applicationId">The application unique id.</param>
         /// <returns>Successfully returned promotion campaign application</returns>
         /// <throws cref="ApiException">
@@ -599,7 +577,7 @@ namespace JadeX.AllegroAPI
         Task<object> GetPromotionCampaignApplicationUsingGET(string applicationId);
 
         /// <summary>Delete an application for promotion campaign</summary>
-        /// <remarks>Use this resource to delete promotion campaign application by application id. You need to use its unique id. Read more: <a href="../../tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-wniosek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#delete-an-application" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete promotion campaign application by application id. You need to use its unique id. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-rabatami-promocjami-yPya2mj6zUP#usun-wniosek" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-rebates-and-promotions-g05avdL0vT4#delete-an-application" target="_blank">EN</a>.</remarks>
         /// <param name="applicationId">The application unique id.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -615,7 +593,7 @@ namespace JadeX.AllegroAPI
         Task DeletePromotionCampaignApplicationUsingDELETE(string applicationId);
 
         /// <summary>Calculate fee and commission for an offer</summary>
-        /// <remarks>Provides information about fee and commission for an offer. Read more: <a href="../../tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#kalkulator-oplat" target="_blank">PL</a> / <a href="../../tutorials/how-to-check-the-fees-3An6Wame3Um#fee-calculator" target="_blank">EN</a>.</remarks>
+        /// <remarks>Provides information about fee and commission for an offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#kalkulator-oplat" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-check-the-fees-3An6Wame3Um#fee-calculator" target="_blank">EN</a>.</remarks>
         /// <returns>Fee calculated successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -628,7 +606,7 @@ namespace JadeX.AllegroAPI
         Task<FeePreviewResponse> CalculateFeePreviewUsingPOST([Body] PublicOfferPreviewRequest body);
 
         /// <summary>Batch offer modification</summary>
-        /// <remarks>Use this resource to modify multiple offers at once. Read more: <a href="../../news/grupowa-edycja-ofert-poszerzamy-mozliwosci-zasobu-lLAyEaqE7fE" target="_blank">PL</a> / <a href="../../news/bulk-editing-of-offers-new-features-0A2lDegElHd" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
+        /// <remarks>Use this resource to modify multiple offers at once. Read more: <a href="https://developer.allegro.pl/news/grupowa-edycja-ofert-poszerzamy-mozliwosci-zasobu-lLAyEaqE7fE" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/bulk-editing-of-offers-new-features-0A2lDegElHd" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="body">offerChangeCommandDto</param>
         /// <returns>Command was registered</returns>
@@ -646,7 +624,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> ModificationCommandUsingPUT(string commandId, [Body] OfferChangeCommand body);
 
         /// <summary>Modification command summary</summary>
-        /// <remarks>Use this resource to find out how many offers were edited within one {commandId}. You will receive a summary with a number of successfully edited offers. Read more: <a href="../../news/grupowa-edycja-ofert-poszerzamy-mozliwosci-zasobu-lLAyEaqE7fE" target="_blank">PL</a> / <a href="../../news/bulk-editing-of-offers-new-features-0A2lDegElHd" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Use this resource to find out how many offers were edited within one {commandId}. You will receive a summary with a number of successfully edited offers. Read more: <a href="https://developer.allegro.pl/news/grupowa-edycja-ofert-poszerzamy-mozliwosci-zasobu-lLAyEaqE7fE" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/bulk-editing-of-offers-new-features-0A2lDegElHd" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <returns>report was generated and successfully returned</returns>
         /// <throws cref="ApiException">
@@ -660,7 +638,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> GetGeneralReportUsingGET(string commandId);
 
         /// <summary>Modification command detailed report</summary>
-        /// <remarks>Use this resource to retrieve a detailed summary of changes introduced within one {commandId} (defaults: limit = 100, offset = 0). Read more: <a href="../../news/grupowa-edycja-ofert-poszerzamy-mozliwosci-zasobu-lLAyEaqE7fE" target="_blank">PL</a> / <a href="../../news/bulk-editing-of-offers-new-features-0A2lDegElHd" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Use this resource to retrieve a detailed summary of changes introduced within one {commandId} (defaults: limit = 100, offset = 0). Read more: <a href="https://developer.allegro.pl/news/grupowa-edycja-ofert-poszerzamy-mozliwosci-zasobu-lLAyEaqE7fE" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/bulk-editing-of-offers-new-features-0A2lDegElHd" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
@@ -677,7 +655,7 @@ namespace JadeX.AllegroAPI
         Task<TaskReport> GetTasksUsingGET(string commandId, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Batch offer price modification</summary>
-        /// <remarks>Change price of offers. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#cena" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#price" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
+        /// <remarks>Change price of offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#cena" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#price" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="body">offerPriceChangeCommandDto</param>
         /// <returns>Command was registered</returns>
@@ -693,7 +671,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> PriceModificationCommandUsingPUT(string commandId, [Body] OfferPriceChangeCommand body);
 
         /// <summary>Change price command summary</summary>
-        /// <remarks>Returns status and summary of particular command execution. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#cena" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#price" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Returns status and summary of particular command execution. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#cena" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#price" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <returns>report was generated and successfully returned</returns>
         /// <throws cref="ApiException">
@@ -706,7 +684,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> GetPriceModificationCommandStatusUsingGET(string commandId);
 
         /// <summary>Change price command detailed report</summary>
-        /// <remarks>Defaults: limit = 100, offset = 0. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#cena" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#price" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Defaults: limit = 100, offset = 0. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#cena" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#price" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
@@ -722,7 +700,7 @@ namespace JadeX.AllegroAPI
         Task<TaskReport> GetPriceModificationCommandTasksStatusesUsingGET(string commandId, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Batch offer quantity modification</summary>
-        /// <remarks>Change quantity of multiple offers. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#liczba-przedmiotow" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#quantity" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
+        /// <remarks>Change quantity of multiple offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#liczba-przedmiotow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#quantity" target="_blank">EN</a>. This resource is rate limited to 250 000 offer changes per hour or 9000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="body">offerQuantityChangeCommandDto</param>
         /// <returns>Command was registered</returns>
@@ -738,7 +716,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> QuantityModificationCommandUsingPUT(string commandId, [Body] OfferQuantityChangeCommand body);
 
         /// <summary>Change quantity command summary</summary>
-        /// <remarks>Returns status and summary of the command. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#liczba-przedmiotow" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#quantity" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Returns status and summary of the command. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#liczba-przedmiotow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#quantity" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <returns>Report was generated and successfully returned</returns>
         /// <throws cref="ApiException">
@@ -751,7 +729,7 @@ namespace JadeX.AllegroAPI
         Task<GeneralReport> GetQuantityModificationCommandStatusUsingGET(string commandId);
 
         /// <summary>Change quantity command detailed report</summary>
-        /// <remarks>Defaults: limit = 100, offset = 0. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#liczba-przedmiotow" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#quantity" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
+        /// <remarks>Defaults: limit = 100, offset = 0. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#liczba-przedmiotow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#quantity" target="_blank">EN</a>. This resource is rate limited to retrieving information about 270 000 offer changes per minute.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
@@ -840,7 +818,7 @@ namespace JadeX.AllegroAPI
         Task<OfferRules> GetPriceAutomationRulesForOfferUsingGET(string offerId);
 
         /// <summary>Get IDs of Allegro categories</summary>
-        /// <remarks>Use this resource to traverse the Allegro categories tree. It returns the list of the given category's children or a list of the main Allegro categories. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#uzupelnij-kategorie-i-parametry" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#provide-category-and-parameters" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to traverse the Allegro categories tree. It returns the list of the given category's children or a list of the main Allegro categories. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#uzupelnij-kategorie-i-parametry" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#provide-category-and-parameters" target="_blank">EN</a>.</remarks>
         /// <param name="parent_id">The ID of the category which children should be returned. If omitted, the list of main Allegro categories will be returned.</param>
         /// <returns>The list of categories returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -852,7 +830,7 @@ namespace JadeX.AllegroAPI
         Task<CategoriesDto> GetCategoriesUsingGET([Query, AliasAs("parent.id")] string? parent_id = default);
 
         /// <summary>Get a category by ID</summary>
-        /// <remarks>Use this resource to get the details of a specific category. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-utworzyc-nowy-produkt" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-create-a-product" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the details of a specific category. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-utworzyc-nowy-produkt" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-create-a-product" target="_blank">EN</a>.</remarks>
         /// <param name="categoryId">The category ID.</param>
         /// <returns>The details of a category returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -864,7 +842,7 @@ namespace JadeX.AllegroAPI
         Task<CategoryDto> GetCategoryUsingGET1(string categoryId);
 
         /// <summary>Get parameters supported by a category</summary>
-        /// <remarks>Use this resource to get the list of parameters that are supported by the given category. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#parametry-ofertowe" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-parameters" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the list of parameters that are supported by the given category. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#parametry-ofertowe" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-parameters" target="_blank">EN</a>.</remarks>
         /// <param name="categoryId">The category ID.</param>
         /// <returns>The list of parameters for the category returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -876,7 +854,7 @@ namespace JadeX.AllegroAPI
         Task<CategoryParameterList> GetFlatParametersUsingGET2(string categoryId);
 
         /// <summary>Get product parameters available in given category</summary>
-        /// <remarks>Use this resource to get the list of product parameters available in given category. You can use these parameters to create a new product. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-utworzyc-nowy-produkt" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-create-a-product" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the list of product parameters available in given category. You can use these parameters to create a new product. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-utworzyc-nowy-produkt" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-create-a-product" target="_blank">EN</a>.</remarks>
         /// <param name="categoryId">The category ID.</param>
         /// <returns>The list of product parameters for the category returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -890,7 +868,7 @@ namespace JadeX.AllegroAPI
         /// <summary>Get planned changes in category parameters</summary>
         /// <remarks>
         /// Use this resource to get information about planned changes in category parameters. Please note that in some cases, the returned events may finally not happen in the future.
-        /// At present we support the following changes: - REQUIREMENT_CHANGE - the parameter will be required in the category. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-sprawdzic-przyszle-zmiany-w-parametrach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-check-future-changes-in-parameters" target="_blank">EN</a>.
+        /// At present we support the following changes: - REQUIREMENT_CHANGE - the parameter will be required in the category. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-sprawdzic-przyszle-zmiany-w-parametrach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-check-future-changes-in-parameters" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="scheduledFor_gte">The minimum date and time from which the change will be effective from in ISO 8601 format. Should be greater than the current date time and less than 3 months from the current date.</param>
         /// <param name="scheduledFor_lte">The maximum date and time from which the change will be effective from in ISO 8601 format. Should be greater than the current date time and less than 3 months from the current date.</param>
@@ -918,7 +896,7 @@ namespace JadeX.AllegroAPI
         /// - CATEGORY_MOVED - category has been moved to a different place in category tree, category parent id field is changed.
         /// - CATEGORY_DELETED - category is no longer available, category from redirectCategory field should be used instead.
         /// 
-        /// Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#dziennik-zmian-w-kategoriach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#event-journal-in-categories" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#dziennik-zmian-w-kategoriach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#event-journal-in-categories" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="from">The ID of the last seen event. Changes that occurred after the given event will be returned.</param>
         /// <param name="limit">The number of events that will be returned in the response.</param>
@@ -934,7 +912,7 @@ namespace JadeX.AllegroAPI
         Task<CategoryEventsResponse> GetCategoryEventsUsingGET1([Query] string? from = default, [Query] int? limit = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous4>? type = default);
 
         /// <summary>Get the additional services definitions by categories</summary>
-        /// <remarks>Use this resource to get additional services definitions, grouped by additional services categories, available on given marketplace. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-zarzadzac-uslugami-dodatkowymi" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-manage-additional-services" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get additional services definitions, grouped by additional services categories, available on given marketplace. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-zarzadzac-uslugami-dodatkowymi" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-manage-additional-services" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -946,7 +924,7 @@ namespace JadeX.AllegroAPI
         Task<CategoriesResponse> GetListOfAdditionalServicesDefinitionsCategoriesUsingGET();
 
         /// <summary>Get the user's shipping rates</summary>
-        /// <remarks>Use this resource to get a list of seller's shipping rates. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="../../news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of seller's shipping rates. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -958,7 +936,7 @@ namespace JadeX.AllegroAPI
         Task<Response> GetListOfShippingRatestUsingGET();
 
         /// <summary>Create a new shipping rates set</summary>
-        /// <remarks>Use this resource to create a new seller's shipping rates set. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="../../news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a new seller's shipping rates set. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
         /// <param name="body">Shipping rates set</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -972,7 +950,7 @@ namespace JadeX.AllegroAPI
         Task<ShippingRatesSet> CreateShippingRatesSetUsingPOST([Body] ShippingRatesSet body);
 
         /// <summary>Get the details of a shipping rates set</summary>
-        /// <remarks>Use this resource to get details of the given shipping rates set. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="../../news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get details of the given shipping rates set. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
         /// <param name="id">Shipping rates set identifier.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -986,7 +964,7 @@ namespace JadeX.AllegroAPI
         Task<ShippingRatesSet> GetShippingRatesSetUsingGET(string id);
 
         /// <summary>Edit a user's shipping rates set</summary>
-        /// <remarks>Use this resource to edit a new seller's shipping rates set. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="../../news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to edit a new seller's shipping rates set. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
         /// <param name="id">Shipping rates set identifier.</param>
         /// <param name="body">Shipping rates set</param>
         /// <returns>OK</returns>
@@ -1003,7 +981,7 @@ namespace JadeX.AllegroAPI
         Task<ShippingRatesSet> ModifyShippingRatesSetUsingPUT(string id, [Body] ShippingRatesSet body);
 
         /// <summary>Get the user's delivery settings</summary>
-        /// <remarks>Use this resource to get the delivery settings declared by the seller. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-ustawienia-dostawy" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-get-delivery-settings" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the delivery settings declared by the seller. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-ustawienia-dostawy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-get-delivery-settings" target="_blank">EN</a>.</remarks>
         /// <param name="marketplace_id">Marketplace for which delivery settings will be returned. By default (if the marketplace parameter is not set) the marketplace on which the seller has registered is used. However, we recommend that the marketplace.id query parameter should always be explicitly set.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1017,7 +995,7 @@ namespace JadeX.AllegroAPI
         Task<DeliverySettingsResponse> GetSaleDeliverySettings([Query, AliasAs("marketplace.id")] string? marketplace_id = default);
 
         /// <summary>Modify the user's delivery settings</summary>
-        /// <remarks>Use this resource to modify the delivery settings declared by the seller. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-edytowac-ustawienia-dostawy" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-edit-delivery-settings" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify the delivery settings declared by the seller. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-edytowac-ustawienia-dostawy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-edit-delivery-settings" target="_blank">EN</a>.</remarks>
         /// <param name="body">Delivery settings set</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1031,7 +1009,7 @@ namespace JadeX.AllegroAPI
         Task<DeliverySettingsResponse> PutSaleDeliverySettings([Body] DeliverySettingsRequest body);
 
         /// <summary>Create a point of service</summary>
-        /// <remarks>Use this resource to create a point of service. Read more: <a href="../../news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="../../news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a point of service. Read more: <a href="https://developer.allegro.pl/news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -1047,7 +1025,7 @@ namespace JadeX.AllegroAPI
         Task<Pos> CreatePOSUsingPOST([Body] object? body = default);
 
         /// <summary>Get the user's points of service</summary>
-        /// <remarks>Use this resource to get a list of points of service by seller ID. Read more: <a href="../../news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="../../news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of points of service by seller ID. Read more: <a href="https://developer.allegro.pl/news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
         /// <param name="seller_id">User identifier.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1060,7 +1038,7 @@ namespace JadeX.AllegroAPI
         Task<SearchResult> GetPOSListUsingGET([Query, AliasAs("seller.id")] string seller_id);
 
         /// <summary>Get the details of a point of service</summary>
-        /// <remarks>Use this resource to get a details of a point of service for a given ID. Read more: <a href="../../news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="../../news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a details of a point of service for a given ID. Read more: <a href="https://developer.allegro.pl/news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
         /// <param name="id">Point of service ID.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1074,7 +1052,7 @@ namespace JadeX.AllegroAPI
         Task<Pos> GetPOSDataUsingGET(string id);
 
         /// <summary>Modify a point of service</summary>
-        /// <remarks>Use this resource to modify a point of service. Read more: <a href="../../news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="../../news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify a point of service. Read more: <a href="https://developer.allegro.pl/news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
         /// <param name="id">Point of service ID. Must match values with 'id' property from the body.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1091,7 +1069,7 @@ namespace JadeX.AllegroAPI
         Task<Pos> ModifyPOSUsingPUT(string id, [Body] object? body = default);
 
         /// <summary>Delete a point of service</summary>
-        /// <remarks>Use this resource to delete a point of service. Read more: <a href="../../news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="../../news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete a point of service. Read more: <a href="https://developer.allegro.pl/news/punkty-odbioru-osobistego-8dmlj8qk7ik" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/points-of-service-Rdoz09ZE7sW" target="_blank">EN</a>.</remarks>
         /// <param name="id">Point of service ID.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -1105,7 +1083,7 @@ namespace JadeX.AllegroAPI
         Task DeletePOSUsingDELETE(string id);
 
         /// <summary>Create a new contact</summary>
-        /// <remarks>Use this resource to create a new contact. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-utworzyc-nowy-kontakt" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-create-new-contact" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a new contact. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-utworzyc-nowy-kontakt" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-create-new-contact" target="_blank">EN</a>.</remarks>
         /// <param name="body">New contact</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -1120,7 +1098,7 @@ namespace JadeX.AllegroAPI
         Task<ContactResponse> CreateContactUsingPOST([Body] ContactRequest body);
 
         /// <summary>Get the user's contacts</summary>
-        /// <remarks>Use this resource to get details of many contacts. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-liste-kontaktow" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-a-list-of-contacts" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get details of many contacts. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-liste-kontaktow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-a-list-of-contacts" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -1133,7 +1111,7 @@ namespace JadeX.AllegroAPI
         Task<ContactResponseList> GetListOfContactsUsingGET();
 
         /// <summary>Get contact details</summary>
-        /// <remarks>Use this resource to get contact details. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-szczegoly-danego-kontaktu" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-contact-details" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get contact details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-szczegoly-danego-kontaktu" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-contact-details" target="_blank">EN</a>.</remarks>
         /// <param name="id">Contact identifier.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1148,7 +1126,7 @@ namespace JadeX.AllegroAPI
         Task<ContactResponse> GetContactUsingGET(string id);
 
         /// <summary>Modify contact details</summary>
-        /// <remarks>Use this resource to modify contact details. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-zmienic-dane-kontaktu" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-change-contact-data" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify contact details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-zmienic-dane-kontaktu" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-change-contact-data" target="_blank">EN</a>.</remarks>
         /// <param name="id">Contact identifier.</param>
         /// <param name="body">Contact</param>
         /// <returns>OK</returns>
@@ -1164,8 +1142,50 @@ namespace JadeX.AllegroAPI
         [Put("/sale/offer-contacts/{id}")]
         Task<ContactResponse> ModifyContactUsingPUT(string id, [Body] ContactRequest body);
 
+        /// <summary>Get the list of responsible persons</summary>
+        /// <remarks>Use this resource to get a list of responsible persons for the compliance of the product with EU regulations.</remarks>
+        /// <returns>OK</returns>
+        /// <throws cref="ApiException">
+        /// Thrown when the request returns a non-success status code:
+        /// 400: Bad Request
+        /// 401: Unauthorized
+        /// 403: Forbidden
+        /// </throws>
+        [Headers("Accept: application/vnd.allegro.public.v1+json")]
+        [Get("/sale/responsible-persons")]
+        Task<Response2> ResponsiblePersonsGET();
+
+        /// <summary>Create responsible person</summary>
+        /// <remarks>Use this resource to create a new responsible person for the compliance of the product with EU regulations.</remarks>
+        /// <returns>Created</returns>
+        /// <throws cref="ApiException">
+        /// Thrown when the request returns a non-success status code:
+        /// 400: Bad Request
+        /// 401: Unauthorized
+        /// 403: Forbidden
+        /// 422: Unprocessable entity
+        /// </throws>
+        [Headers("Accept: application/vnd.allegro.public.v1+json")]
+        [Post("/sale/responsible-persons")]
+        Task<ResponsiblePersonResponse> ResponsiblePersonsPOST([Body] CreateResponsiblePersonRequest body);
+
+        /// <summary>Update responsible person</summary>
+        /// <remarks>Use this resource to update the responsible person for the compliance of the product with EU regulations.</remarks>
+        /// <param name="id">Responsible person ID.</param>
+        /// <returns>OK</returns>
+        /// <throws cref="ApiException">
+        /// Thrown when the request returns a non-success status code:
+        /// 400: Bad Request
+        /// 401: Unauthorized
+        /// 403: Forbidden
+        /// 422: Unprocessable entity
+        /// </throws>
+        [Headers("Accept: application/vnd.allegro.public.v1+json")]
+        [Put("/sale/responsible-persons/{id}")]
+        Task<ResponsiblePersonResponse> ResponsiblePersonsPUT(string id, [Body] UpdateResponsiblePersonRequest body);
+
         /// <summary>Get the list of delivery methods</summary>
-        /// <remarks>Use this resource to get a list of all delivery methods currently available on the platform, as well as those that have already been discontinued. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="../../news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of all delivery methods currently available on the platform, as well as those that have already been discontinued. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-cennikami-dostawy-aMDnG7zamSX" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-shipping-price-lists-0A2lDe6jGSB" target="_blank">EN</a>.</remarks>
         /// <param name="marketplace">Allows to filter delivery methods by marketplace id.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1174,10 +1194,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/sale/delivery-methods")]
-        Task<Response2> GetListOfDeliveryMethodsUsingGET([Query] string? marketplace = default);
+        Task<Response3> GetListOfDeliveryMethodsUsingGET([Query] string? marketplace = default);
 
         /// <summary>Get the details of an additional services group</summary>
-        /// <remarks>Use this resource to get additional services group for a given ID. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-wybrana-grupe-uslug-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-a-group-of-additional-services-for-a-given-id" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get additional services group for a given ID. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-wybrana-grupe-uslug-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-a-group-of-additional-services-for-a-given-id" target="_blank">EN</a>.</remarks>
         /// <param name="groupId">Additional Service Group ID.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1190,7 +1210,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalServicesGroupResponse> GetAdditionalServicesGroupUsingGET(string groupId);
 
         /// <summary>Modify an additional services group</summary>
-        /// <remarks>Use this resource to modify existing additional service group. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-zaktualizowac-grupe-uslug-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-additional-service-group" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify existing additional service group. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-zaktualizowac-grupe-uslug-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-additional-service-group" target="_blank">EN</a>.</remarks>
         /// <param name="groupId">Additional service group ID.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1203,7 +1223,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalServicesGroupResponse> ModifyAdditionalServicesGroupUsingPUT(string groupId, [Body] object? body = default);
 
         /// <summary>Get translations for specified group</summary>
-        /// <remarks>Use this resource to get translations for additional service group. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-uslug-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#additional-services-translations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get translations for additional service group. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-uslug-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#additional-services-translations" target="_blank">EN</a>.</remarks>
         /// <param name="groupId">Additional Service Group ID.</param>
         /// <param name="language">IETF language tag. When provided, the response will contain translations in only that language (if exists).</param>
         /// <returns>OK</returns>
@@ -1217,7 +1237,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalServiceGroupTranslationResponse> GetAdditionalServiceGroupTranslations(string groupId, [Query] string? language = default);
 
         /// <summary>Create/Update translations for specified group and language</summary>
-        /// <remarks>Use this resource to create/update translation for additional service group and specified language. It is allowed to provide an incomplete list of services that belong to the group. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-uslug-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#additional-services-translations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create/update translation for additional service group and specified language. It is allowed to provide an incomplete list of services that belong to the group. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-uslug-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#additional-services-translations" target="_blank">EN</a>.</remarks>
         /// <param name="groupId">Additional Service Group ID.</param>
         /// <param name="language">IETF Language tag.</param>
         /// <param name="body">Additonal service group translation.</param>
@@ -1232,7 +1252,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalServiceGroupTranslationPatchResponse> UpdateAdditionalServiceGroupTranslation(string groupId, string language, [Body] AdditionalServicesGroupTranslationRequest body);
 
         /// <summary>Delete a translation for a specified group and language</summary>
-        /// <remarks>Use this resource to delete the translation for specified additional service group and language. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-uslug-dodatkowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#additional-services-translations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete the translation for specified additional service group and language. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#tlumaczenia-uslug-dodatkowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#additional-services-translations" target="_blank">EN</a>.</remarks>
         /// <param name="groupId">Additional service group ID.</param>
         /// <param name="language">IETF Language tag.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -1246,7 +1266,7 @@ namespace JadeX.AllegroAPI
         Task DeleteAdditionalServiceGroupTranslation(string groupId, string language);
 
         /// <summary>Get a size table</summary>
-        /// <remarks>Use this resource to get selected size table. Read more: <a href="../../news/tabele-rozmiarow-w-rest-api-LRV05q2dGtV" target="_blank">PL</a> / <a href="../../news/size-tables-in-rest-api-D7KP4DE1BH3" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get selected size table. Read more: <a href="https://developer.allegro.pl/news/tabele-rozmiarow-w-rest-api-LRV05q2dGtV" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/size-tables-in-rest-api-D7KP4DE1BH3" target="_blank">EN</a>.</remarks>
         /// <param name="tableId">Table identifier.</param>
         /// <returns>Size table returned successfully</returns>
         /// <throws cref="ApiException">
@@ -1260,7 +1280,7 @@ namespace JadeX.AllegroAPI
         Task<PublicTableDto> GetTableUsingGET(string tableId);
 
         /// <summary>Update a size table</summary>
-        /// <remarks>Use this resource to update selected size table. Read more: <a href="../../news/tabele-rozmiarow-zmieniamy-istniejacy-zasob-i-dodajemy-nowe-zasoby-do-ich-obslugi-k1nyd21A4fP" target="_blank">PL</a> / <a href="../../news/size-tables-we-change-the-existing-resource-and-add-new-resources-to-handle-them-jn91bynlbC9" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to update selected size table. Read more: <a href="https://developer.allegro.pl/news/tabele-rozmiarow-zmieniamy-istniejacy-zasob-i-dodajemy-nowe-zasoby-do-ich-obslugi-k1nyd21A4fP" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/size-tables-we-change-the-existing-resource-and-add-new-resources-to-handle-them-jn91bynlbC9" target="_blank">EN</a>.</remarks>
         /// <param name="tableId">Table identifier.</param>
         /// <param name="body">Size table details</param>
         /// <returns>Size table updated successfully</returns>
@@ -1275,7 +1295,7 @@ namespace JadeX.AllegroAPI
         Task<PublicTableDto> ModifyTableUsingPUT(string tableId, [Body] SizeTablePutRequest body);
 
         /// <summary>Get the user's size tables</summary>
-        /// <remarks>Use this resource to get all size tables assigned to a seller account. Read more: <a href="../../news/tabele-rozmiarow-w-rest-api-LRV05q2dGtV" target="_blank">PL</a> / <a href="../../news/size-tables-in-rest-api-D7KP4DE1BH3" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get all size tables assigned to a seller account. Read more: <a href="https://developer.allegro.pl/news/tabele-rozmiarow-w-rest-api-LRV05q2dGtV" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/size-tables-in-rest-api-D7KP4DE1BH3" target="_blank">EN</a>.</remarks>
         /// <returns>Size tables returned successfully</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -1288,7 +1308,7 @@ namespace JadeX.AllegroAPI
         Task<PublicTablesDto> GetTablesUsingGET();
 
         /// <summary>Create a size table</summary>
-        /// <remarks>Use this resource to create size table. Read more: <a href="../../news/tabele-rozmiarow-zmieniamy-istniejacy-zasob-i-dodajemy-nowe-zasoby-do-ich-obslugi-k1nyd21A4fP" target="_blank">PL</a> / <a href="../../news/size-tables-we-change-the-existing-resource-and-add-new-resources-to-handle-them-jn91bynlbC9" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create size table. Read more: <a href="https://developer.allegro.pl/news/tabele-rozmiarow-zmieniamy-istniejacy-zasob-i-dodajemy-nowe-zasoby-do-ich-obslugi-k1nyd21A4fP" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/size-tables-we-change-the-existing-resource-and-add-new-resources-to-handle-them-jn91bynlbC9" target="_blank">EN</a>.</remarks>
         /// <param name="body">Size table details</param>
         /// <returns>Size table created successfully</returns>
         /// <throws cref="ApiException">
@@ -1302,7 +1322,7 @@ namespace JadeX.AllegroAPI
         Task<PublicTableDto> CreateTableUsingPOST([Body] SizeTablePostRequest body);
 
         /// <summary>Get the size tables templates</summary>
-        /// <remarks>Use this resource to get all size tables templates. Read more: <a href="../../news/tabele-rozmiarow-zmieniamy-istniejacy-zasob-i-dodajemy-nowe-zasoby-do-ich-obslugi-k1nyd21A4fP" target="_blank">PL</a> / <a href="../../news/size-tables-we-change-the-existing-resource-and-add-new-resources-to-handle-them-jn91bynlbC9" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get all size tables templates. Read more: <a href="https://developer.allegro.pl/news/tabele-rozmiarow-zmieniamy-istniejacy-zasob-i-dodajemy-nowe-zasoby-do-ich-obslugi-k1nyd21A4fP" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/size-tables-we-change-the-existing-resource-and-add-new-resources-to-handle-them-jn91bynlbC9" target="_blank">EN</a>.</remarks>
         /// <returns>Size tables templates returned successfully</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -1314,7 +1334,7 @@ namespace JadeX.AllegroAPI
         Task<SizeTableTemplatesResponse> GetTablesTemplatesUsingGET();
 
         /// <summary>Get the user's return policies</summary>
-        /// <remarks>Use this resource to get seller return policies listing. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-zwrotow-przypisane-do-konta" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-return-policies-assigned-to-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get seller return policies listing. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-zwrotow-przypisane-do-konta" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-return-policies-assigned-to-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <returns>OK</returns>
@@ -1329,7 +1349,7 @@ namespace JadeX.AllegroAPI
         Task<ReturnPoliciesList_ReturnPolicyBasic_> GetPublicSellerListingUsingGET1([Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Create new user's return policy</summary>
-        /// <remarks>Use this resource to create a return policy definition. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-informacje-o-warunkach-zwrotow" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-return-policy-information" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a return policy definition. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-informacje-o-warunkach-zwrotow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-return-policy-information" target="_blank">EN</a>.</remarks>
         /// <param name="body">Return Policy</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -1344,7 +1364,7 @@ namespace JadeX.AllegroAPI
         Task<ReturnPolicyResponse> CreateAfterSalesServiceReturnPolicyUsingPOST([Body] ReturnPolicyRequest body);
 
         /// <summary>Get the user's return policy</summary>
-        /// <remarks>Use this resource to get a return policy details. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-zwrotow-przypisane-do-konta" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-return-policies-assigned-to-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a return policy details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-zwrotow-przypisane-do-konta" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-return-policies-assigned-to-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="returnPolicyId">The ID of the return policy.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1358,7 +1378,7 @@ namespace JadeX.AllegroAPI
         Task<ReturnPolicyResponse> GetAfterSalesServiceReturnPolicyUsingGET(string returnPolicyId);
 
         /// <summary>Change the user's return policy</summary>
-        /// <remarks>Use this resource to modify the return policy details. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-edytowac-informacje-o-warunkach-zwrotu" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-return-policy-information" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify the return policy details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-edytowac-informacje-o-warunkach-zwrotu" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-return-policy-information" target="_blank">EN</a>.</remarks>
         /// <param name="returnPolicyId">The ID of the return policy.</param>
         /// <param name="body">Return Policy</param>
         /// <returns>OK</returns>
@@ -1375,7 +1395,7 @@ namespace JadeX.AllegroAPI
         Task<ReturnPolicyResponse> UpdateAfterSalesServiceReturnPolicyUsingPUT(string returnPolicyId, [Body] ReturnPolicyRequest body);
 
         /// <summary>Get the user's implied warranties</summary>
-        /// <remarks>Use this resource to get seller implied warranties listing. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-reklamacji-przypisane-do-konta" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-implied-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get seller implied warranties listing. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-reklamacji-przypisane-do-konta" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-implied-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <returns>OK</returns>
@@ -1390,7 +1410,7 @@ namespace JadeX.AllegroAPI
         Task<ImpliedWarrantiesList_ImpliedWarrantyBasic_> GetPublicSellerListingUsingGET([Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Create new user's implied warranty</summary>
-        /// <remarks>Use this resource to create an implied warranty definition. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-informacje-o-warunkach-reklamacji" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-implied-warranty-information" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create an implied warranty definition. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-informacje-o-warunkach-reklamacji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-implied-warranty-information" target="_blank">EN</a>.</remarks>
         /// <param name="body">Implied warranty</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -1405,7 +1425,7 @@ namespace JadeX.AllegroAPI
         Task<ImpliedWarrantyResponse> CreateAfterSalesServiceImpliedWarrantyUsingPOST([Body] ImpliedWarrantyRequest body);
 
         /// <summary>Get the user's implied warranty</summary>
-        /// <remarks>Use this resource to get an implied warranty details. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-reklamacji-przypisane-do-konta" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-implied-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get an implied warranty details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-warunki-reklamacji-przypisane-do-konta" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-implied-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="impliedWarrantyId">The ID of the implied warranty.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1419,7 +1439,7 @@ namespace JadeX.AllegroAPI
         Task<ImpliedWarrantyResponse> GetAfterSalesServiceImpliedWarrantyUsingGET(string impliedWarrantyId);
 
         /// <summary>Change the user's implied warranty</summary>
-        /// <remarks>Use this resource to modify the implied warranty details. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-edytowac-informacje-o-warunkach-reklamacji" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-implied-warranty-information" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify the implied warranty details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-edytowac-informacje-o-warunkach-reklamacji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-implied-warranty-information" target="_blank">EN</a>.</remarks>
         /// <param name="impliedWarrantyId">The ID of the implied warranty.</param>
         /// <param name="body">Implied warranty</param>
         /// <returns>OK</returns>
@@ -1436,7 +1456,7 @@ namespace JadeX.AllegroAPI
         Task<ImpliedWarrantyResponse> UpdateAfterSalesServiceImpliedWarrantyUsingPUT(string impliedWarrantyId, [Body] ImpliedWarrantyRequest body);
 
         /// <summary>Get the user's warranties</summary>
-        /// <remarks>Use this resource to get seller warranties listing. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-informacje-o-gwarancjach-przypisanych-do-konta" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get seller warranties listing. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-informacje-o-gwarancjach-przypisanych-do-konta" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <returns>OK</returns>
@@ -1451,7 +1471,7 @@ namespace JadeX.AllegroAPI
         Task<WarrantiesList_WarrantyBasic_> GetPublicSellerListingUsingGET2([Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Create new user's warranty</summary>
-        /// <remarks>Use this resource to create a warranty definition. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-informacje-o-gwarancjach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-warranty-information" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a warranty definition. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-informacje-o-gwarancjach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-warranty-information" target="_blank">EN</a>.</remarks>
         /// <param name="body">Warranty</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -1466,7 +1486,7 @@ namespace JadeX.AllegroAPI
         Task<WarrantyResponse> CreateAfterSalesServiceWarrantyUsingPOST([Body] WarrantyRequest body);
 
         /// <summary>Get the user's warranty</summary>
-        /// <remarks>Use this resource to get a warranty details. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-informacje-o-gwarancjach-przypisanych-do-konta" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a warranty details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-informacje-o-gwarancjach-przypisanych-do-konta" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-warranties-assigned-to-the-account" target="_blank">EN</a>.</remarks>
         /// <param name="warrantyId">The ID of the warranty.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1480,7 +1500,7 @@ namespace JadeX.AllegroAPI
         Task<WarrantyResponse> GetAfterSalesServiceWarrantyUsingGET(string warrantyId);
 
         /// <summary>Change the user's warranty</summary>
-        /// <remarks>Use this resource to modify the warranty details. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-edytowac-informacje-o-gwarancjach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-warranty-information" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify the warranty details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-edytowac-informacje-o-gwarancjach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-update-warranty-information" target="_blank">EN</a>.</remarks>
         /// <param name="warrantyId">The ID of the warranty.</param>
         /// <param name="body">Warranty</param>
         /// <returns>OK</returns>
@@ -1504,7 +1524,7 @@ namespace JadeX.AllegroAPI
         /// 2. Use the upload URL to submit the PDF file (*PUT /after-sales-service-conditions/attachments/{attachmentId}*),
         /// 3. Create (or update) warranty with attachment (*POST /after-sales-service-conditions/warranties*).
         /// 
-        /// Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-zalacznik-do-informacji-o-gwarancjach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-attachment-to-warranty-information" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-zalacznik-do-informacji-o-gwarancjach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-attachment-to-warranty-information" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="body">After sale services attachment</param>
         /// <returns>Attachment created successfully.</returns>
@@ -1524,7 +1544,7 @@ namespace JadeX.AllegroAPI
         /// <remarks>
         /// Upload an after sale services attachment.
         /// This operation should be used after creating an offer attachment with *POST /sale/offer-attachments*
-        /// **Important!** You can find the URL address to upload the file to our server in the *Location* response header of *POST /after-sales-service-conditions/attachments*. The URL is unique and one-time. As its format may change in time, you should always use the address from the header. Do not compose the address on your own. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-zalacznik-do-informacji-o-gwarancjach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-attachment-to-warranty-information" target="_blank">EN</a>.
+        /// **Important!** You can find the URL address to upload the file to our server in the *Location* response header of *POST /after-sales-service-conditions/attachments*. The URL is unique and one-time. As its format may change in time, you should always use the address from the header. Do not compose the address on your own. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-zalacznik-do-informacji-o-gwarancjach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-attachment-to-warranty-information" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="attachmentId">The ID of the attachment.</param>
         /// <returns>File uploaded correctly.</returns>
@@ -1542,7 +1562,7 @@ namespace JadeX.AllegroAPI
         Task<AfterSalesServicesAttachment> UploadAfterSalesServiceConditionsAttachmentUsingPUT(string attachmentId,  StreamPart body);
 
         /// <summary>Get the user's current offer quotes</summary>
-        /// <remarks>This endpoint returns current offer quotes (listing and promo fees) cycles for authenticated user and list of offers. Read more: <a href="../../tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#data-naliczenia-kolejnej-oplaty" target="_blank">PL</a> / <a href="../../tutorials/how-to-check-the-fees-3An6Wame3Um#check-when-a-fee-is-charged" target="_blank">EN</a>.</remarks>
+        /// <remarks>This endpoint returns current offer quotes (listing and promo fees) cycles for authenticated user and list of offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#data-naliczenia-kolejnej-oplaty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-check-the-fees-3An6Wame3Um#check-when-a-fee-is-charged" target="_blank">EN</a>.</remarks>
         /// <param name="offer_id">List of offer Ids, maximum 20 values.</param>
         /// <returns>Returns current offer quotes</returns>
         /// <throws cref="ApiException">
@@ -1586,7 +1606,7 @@ namespace JadeX.AllegroAPI
         /// You can build a variant set by grouping offers using combination of available parameters - examples are available in <i>Request samples</i>.
         /// 
         /// 
-        /// More general information about variant sets can be found [here](https://allegro.pl/pomoc/faq/wielowariantowosc-jak-polaczyc-oferty-xGgaOByGgTb#dodatkowe-informacje). Read more: <a href="../../tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#utworz-oferte-wielowariantowa" target="_blank">PL</a> / <a href="../../tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#create-a-multi-variant-offer" target="_blank">EN</a>.
+        /// More general information about variant sets can be found [here](https://allegro.pl/pomoc/faq/wielowariantowosc-jak-polaczyc-oferty-xGgaOByGgTb#dodatkowe-informacje). Read more: <a href="https://developer.allegro.pl/tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#utworz-oferte-wielowariantowa" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#create-a-multi-variant-offer" target="_blank">EN</a>.
         /// </remarks>
         /// <returns>Variant set created successfully</returns>
         /// <throws cref="ApiException">
@@ -1600,7 +1620,7 @@ namespace JadeX.AllegroAPI
         Task<VariantSetResponse> CreateVariantSet([Body] object? body = default);
 
         /// <summary>Get the user's variant sets</summary>
-        /// <remarks>Use this resource to get created variant sets. The returned variant sets are ordered by name. Read more: <a href="../../tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#pobierz-liste-ofert-wielowariantowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#retrieve-a-multi-variant-offer" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get created variant sets. The returned variant sets are ordered by name. Read more: <a href="https://developer.allegro.pl/tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#pobierz-liste-ofert-wielowariantowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#retrieve-a-multi-variant-offer" target="_blank">EN</a>.</remarks>
         /// <param name="offset">Index of first returned variant set.</param>
         /// <param name="limit">Maximum number of returned variant sets.</param>
         /// <param name="query">Filter variant sets by name or offer id.</param>
@@ -1644,7 +1664,7 @@ namespace JadeX.AllegroAPI
         /// You can build a variant set by grouping offers using combination of available parameters - examples are available in <i>Request samples</i>.
         /// 
         /// 
-        /// More general information about variant sets can be found [here](https://allegro.pl/pomoc/faq/wielowariantowosc-jak-polaczyc-oferty-xGgaOByGgTb#dodatkowe-informacje). Read more: <a href="../../tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#edytuj-oferte-wielowariantowa" target="_blank">PL</a> / <a href="../../tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#update-a-multi-variant-offer" target="_blank">EN</a>.
+        /// More general information about variant sets can be found [here](https://allegro.pl/pomoc/faq/wielowariantowosc-jak-polaczyc-oferty-xGgaOByGgTb#dodatkowe-informacje). Read more: <a href="https://developer.allegro.pl/tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#edytuj-oferte-wielowariantowa" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#update-a-multi-variant-offer" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="setId">Variant set identifier.</param>
         /// <returns>Variant set updated successfully</returns>
@@ -1659,7 +1679,7 @@ namespace JadeX.AllegroAPI
         Task<VariantSetResponse> UpdateVariantSet(string setId, [Body] object? body = default);
 
         /// <summary>Get a variant set</summary>
-        /// <remarks>Use this resource to get variant set by set id. Read more: <a href="../../tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#edytuj-oferte-wielowariantowa" target="_blank">PL</a> / <a href="../../tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#update-a-multi-variant-offer" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get variant set by set id. Read more: <a href="https://developer.allegro.pl/tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#edytuj-oferte-wielowariantowa" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#update-a-multi-variant-offer" target="_blank">EN</a>.</remarks>
         /// <param name="setId">Variant set identifier.</param>
         /// <returns>Variant set returned successfully</returns>
         /// <throws cref="ApiException">
@@ -1673,7 +1693,7 @@ namespace JadeX.AllegroAPI
         Task<VariantSetResponse> GetVariantSet(string setId);
 
         /// <summary>Delete a variant set</summary>
-        /// <remarks>Use this resource to delete variant set by id. Offers included in variant set will not be stopped or modified by this operation. Read more: <a href="../../tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#usun-oferte-wielowariantowa" target="_blank">PL</a> / <a href="../../tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#remove-a-multi-variant-offer" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete variant set by id. Offers included in variant set will not be stopped or modified by this operation. Read more: <a href="https://developer.allegro.pl/tutorials/jak-utworzyc-oferte-wielowariantowa-oA6ZYBg5XFo#usun-oferte-wielowariantowa" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-create-a-multi-variant-offer-nn9DOL3nXs2#remove-a-multi-variant-offer" target="_blank">EN</a>.</remarks>
         /// <param name="setId">Variant set identifier.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -1696,7 +1716,7 @@ namespace JadeX.AllegroAPI
         /// * \- https://upload.allegro.pl for Production
         /// * \- https://upload.allegro.pl.allegrosandbox.pl for Sandbox
         /// 
-        /// Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zdjecia" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#images" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zdjecia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#images" target="_blank">EN</a>.
         /// More information about rules for photos in an offer's gallery and description you will find <a href="https://allegro.pl/dla-sprzedajacych/nowe-zasady-dla-zdjec-w-galerii-i-w-opisie-YLlAAa2oXf7" target="_blank">here</a>.
         /// </remarks>
         /// <returns>Image uploaded correctly</returns>
@@ -1727,13 +1747,14 @@ namespace JadeX.AllegroAPI
         /// * Energy label (ENERGY_LABEL). Allowed media types: JPEG, JPG, PNG
         /// * Product information sheet (PRODUCT_INFORMATION_SHEET). Allowed media types: PDF
         /// * Tire label (TIRE_LABEL). Allowed media types: JPEG, JPG, PNG
+        /// * Safety information manual (SAFETY_INFORMATION_MANUAL). Allowed media types: PDF
         /// 
         /// Uploading attachments flow:
         /// 1. Create an attachment object to receive an upload URL (*POST /sale/offer-attachments*),
         /// 2. Use the upload URL to submit the file (*PUT /sale/offer-attachments/{attachmentId}*),
         /// 3. Add attachments to the offer (*PUT /sale/offers/{offerId}*).
         /// 
-        /// Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zalaczniki" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#attachments" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zalaczniki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#attachments" target="_blank">EN</a>.
         /// </remarks>
         /// <returns>Attachment created successfully</returns>
         /// <throws cref="ApiException">
@@ -1751,7 +1772,7 @@ namespace JadeX.AllegroAPI
         /// <remarks>
         /// Upload an offer attachment.
         /// This operation should be used after creating an offer attachment with *POST /sale/offer-attachments*
-        /// **Important!** You can find the URL address to upload the file to our server in the *Location* response header of *POST /sale/offer-attachments*. The URL is unique and one-time. As its format may change in time, you should always use the address from the header. Do not compose the address on your own. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zalaczniki" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#attachments" target="_blank">EN</a>.
+        /// **Important!** You can find the URL address to upload the file to our server in the *Location* response header of *POST /sale/offer-attachments*. The URL is unique and one-time. As its format may change in time, you should always use the address from the header. Do not compose the address on your own. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#zalaczniki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#attachments" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="attachmentId">The ID of the attachment.</param>
         /// <returns>File uploaded correctly</returns>
@@ -1767,10 +1788,10 @@ namespace JadeX.AllegroAPI
 
         /// <summary>Search offers</summary>
         /// <remarks>
-        /// <a href="../../listing/" target="_blank">Access for verified applications only</a>. Use this resource to get a list of offers based on the provided query parameters. At least one of: phrase, seller.id or category.id is required. Additional available parameters vary depending on category.id. The parameters are defined in the filters entity.
+        /// <a href="https://developer.allegro.pl/listing/" target="_blank">Access for verified applications only</a>. Use this resource to get a list of offers based on the provided query parameters. At least one of: phrase, seller.id or category.id is required. Additional available parameters vary depending on category.id. The parameters are defined in the filters entity.
         /// Changing the marketplace, country of delivery, currency or language may impact the availability of offers and filters. Note that requests for closed offers and searching by descriptions may be limited.
         /// 
-        /// Read more: <a href="../../tutorials/jak-wyszukiwac-przegladac-oferty-ZM9YAKAwgfk" target="_blank">PL</a> / <a href="../../tutorials/how-to-search-and-browse-offers-XxWm2ykMYHl" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-wyszukiwac-przegladac-oferty-ZM9YAKAwgfk" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-search-and-browse-offers-XxWm2ykMYHl" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="category_id">The identifier of the category, where you want to search for offers.</param>
         /// <param name="phrase">The search phrase. The phrase is searched in different fields of the offers depending on the value of the `searchMode` parameter.</param>
@@ -1865,7 +1886,7 @@ namespace JadeX.AllegroAPI
         Task<ListingResponse> GetListing([Query, AliasAs("category.id")] string? category_id = default, [Query] string? phrase = default, [Query, AliasAs("seller.id")] string? seller_id = default, [Query, AliasAs("seller.login")] string? seller_login = default, [Query] string? marketplaceId = default, [Query, AliasAs("shipping.country")] string? shipping_country = default, [Query] string? currency = default, [Query] SearchMode? searchMode = default, [Query] int? offset = default, [Query] int? limit = default, [Query] Sort2? sort = default, [Query] string? include = default, [Query] bool? fallback = default, [Query, AliasAs("Dynamic filters")] IDictionary<string, string>? dynamic_filters = default, [Header("Accept-Language")] string? accept_Language = default);
 
         /// <summary>Get order events</summary>
-        /// <remarks>Use this resource to return events that allow you to monitor actions which clients perform, i.e. making a purchase, filling in the checkout form (FOD), finishing payment process, making a surcharge. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#dziennik-zdarzen" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#event-log" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to return events that allow you to monitor actions which clients perform, i.e. making a purchase, filling in the checkout form (FOD), finishing payment process, making a surcharge. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#dziennik-zdarzen" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#event-log" target="_blank">EN</a>.</remarks>
         /// <param name="from">You can use the event ID to retrieve subsequent chunks of events.</param>
         /// <param name="type">
         /// Specify array of event types for filtering. Allowed values are:
@@ -1889,7 +1910,7 @@ namespace JadeX.AllegroAPI
         Task<OrderEventsList> GetOrderEventsUsingGET([Query] string? from = default, [Query(CollectionFormat.Multi)] IEnumerable<string>? type = default, [Query] int? limit = default);
 
         /// <summary>Get order events statistics</summary>
-        /// <remarks>Use this resource to returns object that contains event id and occurrence date of the latest event. It gives you current starting point for reading events. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-znalezc-najnowsze-zdarzenie" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-find-the-newest-event" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to returns object that contains event id and occurrence date of the latest event. It gives you current starting point for reading events. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-znalezc-najnowsze-zdarzenie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-find-the-newest-event" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -1900,7 +1921,7 @@ namespace JadeX.AllegroAPI
         Task<OrderEventStats> GetOrderEventsStatisticsUsingGET();
 
         /// <summary>Get the user's orders</summary>
-        /// <remarks>Use this resource to get an order list. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#lista-zamowien" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#order-list" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get an order list. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#lista-zamowien" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#order-list" target="_blank">EN</a>.</remarks>
         /// <param name="offset">Index of first returned checkout-form from all search results.</param>
         /// <param name="limit">Maximum number of checkout-forms in response.</param>
         /// <param name="status">
@@ -1949,7 +1970,7 @@ namespace JadeX.AllegroAPI
         Task<CheckoutForms> GetListOfOrdersUsingGET([Query] int? offset = default, [Query] int? limit = default, [Query] string? status = default, [Query, AliasAs("fulfillment.status")] string? fulfillment_status = default, [Query, AliasAs("fulfillment.shipmentSummary.lineItemsSent")] string? fulfillment_shipmentSummary_lineItemsSent = default, [Query, AliasAs("lineItems.boughtAt.lte")] System.DateTimeOffset? lineItems_boughtAt_lte = default, [Query, AliasAs("lineItems.boughtAt.gte")] System.DateTimeOffset? lineItems_boughtAt_gte = default, [Query, AliasAs("payment.id")] string? payment_id = default, [Query, AliasAs("surcharges.id")] string? surcharges_id = default, [Query, AliasAs("delivery.method.id")] string? delivery_method_id = default, [Query, AliasAs("buyer.login")] string? buyer_login = default, [Query, AliasAs("marketplace.id")] string? marketplace_id = default, [Query, AliasAs("updatedAt.lte")] System.DateTimeOffset? updatedAt_lte = default, [Query, AliasAs("updatedAt.gte")] System.DateTimeOffset? updatedAt_gte = default, [Query] Sort3? sort = default);
 
         /// <summary>Get an order's details</summary>
-        /// <remarks>Use this resource to get an order details. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#szczegoly-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#order-details" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get an order details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#szczegoly-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#order-details" target="_blank">EN</a>.</remarks>
         /// <param name="id">Checkout form identifier.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -1966,7 +1987,7 @@ namespace JadeX.AllegroAPI
         /// <remarks>
         /// Shipping carriers are essential to provide accurate tracking experience for customers. Use this resource to get a list of all available shipping carriers.
         /// 
-        /// The response of this resource can be stored in accordance with returned caching headers. Read more: <a href="../../news/nowy-zasob-do-pobrania-identyfikatorow-przewoznikow-8dmljjGRGUE" target="_blank">PL</a> / <a href="../../news/new-resource-to-retrieve-available-delivery-company-id-VL6zDDdr4hk" target="_blank">EN</a>.
+        /// The response of this resource can be stored in accordance with returned caching headers. Read more: <a href="https://developer.allegro.pl/news/nowy-zasob-do-pobrania-identyfikatorow-przewoznikow-8dmljjGRGUE" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resource-to-retrieve-available-delivery-company-id-VL6zDDdr4hk" target="_blank">EN</a>.
         /// </remarks>
         /// <returns>List of available shipping carriers.</returns>
         /// <throws cref="ApiException">
@@ -1979,7 +2000,7 @@ namespace JadeX.AllegroAPI
         Task<OrdersShippingCarriersResponse> GetOrdersCarriersUsingGET();
 
         /// <summary>Get a list of parcel tracking numbers</summary>
-        /// <remarks>Get a list of parcel tracking numbers currently assigned to the order. Orders can be retrieved using REST API resource GET /order/checkout-forms. Please note that the shipment list may contain parcel tracking numbers added through other channels such as Moje Allegro or by the carrier that delivers the parcel. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-numery-przesylek-dodane-do-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#retrieving-tracking-numbers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Get a list of parcel tracking numbers currently assigned to the order. Orders can be retrieved using REST API resource GET /order/checkout-forms. Please note that the shipment list may contain parcel tracking numbers added through other channels such as Moje Allegro or by the carrier that delivers the parcel. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-numery-przesylek-dodane-do-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#retrieving-tracking-numbers" target="_blank">EN</a>.</remarks>
         /// <param name="id">Order identifier.</param>
         /// <returns>Returns a list of parcel tracking numbers (shipments)</returns>
         /// <throws cref="ApiException">
@@ -1992,7 +2013,7 @@ namespace JadeX.AllegroAPI
         Task<CheckoutFormOrderWaybillResponse> GetOrderShipmentsUsingGET(string id);
 
         /// <summary>Add a parcel tracking number</summary>
-        /// <remarks>Add a parcel tracking number (shipment) to given order line items. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-dodac-numer-przesylki-do-przedmiotu-w-zamowieniu" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#add-tracking-number-to-order" target="_blank">EN</a>.</remarks>
+        /// <remarks>Add a parcel tracking number (shipment) to given order line items. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-dodac-numer-przesylki-do-przedmiotu-w-zamowieniu" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#add-tracking-number-to-order" target="_blank">EN</a>.</remarks>
         /// <param name="id">Order identifier.</param>
         /// <param name="body">request</param>
         /// <returns>The request is OK and the parcel tracking number will be assigned to the order</returns>
@@ -2009,7 +2030,7 @@ namespace JadeX.AllegroAPI
         Task<CheckoutFormAddWaybillCreated> CreateOrderShipmentsUsingPOST(string id, [Body] CheckoutFormAddWaybillRequest body);
 
         /// <summary>Set seller order status</summary>
-        /// <remarks>Use to set seller order status. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#zmiana-statusu-realizacji-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#order-fulfillment-status-change" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use to set seller order status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#zmiana-statusu-realizacji-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#order-fulfillment-status-change" target="_blank">EN</a>.</remarks>
         /// <param name="id">Order identifier.</param>
         /// <param name="checkoutForm_revision">Checkout form revision.</param>
         /// <param name="body">request</param>
@@ -2026,7 +2047,7 @@ namespace JadeX.AllegroAPI
         Task SetOrderFulfillmentUsingPUT(string id, [Body] CheckoutFormFulfillment body, [Query, AliasAs("checkoutForm.revision")] string? checkoutForm_revision = default);
 
         /// <summary>Get order invoices details</summary>
-        /// <remarks>Use to get invoices details including antivirus scan results and EPT invoice verification status. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-informacje-o-fakturach-dodanych-do-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#retrieve-information-about-invoices" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use to get invoices details including antivirus scan results and EPT invoice verification status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-informacje-o-fakturach-dodanych-do-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#retrieve-information-about-invoices" target="_blank">EN</a>.</remarks>
         /// <param name="id">Order identifier.</param>
         /// <returns>Invoices fetched successfully</returns>
         /// <throws cref="ApiException">
@@ -2039,7 +2060,7 @@ namespace JadeX.AllegroAPI
         Task<CheckoutFormsOrderInvoices> GetOrderInvoicesDetails(string id);
 
         /// <summary>Post new invoice</summary>
-        /// <remarks>Use to add new invoice metadata. Before you send an invoice file, you need to initialize the invoice instance with the required parameters. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-dodac-fakture-do-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#add-an-invoice-to-the-order" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use to add new invoice metadata. Before you send an invoice file, you need to initialize the invoice instance with the required parameters. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-dodac-fakture-do-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#add-an-invoice-to-the-order" target="_blank">EN</a>.</remarks>
         /// <param name="id">Order identifier.</param>
         /// <param name="body">request</param>
         /// <returns>Invoice created successfully</returns>
@@ -2048,14 +2069,15 @@ namespace JadeX.AllegroAPI
         /// 403: You do not have permission to access this order
         /// 404: Order with given id does not exist
         /// 409: Order with given id already has seller invoice
-        /// 422: Some of the provided data is invalid or order does not allow an invoice or order\'s payment is rejected
+        /// 422: Some of the provided data is invalid or order does not allow an invoice or order\'s payment is rejected or previously uploaded file is still in scanning.
+        /// 429: You\'re trying to add another metadata too fast. Upload a file to previously added metadata or wait a few seconds before adding next metadata.
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Post("/order/checkout-forms/{id}/invoices")]
         Task<CheckFormsNewOrderInvoiceId> AddOrderInvoicesMetadata(string id, [Body] CheckFormsNewOrderInvoice body);
 
         /// <summary>Upload invoice file</summary>
-        /// <remarks>Use to upload invoice file to match created invoice metadata. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-dodac-fakture-do-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#add-an-invoice-to-the-order" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use to upload invoice file to match created invoice metadata. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-dodac-fakture-do-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#add-an-invoice-to-the-order" target="_blank">EN</a>.</remarks>
         /// <param name="id">Order identifier.</param>
         /// <param name="invoiceId">Invoice identifier.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -2072,7 +2094,7 @@ namespace JadeX.AllegroAPI
         Task UploadOrderInvoiceFile(string id, string invoiceId,  StreamPart body);
 
         /// <summary>Get Allegro pickup drop off points</summary>
-        /// <remarks>Get a list of Allegro pickup drop off points. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-liste-punktow-allegro" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-list-of-allegro-pickup-drop-off-points" target="_blank">EN</a>.</remarks>
+        /// <remarks>Get a list of Allegro pickup drop off points. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-liste-punktow-allegro" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-list-of-allegro-pickup-drop-off-points" target="_blank">EN</a>.</remarks>
         /// <param name="carriers">List of carrier ids to filter the drop off/pick up points to only the ones where any of the listed carriers operate. In case of an empty list, all points are returned.</param>
         /// <param name="if_Modified_Since">Date of last data modification. If data has been modified after specified date, full set of data is returned. If header is not specified, full set of data is returned. Date has to be provided in HTTP-date format. Information about date (the same HTTP-date format) of last modified data is available in response - `Last-Modified`.</param>
         /// <returns>Returns a list of Allegro pickup drop off points</returns>
@@ -2087,7 +2109,7 @@ namespace JadeX.AllegroAPI
         Task<AllegroPickupDropOffPointsResponse> GetAllegroPickupDropOffPointsGET([Query(CollectionFormat.Multi)] IEnumerable<AllegroCarrier>? carriers = default, [Header("If-Modified-Since")] string? if_Modified_Since = default);
 
         /// <summary>Get carrier parcel tracking history</summary>
-        /// <remarks>Get tracking history for parcels sent via the Ship with Allegro tool using <a href="#operation/getAvailableDeliveryServices" target="_blank">a delivery service</a>. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-historie-statusow-przesylek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-parcels-statuses-history" target="_blank">EN</a>.</remarks>
+        /// <remarks>Get tracking history for parcels sent via the Ship with Allegro tool using <a href="#operation/getAvailableDeliveryServices" target="_blank">a delivery service</a>. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-historie-statusow-przesylek" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-parcels-statuses-history" target="_blank">EN</a>.</remarks>
         /// <param name="carrierId">Carrier identifier.</param>
         /// <param name="waybill">Waybill number (parcel tracking number). Example: `waybill=AAA0000E5D201&waybill=BBB00000E5D202` - returns parcel tracking history for `AAA0000E5D201` as well as for `BBB00000E5D202`.</param>
         /// <returns>Returns parcel tracking history for given waybills</returns>
@@ -2101,7 +2123,7 @@ namespace JadeX.AllegroAPI
         Task<CarrierParcelTrackingResponse> GetParcelTrackingUsingGET(string carrierId, [Query(CollectionFormat.Multi)] IEnumerable<string> waybill);
 
         /// <summary>Get the user's disputes</summary>
-        /// <remarks>Use this resource to get the list of your disputes ordered by descending opened date. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#dyskusje-na-koncie" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#all-discussions" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the list of your disputes ordered by descending opened date. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#dyskusje-na-koncie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#all-discussions" target="_blank">EN</a>.</remarks>
         /// <param name="checkoutForm_id">Checkout form identifier.</param>
         /// <param name="limit">The maximum number of disputes in a response.</param>
         /// <param name="offset">Index of first returned dispute.</param>
@@ -2118,7 +2140,7 @@ namespace JadeX.AllegroAPI
         Task<DisputeListResponse> GetListOfDisputesUsingGET([Query, AliasAs("checkoutForm.id")] System.Guid? checkoutForm_id = default, [Query] int? limit = default, [Query] int? offset = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous5>? status = default);
 
         /// <summary>Get a single dispute</summary>
-        /// <remarks>Use this resource to get a single dispute. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#szczegolowe-informacje-o-dyskusji" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#information-about-a-particular-discussion" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a single dispute. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#szczegolowe-informacje-o-dyskusji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#information-about-a-particular-discussion" target="_blank">EN</a>.</remarks>
         /// <param name="disputeId">Dispute identifier.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -2132,7 +2154,7 @@ namespace JadeX.AllegroAPI
         Task<Dispute> GetDisputeUsingGET(System.Guid disputeId);
 
         /// <summary>Get the messages within a dispute</summary>
-        /// <remarks>Use this resource to get the list of messages within dispute. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#wiadomosci-z-dyskusji" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#all-messages-within-a-discussion" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the list of messages within dispute. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#wiadomosci-z-dyskusji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#all-messages-within-a-discussion" target="_blank">EN</a>.</remarks>
         /// <param name="disputeId">Dispute identifier.</param>
         /// <param name="limit">The maximum number of messages within dispute returned in a response.</param>
         /// <param name="offset">Index of first returned message within dispute.</param>
@@ -2148,7 +2170,7 @@ namespace JadeX.AllegroAPI
         Task<DisputeMessageList> GetMessagesFromDisputeUsingGET(System.Guid disputeId, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Add a message to a dispute</summary>
-        /// <remarks>Use this resource to post a message in certain dispute. At least one of fields: 'text', 'attachment' has to be present. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#nowa-wiadomosc-w-dyskusji" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#add-a-new-message-in-the-discussion" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to post a message in certain dispute. At least one of fields: 'text', 'attachment' has to be present. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#nowa-wiadomosc-w-dyskusji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#add-a-new-message-in-the-discussion" target="_blank">EN</a>.</remarks>
         /// <param name="disputeId">Dispute identifier.</param>
         /// <returns>CREATED</returns>
         /// <throws cref="ApiException">
@@ -2165,7 +2187,7 @@ namespace JadeX.AllegroAPI
         Task<DisputeMessage> AddMessageToDisputeUsingPOST(System.Guid disputeId, [Body] object? body = default);
 
         /// <summary>Create an attachment declaration</summary>
-        /// <remarks>Use this resource to post an attachment declaration. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#deklaracja-zalacznika" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#attachment-declaration" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to post an attachment declaration. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#deklaracja-zalacznika" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#attachment-declaration" target="_blank">EN</a>.</remarks>
         /// <returns>CREATED</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -2181,7 +2203,7 @@ namespace JadeX.AllegroAPI
         /// <remarks>
         /// Upload a dispute message attachment.
         /// This operation should be used after creating an attachment declaration with *POST /sale/dispute-attachments*
-        /// **Important!** You can find the URL address to upload the file to our server in the *Location* response header of *POST /sale/dispute-attachments*. The URL is unique and one-time. As its format may change in time, you should always use the address from the header. Do not compose the address on your own. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#dodanie-zalacznika" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#adding-an-attachment" target="_blank">EN</a>.
+        /// **Important!** You can find the URL address to upload the file to our server in the *Location* response header of *POST /sale/dispute-attachments*. The URL is unique and one-time. As its format may change in time, you should always use the address from the header. Do not compose the address on your own. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#dodanie-zalacznika" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#adding-an-attachment" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="attachmentId">Attachment identifier.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -2197,7 +2219,7 @@ namespace JadeX.AllegroAPI
         Task UploadDisputeAttachmentUsingPUT(System.Guid attachmentId,  StreamPart body);
 
         /// <summary>Get an attachment</summary>
-        /// <remarks>Use this resource to get an attachment. Read more: <a href="../../tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#pobranie-zalacznika" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-discussions-VL6Yr40e5t5#attachment-related-to-the-discussion" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get an attachment. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-dyskusjami-E7Zj6gK7ysE#pobranie-zalacznika" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-discussions-VL6Yr40e5t5#attachment-related-to-the-discussion" target="_blank">EN</a>.</remarks>
         /// <param name="attachmentId">Attachment identifier.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -2211,7 +2233,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> GetAttachmentUsingGET(System.Guid attachmentId);
 
         /// <summary>Create a tag</summary>
-        /// <remarks>Use this resource to create a new tag. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="../../news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a new tag. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
         /// <param name="body">request</param>
         /// <returns>Successfully created the requested tag</returns>
         /// <throws cref="ApiException">
@@ -2226,7 +2248,7 @@ namespace JadeX.AllegroAPI
         Task<TagId> CreateTagPOST1([Body] TagRequest body);
 
         /// <summary>Get the user's tags</summary>
-        /// <remarks>Use this resource to get a list of tags defined by the specified user (Defaults: limit = 1000, offset = 0). Read more: <a href="../../news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="../../news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of tags defined by the specified user (Defaults: limit = 1000, offset = 0). Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
         /// <param name="limit">The limit of elements in the response.</param>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <returns>Successfully returned the requested list of tags</returns>
@@ -2240,7 +2262,7 @@ namespace JadeX.AllegroAPI
         Task<TagListResponse> ListSellerTagsGET1([Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Delete a tag</summary>
-        /// <remarks>Use this resource to delete the tag. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="../../news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete the tag. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
         /// <param name="tagId">Tag identifier.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -2254,7 +2276,7 @@ namespace JadeX.AllegroAPI
         Task DeleteTagUsingDELETE(string tagId);
 
         /// <summary>Modify a tag</summary>
-        /// <remarks>Use this resource to update a tag. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="../../news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>. This resource is rate limited to 1 million changes per hour.</remarks>
+        /// <remarks>Use this resource to update a tag. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>. This resource is rate limited to 1 million changes per hour.</remarks>
         /// <param name="tagId">Tag identifier.</param>
         /// <param name="body">request</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -2270,7 +2292,7 @@ namespace JadeX.AllegroAPI
         Task UpdateTagPUT(string tagId, [Body] TagRequest body);
 
         /// <summary>Assign tags to an offer</summary>
-        /// <remarks>Use this resource to assign a tag to offer. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="../../news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to assign a tag to offer. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <param name="body">request</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
@@ -2287,7 +2309,7 @@ namespace JadeX.AllegroAPI
         Task AssignTagToOfferPOST(string offerId, [Body] TagIdsRequest body);
 
         /// <summary>Get tags assigned to an offer</summary>
-        /// <remarks>Use this resource to get a list of tags assigned to offer. Read more: <a href="../../news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="../../news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of tags assigned to offer. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zarzadzaj-tagami-i-zalacznikami-w-ofertach-1nzlmKLPyHl" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-manage-tags-and-attachments-in-offers-WvGz12BXrHL" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <returns>Successfully returned list of assigned tags</returns>
         /// <throws cref="ApiException">
@@ -2301,7 +2323,7 @@ namespace JadeX.AllegroAPI
         Task<TagListResponse> ListAssignedOfferTagsGET(string offerId);
 
         /// <summary>Get offer rating</summary>
-        /// <remarks>Use this resource to get offer rating. Read more: <a href="../../news/nowy-zasob-do-pobrania-oceny-produktu-q018mmPe0H7" target="_blank">PL</a> / <a href="../../news/new-resource-to-retrieve-product-rating-q018mmPrWUX" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get offer rating. Read more: <a href="https://developer.allegro.pl/news/nowy-zasob-do-pobrania-oceny-produktu-q018mmPe0H7" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resource-to-retrieve-product-rating-q018mmPrWUX" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <returns>OK.</returns>
         /// <throws cref="ApiException">
@@ -2315,7 +2337,7 @@ namespace JadeX.AllegroAPI
         Task<OfferRating> OfferRatingGET(string offerId);
 
         /// <summary>Get all available offer promotion packages</summary>
-        /// <remarks>Use this resource to retrieve all available offer promotion packages. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-dostepne-opcje-promowania" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-available-promo-options" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve all available offer promotion packages. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-dostepne-opcje-promowania" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-available-promo-options" target="_blank">EN</a>.</remarks>
         /// <returns>Offer promotion packages returned successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -2326,7 +2348,7 @@ namespace JadeX.AllegroAPI
         Task<AvailablePromotionPackages> GetAvailableOfferPromotionPackages();
 
         /// <summary>Modify offer promotion packages</summary>
-        /// <remarks>Use this resource to modify offer promotion packages. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-lub-zmienic-opcje-promowania-w-pojedynczej-ofercie" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-or-change-promo-options-in-a-single-offer" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify offer promotion packages. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-lub-zmienic-opcje-promowania-w-pojedynczej-ofercie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-or-change-promo-options-in-a-single-offer" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <param name="body">request</param>
         /// <returns>Offer promotion packages modified successfully.</returns>
@@ -2341,7 +2363,7 @@ namespace JadeX.AllegroAPI
         Task<OfferPromoOptions> ModifyOfferPromoOptionsUsingPOST(string offerId, [Body] PromoOptionsModifications body);
 
         /// <summary>Get offer promotion packages</summary>
-        /// <remarks>Use this resource to get promotion packages assigned to an offer. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-opcje-promowania-przypisane-do-oferty" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-promo-options-assigned-to-an-offer" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get promotion packages assigned to an offer. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-opcje-promowania-przypisane-do-oferty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-promo-options-assigned-to-an-offer" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <returns>Offer promotion packages returned successfully</returns>
         /// <throws cref="ApiException">
@@ -2354,7 +2376,7 @@ namespace JadeX.AllegroAPI
         Task<OfferPromoOptions> GetOfferPromoOptionsUsingGET(string offerId);
 
         /// <summary>Get promo options for seller's offers</summary>
-        /// <remarks>Use this resource to retrieve promo options for seller offers. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-opcje-promowania-dla-wielu-ofert" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-available-promo-options-for-multiple-offers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve promo options for seller offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-pobrac-opcje-promowania-dla-wielu-ofert" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-retrieve-available-promo-options-for-multiple-offers" target="_blank">EN</a>.</remarks>
         /// <param name="limit">Limit of promo options per page.</param>
         /// <param name="offset">Distance between the beginning of the document and the point from which promo options are returned.</param>
         /// <returns>Promo options for seller offers successfully returned.</returns>
@@ -2368,7 +2390,7 @@ namespace JadeX.AllegroAPI
         Task<OfferPromoOptionsForSeller> GetPromoOptionsForSellerOffersUsingGET([Query] int? limit = default, [Query] long? offset = default);
 
         /// <summary>Batch offer promotion package modification</summary>
-        /// <remarks>Use this resource to modify promotion packages on multiple offers at once. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-lub-edytowac-opcje-promowania-na-wielu-ofertach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-or-change-promo-options-in-multiple-offers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to modify promotion packages on multiple offers at once. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-lub-edytowac-opcje-promowania-na-wielu-ofertach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-or-change-promo-options-in-multiple-offers" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command identifier. Must be a UUID.</param>
         /// <returns>Command was registered</returns>
         /// <throws cref="ApiException">
@@ -2382,7 +2404,7 @@ namespace JadeX.AllegroAPI
         Task<PromoGeneralReport> PromoModificationCommandUsingPUT(string commandId, [Body] object? body = default);
 
         /// <summary>Modification command summary</summary>
-        /// <remarks>Use this resource to find out how many offers were edited within one {commandId}. You will receive a summary with a number of successfully edited offers and errors. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-lub-edytowac-opcje-promowania-na-wielu-ofertach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-or-change-promo-options-in-multiple-offers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to find out how many offers were edited within one {commandId}. You will receive a summary with a number of successfully edited offers and errors. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-dodac-lub-edytowac-opcje-promowania-na-wielu-ofertach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-add-or-change-promo-options-in-multiple-offers" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <returns>Summary successfully returned.</returns>
         /// <throws cref="ApiException">
@@ -2396,7 +2418,7 @@ namespace JadeX.AllegroAPI
         Task<PromoGeneralReport> GetPromoModificationCommandResultUsingGET(string commandId);
 
         /// <summary>Modification command detailed result</summary>
-        /// <remarks>Use this resource to retrieve the result of an offer modification command. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-sprawdzic-szczegolowy-raport-zadania" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-check-a-detailed-report-of-your-task" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve the result of an offer modification command. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-sprawdzic-szczegolowy-raport-zadania" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-check-a-detailed-report-of-your-task" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command identifier.</param>
         /// <param name="limit">The limit of returned items.</param>
         /// <param name="offset">The offset of returned items.</param>
@@ -2412,7 +2434,7 @@ namespace JadeX.AllegroAPI
         Task<PromoModificationReport> GetPromoModificationCommandDetailedResultUsingGET(string commandId, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Get Smart! classification report of the particular offer</summary>
-        /// <remarks>Use this resource to get a full Smart! offer classification report of one of your offers. Please keep in mind you have to meet Smart! seller conditions first - for more details, use *GET /sale/smart*. To learn more about Smart! offer requirements, see our knowledge base article: [PL](https://allegro.pl/pomoc/dla-sprzedajacych/informacje-dla-sprzedajacych/co-zrobic-aby-moje-oferty-byly-oznaczone-ikona-allegro-smart-lDkP8VbKncV) / [EN](https://allegro.pl/help/for-sellers/allegro-smart-for-sellers/how-can-i-make-my-offers-be-marked-with-the-allegro-smart-badge-rKD1RV30jFM). Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#klasyfikacja-oferty" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#offer-classification" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a full Smart! offer classification report of one of your offers. Please keep in mind you have to meet Smart! seller conditions first - for more details, use *GET /sale/smart*. To learn more about Smart! offer requirements, see our knowledge base article: [PL](https://allegro.pl/pomoc/dla-sprzedajacych/informacje-dla-sprzedajacych/co-zrobic-aby-moje-oferty-byly-oznaczone-ikona-allegro-smart-lDkP8VbKncV) / [EN](https://allegro.pl/help/for-sellers/allegro-smart-for-sellers/how-can-i-make-my-offers-be-marked-with-the-allegro-smart-badge-rKD1RV30jFM). Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#klasyfikacja-oferty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#offer-classification" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">Offer identifier.</param>
         /// <param name="marketplaceId">Marketplace for which offer classification report will be returned. If not specified, the result of the offer's base marketplace will be returned.</param>
         /// <returns>Successfully returned offer Smart! classification report</returns>
@@ -2429,7 +2451,7 @@ namespace JadeX.AllegroAPI
         Task<SmartOfferClassificationReport> GetOfferSmartClassificationGET(string offerId, [Query] string? marketplaceId = default);
 
         /// <summary>Get search products results</summary>
-        /// <remarks>Use this resource to get a list of products according to provided parameters. At least ean or phrase parameter is required. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-znalezc-produkt" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-find-a-product" target="_blank">EN</a>. This resource is limited with <a href="../../tutorials/basic-information-VL6YelvVKTn#limiting-the-number-of-queries-limits" target="_blank">Leaky Bucket</a> mechanism.</remarks>
+        /// <remarks>Use this resource to get a list of products according to provided parameters. At least ean or phrase parameter is required. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-znalezc-produkt" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-find-a-product" target="_blank">EN</a>. This resource is limited with <a href="https://developer.allegro.pl/tutorials/basic-information-VL6YelvVKTn#limiting-the-number-of-queries-limits" target="_blank">Leaky Bucket</a> mechanism.</remarks>
         /// <param name="ean">The EAN values can include EAN, ISBN, and UPC identifier types. Parameter is depracated and will be removed in the future. Please use combination of phrase and mode (`GTIN`) parameters instead.</param>
         /// <param name="phrase">Search phrase.</param>
         /// <param name="mode">
@@ -2475,7 +2497,7 @@ namespace JadeX.AllegroAPI
         Task<GetSaleProductsResponse> GetSaleProducts([Query] string? ean = default, [Query] string? phrase = default, [Query] Mode? mode = default, [Query] string? language = default, [Query, AliasAs("category.id")] string? category_id = default, [Query, AliasAs("Dynamic filters")] IDictionary<string, string>? dynamic_filters = default, [Query, AliasAs("page.id")] string? page_id = default, [Query] SearchFeatures? searchFeatures = default, [Query] bool? includeDrafts = default);
 
         /// <summary>Get all data of the particular product</summary>
-        /// <remarks>Use this resource to retrieve all data of the particular product. Read more: <a href="../../tutorials/wystawianie-oferty-z-produktem-new-E7ggykoBEf0#jak-pobrac-pelne-dane-o-produkcie" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-retrieve-product-data" target="_blank">EN</a>. This resource is limited with <a href="../../tutorials/basic-information-VL6YelvVKTn#limiting-the-number-of-queries-limits" target="_blank">Leaky Bucket</a> mechanism.</remarks>
+        /// <remarks>Use this resource to retrieve all data of the particular product. Read more: <a href="https://developer.allegro.pl/tutorials/wystawianie-oferty-z-produktem-new-E7ggykoBEf0#jak-pobrac-pelne-dane-o-produkcie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-retrieve-product-data" target="_blank">EN</a>. This resource is limited with <a href="https://developer.allegro.pl/tutorials/basic-information-VL6YelvVKTn#limiting-the-number-of-queries-limits" target="_blank">Leaky Bucket</a> mechanism.</remarks>
         /// <param name="productId">The product identifier.</param>
         /// <param name="category_id">The similar category identifier. You can choose a category from 'similar categories' to filter the list of parameters available in the category context.</param>
         /// <param name="includeDrafts">Return also if product is in draft state.</param>
@@ -2492,7 +2514,7 @@ namespace JadeX.AllegroAPI
         Task<SaleProductDto> GetSaleProduct(string productId, [Query, AliasAs("category.id")] string? category_id = default, [Query] bool? includeDrafts = default, [Query] string? language = default);
 
         /// <summary>Propose a product</summary>
-        /// <remarks>Use this resource to propose a product. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-utworzyc-nowy-produkt" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-create-a-product" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to propose a product. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-utworzyc-nowy-produkt" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-create-a-product" target="_blank">EN</a>.</remarks>
         /// <returns>Product proposed successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -2507,7 +2529,7 @@ namespace JadeX.AllegroAPI
         Task<ProductProposalsResponse> ProposeSaleProduct([Body] ProductProposalsRequest body);
 
         /// <summary>Propose changes in product</summary>
-        /// <remarks>Use this resource to propose changes in product. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-zglosic-blad-w-produkcie" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-report-incorrect-data-in-a-product" target="_blank">EN</a>. This resource is limited to 100 suggestions per day for a single user.</remarks>
+        /// <remarks>Use this resource to propose changes in product. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-zglosic-blad-w-produkcie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-report-incorrect-data-in-a-product" target="_blank">EN</a>. This resource is limited to 100 suggestions per day for a single user.</remarks>
         /// <param name="productId">The product identifier.</param>
         /// <param name="accept_Language">Expected language of messages.</param>
         /// <returns>Product changes proposed successfully.</returns>
@@ -2522,32 +2544,8 @@ namespace JadeX.AllegroAPI
         [Post("/sale/products/{productId}/change-proposals")]
         Task<ProductChangeProposalDto> ProductChangeProposal(string productId, [Body] ProductChangeProposalRequest body, [Header("Accept-Language")] string? accept_Language = default);
 
-        /// <summary>[BETA] Get selection insights.</summary>
-        /// <remarks>Get products from selection insights.</remarks>
-        /// <param name="marketplaceId">The marketplace IDs on which the product is GAP to filter results. By default the marketplace ID where the user is registered.</param>
-        /// <param name="availability">Availability badges to filter results.</param>
-        /// <param name="category_id">Category ids to filter results.</param>
-        /// <param name="phrase">The search phrase. The phrase is searched in name, brands, model, gtin, manufacturer code.</param>
-        /// <param name="brand">Brand names to filter results.</param>
-        /// <param name="gtin">Gtins to filter results.</param>
-        /// <param name="manufacturerCode">Manufacturer codes to filter results.</param>
-        /// <param name="hideUnnamed">Boolean value to hide unnamed products.</param>
-        /// <param name="offset">The offset of elements in the response.</param>
-        /// <param name="limit">The limit of elements in the response.</param>
-        /// <returns>Selection insights returned successfully.</returns>
-        /// <throws cref="ApiException">
-        /// Thrown when the request returns a non-success status code:
-        /// 401: Unauthorized.
-        /// 403: Account is not a Company account type.
-        /// 422: One of parameters has invalid value.
-        /// </throws>
-        [System.Obsolete]
-        [Headers("Accept: application/vnd.allegro.beta.v1+json")]
-        [Get("/sale/selection-insights")]
-        Task<GetSelectionInsightsResponse> GetSaleSelectionInsights([Query(CollectionFormat.Multi)] IEnumerable<string>? marketplaceId = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous6>? availability = default, [Query(CollectionFormat.Multi), AliasAs("category.id")] IEnumerable<string>? category_id = default, [Query(CollectionFormat.Multi)] IEnumerable<string>? phrase = default, [Query(CollectionFormat.Multi)] IEnumerable<string>? brand = default, [Query(CollectionFormat.Multi)] IEnumerable<string>? gtin = default, [Query(CollectionFormat.Multi)] IEnumerable<string>? manufacturerCode = default, [Query] bool? hideUnnamed = default, [Query] int? offset = default, [Query] int? limit = default);
-
         /// <summary>Get all data of the particular product changes proposal</summary>
-        /// <remarks>Use this resource to retrieve all data of the particular product changes proposal. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-zglosic-blad-w-produkcie" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-report-incorrect-data-in-a-product" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve all data of the particular product changes proposal. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#jak-zglosic-blad-w-produkcie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#how-to-report-incorrect-data-in-a-product" target="_blank">EN</a>.</remarks>
         /// <param name="changeProposalId">The product changes proposal identifier.</param>
         /// <param name="accept_Language">Expected language of messages.</param>
         /// <returns>Product changes proposal returned successfully.</returns>
@@ -2562,7 +2560,7 @@ namespace JadeX.AllegroAPI
         Task<ProductChangeProposalDto> GetProductChangeProposal(string changeProposalId, [Header("Accept-Language")] string? accept_Language = default);
 
         /// <summary>Get offers with missing parameters</summary>
-        /// <remarks>Use this resource to get information about required parameters or parameters scheduled to become required that are not filled in offers. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-sprawdzic-nieuzupelnione-parametry-w-ofertach" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-check-unfilled-parameters-in-offers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get information about required parameters or parameters scheduled to become required that are not filled in offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#jak-sprawdzic-nieuzupelnione-parametry-w-ofertach" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#how-to-check-unfilled-parameters-in-offers" target="_blank">EN</a>.</remarks>
         /// <param name="offer_id">List of offer ids. If empty all offers with unfilled parameters will be returned.</param>
         /// <param name="parameterType">Filter by parameter type.</param>
         /// <param name="offset">The offset of elements in the response.</param>
@@ -2579,7 +2577,7 @@ namespace JadeX.AllegroAPI
         Task<UnfilledParametersResponse> GetOffersUnfilledParametersUsingGET1([Query(CollectionFormat.Multi), AliasAs("offer.id")] IEnumerable<string>? offer_id = default, [Query] ParameterType? parameterType = default, [Query] int? offset = default, [Query] int? limit = default);
 
         /// <summary>Get list of categories where compatibility list is supported</summary>
-        /// <remarks>Compatibility list is available in particular categories, this resource allows to get the list of these categories with additional details. Read more: <a href="../../tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-sprawdzic-czy-w-danej-kategorii-moge-dodac-sekcje-pasuje-do-do-oferty" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#which-categories-support-compatibility-section" target="_blank">EN</a>.</remarks>
+        /// <remarks>Compatibility list is available in particular categories, this resource allows to get the list of these categories with additional details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-sprawdzic-czy-w-danej-kategorii-moge-dodac-sekcje-pasuje-do-do-oferty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#which-categories-support-compatibility-section" target="_blank">EN</a>.</remarks>
         /// <returns>Configuration of supported categories.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -2590,7 +2588,7 @@ namespace JadeX.AllegroAPI
         Task<CompatibilityListSupportedCategoriesDto> GetCategoriesThatSupportCompatibilityList();
 
         /// <summary>Get suggested compatibility list.</summary>
-        /// <remarks>Resource allows to fetch compatibility list suggestion for given offer or product. Read more: <a href="../../tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-wyszukac-sugerowana-sekcje-compatibilitylist" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#how-to-search-for-the-suggested-compatibility-section" target="_blank">EN</a>.</remarks>
+        /// <remarks>Resource allows to fetch compatibility list suggestion for given offer or product. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-wyszukac-sugerowana-sekcje-compatibilitylist" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#how-to-search-for-the-suggested-compatibility-section" target="_blank">EN</a>.</remarks>
         /// <param name="offer_id">Offer id on the basis of which we will return the suggested compatibility list.</param>
         /// <param name="product_id">Product id on the basis of which we will return the suggested compatibility list.</param>
         /// <param name="language">Locale on the basis of which we will return the suggested compatibility list. For product-based suggestions if missing pl-PL will be used. For offer-based suggestions if missing offer language will be used.</param>
@@ -2606,7 +2604,7 @@ namespace JadeX.AllegroAPI
         Task<CompatibilityList> GetCompatibilityListSuggestion([Query, AliasAs("offer.id")] string? offer_id = default, [Query, AliasAs("product.id")] string? product_id = default, [Query] string? language = default);
 
         /// <summary>Get list of compatible product groups</summary>
-        /// <remarks>Compatible products are organized in groups, this resource allows to browse these groups. Read more: <a href="../../tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-zarzadzac-sekcja-pasuje-do-zintegrowana-z-baza-pojazdow" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#managing-the-compatibility-section-compatibilitylist-integrated-vehicle-database" target="_blank">EN</a>.</remarks>
+        /// <remarks>Compatible products are organized in groups, this resource allows to browse these groups. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-zarzadzac-sekcja-pasuje-do-zintegrowana-z-baza-pojazdow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#managing-the-compatibility-section-compatibilitylist-integrated-vehicle-database" target="_blank">EN</a>.</remarks>
         /// <param name="if_Modified_Since">Date of last data modification. If data has been modified after specified date, full set of data is returned. If header is not specified, full set of data is returned. Date has to be provided in HTTP-date format.</param>
         /// <param name="type">Type of compatible products. You can find available types in the response for the GET <a href="/documentation/#tag/Compatibility-List/paths/~1sale~1compatibility-list~1supported-categories/get">supported-categories</a> resource. You can use value provided in `itemsType`, for categories where `inputType=ID`.</param>
         /// <param name="limit">The limit of returned items.</param>
@@ -2624,7 +2622,7 @@ namespace JadeX.AllegroAPI
         Task<CompatibleProductsGroupsDto> GetCompatibleProductsGroups([Query] string type, [Query] int? limit = default, [Query] int? offset = default, [Header("If-Modified-Since")] string? if_Modified_Since = default);
 
         /// <summary>Get list of compatible products</summary>
-        /// <remarks>Resource allows to fetch compatible products of given type. Read more: <a href="../../tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-zarzadzac-sekcja-pasuje-do-zintegrowana-z-baza-pojazdow" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#managing-the-compatibility-section-compatibilitylist-integrated-vehicle-database" target="_blank">EN</a>.</remarks>
+        /// <remarks>Resource allows to fetch compatible products of given type. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-sekcja-pasuje-do-E7Zj6gAEGil#jak-zarzadzac-sekcja-pasuje-do-zintegrowana-z-baza-pojazdow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-compatibility-section-v8WbL1wV0Hz#managing-the-compatibility-section-compatibilitylist-integrated-vehicle-database" target="_blank">EN</a>.</remarks>
         /// <param name="if_Modified_Since">Date of last data modification. If data has been modified after specified date, full set of data is returned. If header is not specified, full set of data is returned. Date has to be provided in HTTP-date format. Header is ignored if `phrase` parameter is used.</param>
         /// <param name="type">Type of compatible products. You can find available types in the response for the GET <a href="/documentation/#tag/Compatibility-List/paths/~1sale~1compatibility-list~1supported-categories/get">supported-categories</a> resource. You can use value provided in `itemsType`, for categories where `inputType=ID`.</param>
         /// <param name="group_id">Group identifier from `/sale/compatible-products/groups` resource. Parameter is required when parameter `tecdoc.kTypNr` or `tecdoc.nTypNr` or `phrase` is not specified.</param>
@@ -2646,7 +2644,7 @@ namespace JadeX.AllegroAPI
         Task<CompatibleProductsListDto> GetCompatibleProducts([Query] string type, [Query, AliasAs("group.id")] string? group_id = default, [Query, AliasAs("tecdoc.kTypNr")] string? tecdoc_kTypNr = default, [Query, AliasAs("tecdoc.nTypNr")] string? tecdoc_nTypNr = default, [Query] string? phrase = default, [Query] int? limit = default, [Query] int? offset = default, [Header("If-Modified-Since")] string? if_Modified_Since = default);
 
         /// <summary>Get user's additional emails</summary>
-        /// <remarks>Use this resource to get a list of all additional email addresses assigned to account. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-adresy-e-mail" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-email-addresses" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of all additional email addresses assigned to account. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-adresy-e-mail" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-email-addresses" target="_blank">EN</a>.</remarks>
         /// <returns>List of user's additional emails returned successfully</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -2657,7 +2655,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalEmailsResponse> GetListOfAdditionalEmailsUsingGET();
 
         /// <summary>Add a new additional email address to user's account</summary>
-        /// <remarks>Use this resource to add a new additional email address to account. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-dodac-adres-e-mail" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-add-an-additional-email" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to add a new additional email address to account. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-dodac-adres-e-mail" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-add-an-additional-email" target="_blank">EN</a>.</remarks>
         /// <param name="body">request</param>
         /// <returns>Additional email added successfully</returns>
         /// <throws cref="ApiException">
@@ -2671,7 +2669,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalEmail> AddAdditionalEmailUsingPOST([Body] AdditionalEmailRequest body);
 
         /// <summary>Get information about a particular additional email</summary>
-        /// <remarks>Use this resource to retrieve a single additional email. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-szczegolowe-informacje-o-adresie-e-mail" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-e-mail-details" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to retrieve a single additional email. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-pobrac-szczegolowe-informacje-o-adresie-e-mail" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-retrieve-e-mail-details" target="_blank">EN</a>.</remarks>
         /// <param name="emailId">Id of the additional email.</param>
         /// <returns>Additional email returned successfully</returns>
         /// <throws cref="ApiException">
@@ -2684,7 +2682,7 @@ namespace JadeX.AllegroAPI
         Task<AdditionalEmail> GetAdditionalEmailUsingGET(string emailId);
 
         /// <summary>Delete an additional email address</summary>
-        /// <remarks>Use this resource to delete one of additional emails. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-usunac-adres-e-mail" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-remove-e-mail" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete one of additional emails. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-usunac-adres-e-mail" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-remove-e-mail" target="_blank">EN</a>.</remarks>
         /// <param name="emailId">Id of the additional email to be deleted.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -2697,7 +2695,7 @@ namespace JadeX.AllegroAPI
         Task DeleteAdditionalEmailUsingDELETE(string emailId);
 
         /// <summary>Payment operations history</summary>
-        /// <remarks>Use this endpoint to get the list of the seller payment operations. Read more: <a href="../../tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#historia-operacji-platniczych" target="_blank">PL</a> / <a href="../../tutorials/how-to-check-the-fees-3An6Wame3Um#payment-operations" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this endpoint to get the list of the seller payment operations. Read more: <a href="https://developer.allegro.pl/tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#historia-operacji-platniczych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-check-the-fees-3An6Wame3Um#payment-operations" target="_blank">EN</a>.</remarks>
         /// <param name="wallet_type">Type of the wallet: * AVAILABLE - operations available for payout. * WAITING - operations temporarily suspended for payout.</param>
         /// <param name="wallet_paymentOperator">Payment operator: * PAYU - operations processed by PAYU operator. * P24 - operations processed by PRZELEWY24 operator.</param>
         /// <param name="payment_id">The payment ID.</param>
@@ -2717,10 +2715,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/payments/payment-operations")]
-        Task<PaymentOperations> GetPaymentsOperationHistory([Query, AliasAs("wallet.type")] Type? wallet_type = default, [Query, AliasAs("wallet.paymentOperator")] PaymentOperator? wallet_paymentOperator = default, [Query, AliasAs("payment.id")] System.Guid? payment_id = default, [Query, AliasAs("participant.login")] string? participant_login = default, [Query, AliasAs("occurredAt.gte")] System.DateTimeOffset? occurredAt_gte = default, [Query, AliasAs("occurredAt.lte")] System.DateTimeOffset? occurredAt_lte = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous7>? group = default, [Query] MarketplaceId2? marketplaceId = default, [Query] string? currency = default, [Query] int? limit = default, [Query] int? offset = default);
+        Task<PaymentOperations> GetPaymentsOperationHistory([Query, AliasAs("wallet.type")] Type? wallet_type = default, [Query, AliasAs("wallet.paymentOperator")] PaymentOperator? wallet_paymentOperator = default, [Query, AliasAs("payment.id")] System.Guid? payment_id = default, [Query, AliasAs("participant.login")] string? participant_login = default, [Query, AliasAs("occurredAt.gte")] System.DateTimeOffset? occurredAt_gte = default, [Query, AliasAs("occurredAt.lte")] System.DateTimeOffset? occurredAt_lte = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous6>? group = default, [Query] MarketplaceId? marketplaceId = default, [Query] string? currency = default, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Add a users to the blacklist</summary>
-        /// <remarks>Use this resource to add new users to the blacklist on given account. At least one of id or login is required. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-dodac-kupujacego-do-listy-nieaktywnych-kupujacych" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-add-the-buyer-to-the-blacklist" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to add new users to the blacklist on given account. At least one of id or login is required. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-dodac-kupujacego-do-listy-nieaktywnych-kupujacych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-add-the-buyer-to-the-blacklist" target="_blank">EN</a>.</remarks>
         /// <param name="body">request</param>
         /// <returns>Users successfully added to the blacklist.</returns>
         /// <throws cref="ApiException">
@@ -2735,7 +2733,7 @@ namespace JadeX.AllegroAPI
         Task<BlackListResponse> DoAddToBlackList([Body] BlacklistRequest body);
 
         /// <summary>Remove users from the blacklist</summary>
-        /// <remarks>Use this resource to remove users from the blacklist on given account. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-usunac-uzytkownika-z-listy-nieaktywnych-kupujacych" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-remove-a-user-from-blacklist" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to remove users from the blacklist on given account. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#jak-usunac-uzytkownika-z-listy-nieaktywnych-kupujacych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#how-to-remove-a-user-from-blacklist" target="_blank">EN</a>.</remarks>
         /// <param name="excludedUserId">Remove users from the blacklist.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -2747,7 +2745,7 @@ namespace JadeX.AllegroAPI
         Task DoRemoveFromBlackList(long excludedUserId);
 
         /// <summary>Place a bid in an auction</summary>
-        /// <remarks>Place a bid in an auction. Read more: <a href="../../news/nowe-zasoby-zloz-oferte-kupna-w-licytacji-q018m02vDT1" target="_blank">PL</a> / <a href="../../news/new-resources-place-a-bid-in-an-auction-rjWwEj1e7sG" target="_blank">EN</a>.</remarks>
+        /// <remarks>Place a bid in an auction. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zloz-oferte-kupna-w-licytacji-q018m02vDT1" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-place-a-bid-in-an-auction-rjWwEj1e7sG" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">The offer ID.</param>
         /// <returns>Bid succesfully placed</returns>
         /// <throws cref="ApiException">
@@ -2762,7 +2760,7 @@ namespace JadeX.AllegroAPI
         Task<MyBidResponse> PlaceBid(string offerId, [Body] BidRequest? body = default);
 
         /// <summary>Get current user's bid information</summary>
-        /// <remarks>Get current user's bid information. Read more: <a href="../../news/nowe-zasoby-zloz-oferte-kupna-w-licytacji-q018m02vDT1" target="_blank">PL</a> / <a href="../../news/new-resources-place-a-bid-in-an-auction-rjWwEj1e7sG" target="_blank">EN</a>.</remarks>
+        /// <remarks>Get current user's bid information. Read more: <a href="https://developer.allegro.pl/news/nowe-zasoby-zloz-oferte-kupna-w-licytacji-q018m02vDT1" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/new-resources-place-a-bid-in-an-auction-rjWwEj1e7sG" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">The offer ID.</param>
         /// <returns>Bid information succesfully found.</returns>
         /// <throws cref="ApiException">
@@ -2788,7 +2786,7 @@ namespace JadeX.AllegroAPI
         /// - OFFER_TRANSLATION_UPDATED - translation of offer was updated
         /// - OFFER_VISIBILITY_CHANGED - visibility of offer was changed on marketplaces
         /// 
-        /// Returned events may occur by actions made via browser or API. The resource allows you to get events concerning active offers and offers scheduled for activation (status ACTIVE and ACTIVATING). Returned events do not concern offers in INACTIVE and ENDED status (the exception is OFFER_ARCHIVED event). External id is returned for all event types except OFFER_BID_PLACED and OFFER_BID_CANCELED. Please note that one change may result in more than one event. Read more: <a href="../../tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#dziennik-zdarzen-w-ofertach-sprzedawcy" target="_blank">PL</a> / <a href="../../tutorials/how-to-process-list-of-offers-m09BKA5v8H3#event-journal-concerning-changes-in-seller-s-offers" target="_blank">EN</a>.
+        /// Returned events may occur by actions made via browser or API. The resource allows you to get events concerning active offers and offers scheduled for activation (status ACTIVE and ACTIVATING). Returned events do not concern offers in INACTIVE and ENDED status (the exception is OFFER_ARCHIVED event). External id is returned for all event types except OFFER_BID_PLACED and OFFER_BID_CANCELED. Please note that one change may result in more than one event. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-ofertami-7GzB2L37ase#dziennik-zdarzen-w-ofertach-sprzedawcy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-process-list-of-offers-m09BKA5v8H3#event-journal-concerning-changes-in-seller-s-offers" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="from">The ID of the last seen event. Events that occured after the given event will be returned.</param>
         /// <param name="limit">The number of events that will be returned in the response.</param>
@@ -2801,12 +2799,12 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json, application/json")]
         [Get("/sale/offer-events")]
-        Task<SellerOfferEventsResponse> GetOfferEvents([Query] string? from = default, [Query] int? limit = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous8>? type = default);
+        Task<SellerOfferEventsResponse> GetOfferEvents([Query] string? from = default, [Query] int? limit = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous7>? type = default);
 
         /// <summary>Get a list of available badge campaigns</summary>
         /// <remarks>
         /// Badge campaigns are another way to promote your offers. You can apply for a badge, which - depending on a type - will be displayed on your offer page of on the list of offers.
-        /// First - use this resource to get a list of all available badge campaigns at the moment, then use *POST /sale/badges* to apply for badge. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#lista-dostepnych-kampanii" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#list-of-available-campaigns" target="_blank">EN</a>.
+        /// First - use this resource to get a list of all available badge campaigns at the moment, then use *POST /sale/badges* to apply for badge. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#lista-dostepnych-kampanii" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#list-of-available-campaigns" target="_blank">EN</a>.
         /// </remarks>
         /// <returns>List of available badge campaigns.</returns>
         /// <throws cref="ApiException">
@@ -2832,7 +2830,7 @@ namespace JadeX.AllegroAPI
         /// or
         /// <a href="https://allegro.pl/regulaminy/regulamin-programu-bonusowego-prowizja-nawet-0-5-0KPkAE7wkcv"
         /// target="_blank">Commission discount terms and conditions</a>.
-        /// Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#zglos-oferte-do-kampanii" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#submit-offer-to-a-campaign" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#zglos-oferte-do-kampanii" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#submit-offer-to-a-campaign" target="_blank">EN</a>.
         /// </remarks>
         /// <returns>Successfully applied for a badge.</returns>
         /// <throws cref="ApiException">
@@ -2847,7 +2845,7 @@ namespace JadeX.AllegroAPI
         Task PostBadges([Body] BadgeApplicationRequest? body = default);
 
         /// <summary>Get a list of badges</summary>
-        /// <remarks>Use this resource to get a list of badges in authorized seller's offers. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#kampanie-przypisane-do-ofert" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#check-badges-assigned-to-offers" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of badges in authorized seller's offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#kampanie-przypisane-do-ofert" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#check-badges-assigned-to-offers" target="_blank">EN</a>.</remarks>
         /// <param name="offer_id">Offer ID.</param>
         /// <param name="offset">Offset.</param>
         /// <param name="limit">The maximum number of badges returned in the response.</param>
@@ -2863,7 +2861,7 @@ namespace JadeX.AllegroAPI
         Task<BadgesList> GetBadges([Query, AliasAs("offer.id")] string? offer_id = default, [Query] int? offset = default, [Query] int? limit = default);
 
         /// <summary>Get a badge application details</summary>
-        /// <remarks>Use this resource to get a badge application details. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#pobierz-dane-zgloszenie" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#retrieve-campaign-application" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a badge application details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#pobierz-dane-zgloszenie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#retrieve-campaign-application" target="_blank">EN</a>.</remarks>
         /// <param name="applicationId">Badge application ID.</param>
         /// <returns>Successfully returned badge application.</returns>
         /// <throws cref="ApiException">
@@ -2877,7 +2875,7 @@ namespace JadeX.AllegroAPI
         Task<BadgeApplication> BadgeApplicationsGetOne(string applicationId);
 
         /// <summary>Get a list of badge applications</summary>
-        /// <remarks>Use this resource to get a list of badge applications. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#pobierz-swoje-zgloszenia" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#retrieve-all-campaign-applications" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of badge applications. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#pobierz-swoje-zgloszenia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#retrieve-all-campaign-applications" target="_blank">EN</a>.</remarks>
         /// <param name="campaign_id">Campaign ID.</param>
         /// <param name="offer_id">Offer ID.</param>
         /// <param name="offset">Offset.</param>
@@ -2894,7 +2892,7 @@ namespace JadeX.AllegroAPI
         Task<BadgeApplications> BadgeApplicationsGetAll([Query, AliasAs("campaign.id")] string? campaign_id = default, [Query, AliasAs("offer.id")] string? offer_id = default, [Query] int? offset = default, [Query] int? limit = default);
 
         /// <summary>Get badge operation details</summary>
-        /// <remarks>Use this resource to get badge operation details. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#zmiana-ceny-i-zakonczenie-oznaczenia" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#change-price-and-finish-badge" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get badge operation details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#zmiana-ceny-i-zakonczenie-oznaczenia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#change-price-and-finish-badge" target="_blank">EN</a>.</remarks>
         /// <param name="operationId">Badge operation ID.</param>
         /// <returns>Successfully returned badge operation details.</returns>
         /// <throws cref="ApiException">
@@ -2910,7 +2908,7 @@ namespace JadeX.AllegroAPI
         /// <summary>Update campaign badge for the given offer</summary>
         /// <remarks>
         /// This resource allows you to update a campaign badge for the given offer. You can use *Location* provided in header of the response to track your update status. Update offer price in a campaign or finish marking an offer in a campaign.
-        /// Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#zmiana-ceny-i-zakonczenie-oznaczenia" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#change-price-and-finish-badge" target="_blank">EN</a>.
+        /// Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#zmiana-ceny-i-zakonczenie-oznaczenia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#change-price-and-finish-badge" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="offerId">Offer ID.</param>
         /// <param name="campaignId">Campaign ID.</param>
@@ -2929,7 +2927,7 @@ namespace JadeX.AllegroAPI
         Task PatchBadge(string offerId, string campaignId, [Body] BadgePatchRequest? body = default);
 
         /// <summary>Initiate a refund of a payment</summary>
-        /// <remarks>Use this endpoint to initiate a refund of a payment. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-wykonac-zwrot-platnosci" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-refund-a-payment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this endpoint to initiate a refund of a payment. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-wykonac-zwrot-platnosci" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-refund-a-payment" target="_blank">EN</a>.</remarks>
         /// <returns>Refund request created successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -2944,7 +2942,7 @@ namespace JadeX.AllegroAPI
         Task<RefundDetails> InitiateRefund([Body] InitializeRefund? body = default);
 
         /// <summary>Get a list of refunded payments</summary>
-        /// <remarks>Get a list of refunded payments. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-liste-zwrotow-platnosci" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-a-list-of-refunded-payment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Get a list of refunded payments. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-liste-zwrotow-platnosci" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-a-list-of-refunded-payment" target="_blank">EN</a>.</remarks>
         /// <param name="limit">Number of returned operations.</param>
         /// <param name="offset">Index of the first returned payment operation from all search results.</param>
         /// <param name="id">ID of the refund.</param>
@@ -2961,10 +2959,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/payments/refunds")]
-        Task<Response7> GetRefundedPayments([Query] int? limit = default, [Query] int? offset = default, [Query] System.Guid? id = default, [Query, AliasAs("payment.id")] System.Guid? payment_id = default, [Query, AliasAs("occurredAt.gte")] System.DateTimeOffset? occurredAt_gte = default, [Query, AliasAs("occurredAt.lte")] System.DateTimeOffset? occurredAt_lte = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous9>? status = default);
+        Task<Response8> GetRefundedPayments([Query] int? limit = default, [Query] int? offset = default, [Query] System.Guid? id = default, [Query, AliasAs("payment.id")] System.Guid? payment_id = default, [Query, AliasAs("occurredAt.gte")] System.DateTimeOffset? occurredAt_gte = default, [Query, AliasAs("occurredAt.lte")] System.DateTimeOffset? occurredAt_lte = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous8>? status = default);
 
         /// <summary>Get a list of billing entries</summary>
-        /// <remarks>The billing entries are sorted in a descending order (newest first) by date on which they occurred. Read more: <a href="../../tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#historia-operacji-billingowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-check-the-fees-3An6Wame3Um#billing-operations" target="_blank">EN</a>.</remarks>
+        /// <remarks>The billing entries are sorted in a descending order (newest first) by date on which they occurred. Read more: <a href="https://developer.allegro.pl/tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#historia-operacji-billingowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-check-the-fees-3An6Wame3Um#billing-operations" target="_blank">EN</a>.</remarks>
         /// <param name="marketplaceId">The marketplace ID where operation was made. By default the marketplace ID where the user is registered.</param>
         /// <param name="occurredAt_gte">Date from which billing entries are filtered. If occurredAt.lte is also set, occurredAt.gte cannot be later.</param>
         /// <param name="occurredAt_lte">Date to which billing entries are filtered. If occurredAt.gte is also set, occurredAt.lte cannot be earlier.</param>
@@ -2985,7 +2983,7 @@ namespace JadeX.AllegroAPI
         Task<BillingEntries> GetBillingEntries([Query] string? marketplaceId = default, [Query, AliasAs("occurredAt.gte")] System.DateTimeOffset? occurredAt_gte = default, [Query, AliasAs("occurredAt.lte")] System.DateTimeOffset? occurredAt_lte = default, [Query(CollectionFormat.Multi), AliasAs("type.id")] IEnumerable<string>? type_id = default, [Query, AliasAs("offer.id")] string? offer_id = default, [Query, AliasAs("order.id")] System.Guid? order_id = default, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Get a list of billing types</summary>
-        /// <remarks>List of all billing types. Type names are localized according to "Accept-Language" header. Read more: <a href="../../tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#historia-operacji-billingowych" target="_blank">PL</a> / <a href="../../tutorials/how-to-check-the-fees-3An6Wame3Um#billing-operations" target="_blank">EN</a>.</remarks>
+        /// <remarks>List of all billing types. Type names are localized according to "Accept-Language" header. Read more: <a href="https://developer.allegro.pl/tutorials/jak-sprawdzic-oplaty-nn9DOL5PASX#historia-operacji-billingowych" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-check-the-fees-3An6Wame3Um#billing-operations" target="_blank">EN</a>.</remarks>
         /// <param name="accept_Language">Expected language of name translations.</param>
         /// <returns>List of billing types returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -2997,7 +2995,7 @@ namespace JadeX.AllegroAPI
         Task<ICollection<BillingType>> GetBillingTypes([Header("Accept-Language")] string? accept_Language = default);
 
         /// <summary>Get a refund application details</summary>
-        /// <remarks>Use this resource to get refund application details. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-pojedynczy-wniosek-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-single-sale-commission-refund" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get refund application details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-pojedynczy-wniosek-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-single-sale-commission-refund" target="_blank">EN</a>.</remarks>
         /// <param name="claimId">Refund application ID.</param>
         /// <returns>Successfully returned refund application.</returns>
         /// <throws cref="ApiException">
@@ -3012,7 +3010,7 @@ namespace JadeX.AllegroAPI
         Task<RefundClaim> GetRefundApplication(string claimId);
 
         /// <summary>Cancel a refund application</summary>
-        /// <remarks>Use this resource to cancel a refund application. This cannot be undone. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-anulowac-wniosek-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-cancel-sale-commission-refund" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to cancel a refund application. This cannot be undone. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-anulowac-wniosek-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-cancel-sale-commission-refund" target="_blank">EN</a>.</remarks>
         /// <param name="claimId">Refund application ID.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -3027,7 +3025,7 @@ namespace JadeX.AllegroAPI
         Task CancelRefundApplication(string claimId);
 
         /// <summary>Get a list of refund applications</summary>
-        /// <remarks>Use this resource to get a list of refund applications based on the provided query parameters. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-liste-utworzonych-wnioskow-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-list-of-sale-commission-refunds" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of refund applications based on the provided query parameters. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-liste-utworzonych-wnioskow-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-list-of-sale-commission-refunds" target="_blank">EN</a>.</remarks>
         /// <param name="lineItem_offer_id">ID of the offer associated with the refund application.</param>
         /// <param name="buyer_login">Login of the buyer that made the purchase associated with the refund application.</param>
         /// <param name="status">Status of the refund application.</param>
@@ -3043,10 +3041,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/order/refund-claims")]
-        Task<Response9> GetRefundApplications([Query, AliasAs("lineItem.offer.id")] string? lineItem_offer_id = default, [Query, AliasAs("buyer.login")] string? buyer_login = default, [Query] Status? status = default, [Query] int? limit = default, [Query] int? offset = default);
+        Task<Response10> GetRefundApplications([Query, AliasAs("lineItem.offer.id")] string? lineItem_offer_id = default, [Query, AliasAs("buyer.login")] string? buyer_login = default, [Query] Status? status = default, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>Create a refund application</summary>
-        /// <remarks>Use this resource to create a refund application. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-utworzyc-wniosek-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-create-a-sale-commission-refund-application" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create a refund application. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-utworzyc-wniosek-o-rabat-transakcyjny" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-create-a-sale-commission-refund-application" target="_blank">EN</a>.</remarks>
         /// <returns>The refund application was created successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3060,7 +3058,7 @@ namespace JadeX.AllegroAPI
         Task<RefundClaimResponse> CreateRefundApplication([Body] RefundClaimRequest body);
 
         /// <summary>Search fundraising campaigns</summary>
-        /// <remarks>Use this resource to search fundraising campaigns. Read more: <a href="../../news/wystaw-oferte-charytatywna-na-allegro-MR87PBxZySY" target="_blank">PL</a> / <a href="../../news/list-a-charity-offer-on-allegro-LRV0572GOhr" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to search fundraising campaigns. Read more: <a href="https://developer.allegro.pl/news/wystaw-oferte-charytatywna-na-allegro-MR87PBxZySY" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/list-a-charity-offer-on-allegro-LRV0572GOhr" target="_blank">EN</a>.</remarks>
         /// <param name="limit">Maximum number of returned results.</param>
         /// <param name="phrase">Fundraising campaign name or it's Organization name prefix to search for.</param>
         /// <returns>The request successfully returns the search result.</returns>
@@ -3075,7 +3073,7 @@ namespace JadeX.AllegroAPI
         Task<FundraisingCampaigns> SearchFundraisingCampaigns([Query] int limit, [Query] string phrase);
 
         /// <summary>Get available delivery services</summary>
-        /// <remarks>Use this resource to get delivery services available for user. It returns services provided by Allegro and contracts with carriers owned by user and configured by GUI. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-liste-uslug-dostawy" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-a-list-of-delivery-services" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get delivery services available for user. It returns services provided by Allegro and contracts with carriers owned by user and configured by GUI. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-liste-uslug-dostawy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-a-list-of-delivery-services" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3088,7 +3086,7 @@ namespace JadeX.AllegroAPI
         Task<DeliveryServicesDto> GetDeliveryServices();
 
         /// <summary>Create new shipment</summary>
-        /// <remarks>Use this resource to create shipment for delivery. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-nowa-paczke" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-new-shipment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create shipment for delivery. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-nowa-paczke" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-new-shipment" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3102,7 +3100,7 @@ namespace JadeX.AllegroAPI
         Task<ShipmentCreateCommandDto> CreateNewShipment([Body] ShipmentCreateCommandDto body);
 
         /// <summary>Get shipment creation command status</summary>
-        /// <remarks>Use this resource to get shipment creation status. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-utworzenia-paczki" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-the-creation-status-of-a-shipment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get shipment creation status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-utworzenia-paczki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-the-creation-status-of-a-shipment" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3118,7 +3116,7 @@ namespace JadeX.AllegroAPI
         Task<CreateShipmentCommandStatusDto> GetShipmentCreationStatus(string commandId);
 
         /// <summary>Cancel shipment</summary>
-        /// <remarks>Use this resource to cancel parcel. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-anulowac-paczke" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-cancel-a-shipment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to cancel parcel. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-anulowac-paczke" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-cancel-a-shipment" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3131,7 +3129,7 @@ namespace JadeX.AllegroAPI
         Task<ShipmentCancelCommandDto> CancelShipment([Body] ShipmentCancelCommandDto body);
 
         /// <summary>Get shipment cancellation status</summary>
-        /// <remarks>Use this resource to get parcel cancellation status. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-anulowania-paczki" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-shipment-cancellation-status" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcel cancellation status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-anulowania-paczki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-shipment-cancellation-status" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3147,7 +3145,7 @@ namespace JadeX.AllegroAPI
         Task<CancelShipmentCommandStatusDto> GetShipmentCancellationStatus(string commandId);
 
         /// <summary>Get shipment details</summary>
-        /// <remarks>Use this resource to get parcel details. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-szczegolowe-informacje-o-paczce" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-shipment-details" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcel details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-szczegolowe-informacje-o-paczce" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-shipment-details" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3162,7 +3160,7 @@ namespace JadeX.AllegroAPI
         Task<ShipmentDto> GetShipmentDetails(string shipmentId);
 
         /// <summary>Get shipments labels</summary>
-        /// <remarks>Use this resource to get label for created shipment. <br/>Returned content type depends on created shipment. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-etykiete-na-paczke" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-label-for-shipment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get label for created shipment. <br/>Returned content type depends on created shipment. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-etykiete-na-paczke" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-label-for-shipment" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3177,7 +3175,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> GetShipmentLabels([Body] LabelRequestDto body);
 
         /// <summary>Get shipments protocol</summary>
-        /// <remarks>Protocol availability depends on Carrier. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-protokol-nadania-przesylek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-shipment-protocol" target="_blank">EN</a>.</remarks>
+        /// <remarks>Protocol availability depends on Carrier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-protokol-nadania-przesylek" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-shipment-protocol" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3192,7 +3190,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> GetShipmentProtocol([Body] ShipmentIdsDto body);
 
         /// <summary>Get shipments pickup proposals</summary>
-        /// <remarks>Use this resource to get parcels pickup date proposals. Pickup takes place, when courier arrives to take parcels for shipment. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-proponowana-date-odbioru-paczek-przez-kuriera" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-pickup-date-proposals" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcels pickup date proposals. Pickup takes place, when courier arrives to take parcels for shipment. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-proponowana-date-odbioru-paczek-przez-kuriera" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-pickup-date-proposals" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3206,7 +3204,7 @@ namespace JadeX.AllegroAPI
         Task<ICollection<PickupProposalsResponseDto>> GetPickupProposals([Body] PickupProposalsRequestDto body);
 
         /// <summary>Request shipments pickup</summary>
-        /// <remarks>Use this resource to request a pickup of shipments. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-zamowic-odbior-paczek-przez-kuriera" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-request-shipment-pickup-by-a-courier" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to request a pickup of shipments. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-zamowic-odbior-paczek-przez-kuriera" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-request-shipment-pickup-by-a-courier" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3219,7 +3217,7 @@ namespace JadeX.AllegroAPI
         Task<PickupCreateCommandDto> CreatePickup([Body] PickupCreateCommandDto body);
 
         /// <summary>Create pickup command status</summary>
-        /// <remarks>Use this resource to get pickup request status. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-zamowienia-odbioru-paczek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-shipment-pickup-request-status" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get pickup request status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-zamowienia-odbioru-paczek" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-shipment-pickup-request-status" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3235,7 +3233,7 @@ namespace JadeX.AllegroAPI
         Task<CreatePickupCommandStatusDto> CreatePickupStatus(string commandId);
 
         /// <summary>Get available delivery services</summary>
-        /// <remarks>Use this resource to get delivery services available for user. It returns services provided by Allegro and contracts with carriers owned by user and configured by GUI. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-liste-uslug-dostawy" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-a-list-of-delivery-services" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get delivery services available for user. It returns services provided by Allegro and contracts with carriers owned by user and configured by GUI. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-liste-uslug-dostawy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-a-list-of-delivery-services" target="_blank">EN</a>.</remarks>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3249,7 +3247,7 @@ namespace JadeX.AllegroAPI
         Task<DeliveryServices> GetAvailableDeliveryServices();
 
         /// <summary>Create a new parcel</summary>
-        /// <remarks>Use this resource to create parcel for delivery. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-nowa-paczke" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-new-parcel" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create parcel for delivery. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-nowa-paczke" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-new-parcel" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID.</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -3262,10 +3260,10 @@ namespace JadeX.AllegroAPI
         [System.Obsolete]
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Put("/parcel-management/parcel-create-commands/{commandId}")]
-        Task<Response45> CreateNewParcel(string commandId, [Body] ParcelCreationParameters body);
+        Task<Response46> CreateNewParcel(string commandId, [Body] ParcelCreationParameters body);
 
         /// <summary>Get parcel creation status</summary>
-        /// <remarks>Use this resource to get parcel creation status. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-utworzenia-paczki" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-parcel-creation-status" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcel creation status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-utworzenia-paczki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-parcel-creation-status" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3279,10 +3277,10 @@ namespace JadeX.AllegroAPI
         [System.Obsolete]
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/parcel-management/parcel-create-commands/{commandId}")]
-        Task<Response48> GetParcelCreationStatus(string commandId);
+        Task<Response49> GetParcelCreationStatus(string commandId);
 
         /// <summary>Get parcel details</summary>
-        /// <remarks>Use this resource to get parcel details. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-szczegolowe-informacje-o-paczce" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-parcel-details" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcel details. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-szczegolowe-informacje-o-paczce" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-parcel-details" target="_blank">EN</a>.</remarks>
         /// <param name="parcelId">Id of parcel.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3299,7 +3297,7 @@ namespace JadeX.AllegroAPI
         Task<ParcelDetails> GetParcelDetails(string parcelId);
 
         /// <summary>Get parcels pickup date proposals</summary>
-        /// <remarks>Use this resource to get parcels pickup date proposals. Pickup takes place, when courier arrives to take parcels for shipment. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-proponowana-date-odbioru-paczek-przez-kuriera" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-pickup-date-proposals" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcels pickup date proposals. Pickup takes place, when courier arrives to take parcels for shipment. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-proponowana-date-odbioru-paczek-przez-kuriera" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-pickup-date-proposals" target="_blank">EN</a>.</remarks>
         /// <param name="parcelId">Ids of parcels. Passing more than one value will search pickup dates for all of them separately. Example: `parcelId=adc05c84-a9eb-4981-bbc0-773d8c0017e7&parcelId=adc05c84-a9eb-4981-bbc0-773d8c0017e8` - will return pickup date proposals for parcels with ID `adc05c84-a9eb-4981-bbc0-773d8c0017e7` and `adc05c84-a9eb-4981-bbc0-773d8c0017e8`.</param>
         /// <param name="readyDate">Date when parcels will be ready.</param>
         /// <returns>OK</returns>
@@ -3318,7 +3316,7 @@ namespace JadeX.AllegroAPI
         Task<PickupDateParcelsProposals> GetParcelsPickupDateProposals([Query(CollectionFormat.Multi)] IEnumerable<string> parcelId, [Query] System.DateTimeOffset? readyDate = default);
 
         /// <summary>Request parcel pickup</summary>
-        /// <remarks>Use this resource to request pickup for parcels. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-zamowic-odbior-paczek-przez-kuriera" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-request-parcel-pickup-by-a-courier" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to request pickup for parcels. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-zamowic-odbior-paczek-przez-kuriera" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-request-parcel-pickup-by-a-courier" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID.</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -3330,10 +3328,10 @@ namespace JadeX.AllegroAPI
         [System.Obsolete]
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Put("/parcel-management/parcel-pickup-request-commands/{commandId}")]
-        Task<Response60> RequestParcelPickup(string commandId, [Body] PickupParcelParameters body);
+        Task<Response61> RequestParcelPickup(string commandId, [Body] PickupParcelParameters body);
 
         /// <summary>Get parcel pickup status</summary>
-        /// <remarks>Use this resource to get parcel pickup status. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-zamowienia-odbioru-paczek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-parcel-pickup-request-status" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcel pickup status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-zamowienia-odbioru-paczek" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-parcel-pickup-request-status" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3347,10 +3345,10 @@ namespace JadeX.AllegroAPI
         [System.Obsolete]
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/parcel-management/parcel-pickup-request-commands/{commandId}")]
-        Task<Response63> GetParcelPickupStatus(string commandId);
+        Task<Response64> GetParcelPickupStatus(string commandId);
 
         /// <summary>Get parcel label</summary>
-        /// <remarks>Use this resource to get label for created parcel. <br/>Returned content type depends on created parcel. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-etykiete-na-paczke" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-label-for-parcel" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get label for created parcel. <br/>Returned content type depends on created parcel. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-utworzyc-etykiete-na-paczke" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-create-a-label-for-parcel" target="_blank">EN</a>.</remarks>
         /// <param name="parcelId">Id of parcel.</param>
         /// <param name="pageFormat">Label page format. Only for PDF file.</param>
         /// <returns>OK</returns>
@@ -3368,7 +3366,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> GetParcelLabel([Query] string parcelId, [Query] PageFormat? pageFormat = default);
 
         /// <summary>Get parcels protocol</summary>
-        /// <remarks>Use this resource to get parcels protocol. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-protokol-nadania-przesylek" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-parcel-protocol" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcels protocol. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-pobrac-protokol-nadania-przesylek" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-retrieve-parcel-protocol" target="_blank">EN</a>.</remarks>
         /// <param name="parcelId">Ids of parcels. Passing more than one value will generate protocol for all of them. Example: `parcelId=2c6d5ca1-e892-455f-ae24-89ba7c12abcd&parcelId=2c6d5ca1-e892-455f-ae24-89ba7c12abc1` - returns protocol for parcels with ID `2c6d5ca1-e892-455f-ae24-89ba7c12abcd` and `2c6d5ca1-e892-455f-ae24-89ba7c12abc1`.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3386,7 +3384,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> GetParcelsProtocol([Query(CollectionFormat.Multi)] IEnumerable<string> parcelId);
 
         /// <summary>Cancel parcel</summary>
-        /// <remarks>Use this resource to cancel parcel. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-anulowac-paczke" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-cancel-a-parcel" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to cancel parcel. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-anulowac-paczke" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-cancel-a-parcel" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID.</param>
         /// <returns>Created</returns>
         /// <throws cref="ApiException">
@@ -3398,10 +3396,10 @@ namespace JadeX.AllegroAPI
         [System.Obsolete]
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Put("/parcel-management/parcel-cancel-commands/{commandId}")]
-        Task<Response75> CancelParcel(string commandId, [Body] CancelParcelParameters body);
+        Task<Response76> CancelParcel(string commandId, [Body] CancelParcelParameters body);
 
         /// <summary>Get parcel cancellation status</summary>
-        /// <remarks>Use this resource to get parcel cancellation status. Read more: <a href="../../tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-anulowania-paczki" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-parcel-cancellation-status" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get parcel cancellation status. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-przesylkami-przez-wysylam-z-allegro-LRVjK7K21sY#jak-sprawdzic-status-anulowania-paczki" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-parcels-via-ship-with-allegro-ZM9YAyGKWTV#how-to-check-parcel-cancellation-status" target="_blank">EN</a>.</remarks>
         /// <param name="commandId">Command UUID.</param>
         /// <returns>OK</returns>
         /// <throws cref="ApiException">
@@ -3415,10 +3413,10 @@ namespace JadeX.AllegroAPI
         [System.Obsolete]
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
         [Get("/parcel-management/parcel-cancel-commands/{commandId}")]
-        Task<Response78> GetParcelCancellationStatus(string commandId);
+        Task<Response79> GetParcelCancellationStatus(string commandId);
 
         /// <summary>Get categories suggestions</summary>
-        /// <remarks>Use this resource to receive suggested categories for given phrase. Read more: <a href="../../news/udostepnilismy-nowy-zasob-dzieki-ktoremu-sprawdzisz-sugerowane-kategorie-dla-podanej-frazy-4RAl9jwX1FW" target="_blank">PL</a> / <a href="../../news/we-have-introduced-a-new-resource-that-allows-you-to-retrieve-the-suggested-categories-for-the-given-phrase-v8Wdy1EOyF0" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to receive suggested categories for given phrase. Read more: <a href="https://developer.allegro.pl/news/udostepnilismy-nowy-zasob-dzieki-ktoremu-sprawdzisz-sugerowane-kategorie-dla-podanej-frazy-4RAl9jwX1FW" target="_blank">PL</a> / <a href="https://developer.allegro.pl/news/we-have-introduced-a-new-resource-that-allows-you-to-retrieve-the-suggested-categories-for-the-given-phrase-v8Wdy1EOyF0" target="_blank">EN</a>.</remarks>
         /// <param name="name">Product name for which you want to get suggested categories.</param>
         /// <returns>Category suggestion returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -3433,7 +3431,7 @@ namespace JadeX.AllegroAPI
         Task<CategorySuggestionResponse> CategorySuggestionUsingGET([Query] string name);
 
         /// <summary>Get all tax settings for category</summary>
-        /// <remarks>Use this resource to receive tax settings for given category. Based on received settings you may set VAT tax settings for your offers. Read more: <a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#opcje-faktury-i-stawki-vat" target="_blank">PL</a> / <a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#invoice-and-vat-settings" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to receive tax settings for given category. Based on received settings you may set VAT tax settings for your offers. Read more: <a href="https://developer.allegro.pl/tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#opcje-faktury-i-stawki-vat" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#invoice-and-vat-settings" target="_blank">EN</a>.</remarks>
         /// <param name="category_id">An identifier of a category for which all available tax settings will be returned.</param>
         /// <param name="countryCode">Country code for which tax settings will be returned. If not provided settings for all countries will be returned.</param>
         /// <returns>Tax settings for given category returned successfully</returns>
@@ -3447,10 +3445,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json, application/vnd.allegro.beta.v1+json")]
         [Get("/sale/tax-settings")]
-        Task<TaxSettings> GetTaxSettingsForCategory([Query, AliasAs("category.id")] string category_id, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous10>? countryCode = default);
+        Task<TaxSettings> GetTaxSettingsForCategory([Query, AliasAs("category.id")] string category_id, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous9>? countryCode = default);
 
         /// <summary>Get the current consents' state for an offer</summary>
-        /// <remarks>Use this resource to get the current Allegro Prices consent value for the offer on each of the available marketplaces. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the current Allegro Prices consent value for the offer on each of the available marketplaces. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">The offer ID.</param>
         /// <returns>Consent value returned successfully.</returns>
         /// <throws cref="ApiException">
@@ -3464,9 +3462,9 @@ namespace JadeX.AllegroAPI
         Task<AllegroPricesOfferConsentChangeResponse> GetAllegroPricesConsentForOffer(string offerId);
 
         /// <summary>Update consents for an offer</summary>
-        /// <remarks>Use this resource to update the Allegro Prices consent value for the offer on chosen marketplaces. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to update the Allegro Prices consent value for the offer on chosen marketplaces. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
         /// <param name="offerId">The offer ID.</param>
-        /// <returns>Allegro Prices consent for the offer updated successfully.</returns>
+        /// <returns>Allegro Prices consents' state for the offer updated successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
         /// 400: Bad request.
@@ -3480,7 +3478,7 @@ namespace JadeX.AllegroAPI
         Task<AllegroPricesOfferConsentChangeResponse> UpdateAllegroPricesConsentForOffer(string offerId, [Body] AllegroPricesOfferChangeRequest body);
 
         /// <summary>Get the current eligibility information for the account</summary>
-        /// <remarks>Use this resource to get the current Allegro Prices eligibility information for the account. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the current Allegro Prices eligibility information for the account on each of the available marketplaces. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
         /// <returns>Allegro Prices eligibility information for the account returned successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3490,9 +3488,9 @@ namespace JadeX.AllegroAPI
         [Get("/sale/allegro-prices-account-eligibility")]
         Task<AllegroPricesEligibilityResponse> GetAllegroPricesEligibilityForAccount();
 
-        /// <summary>Update consent value for the account</summary>
-        /// <remarks>Use this resource to update the Allegro Prices consent value for the account. Consent applies to all marketplaces where your offers are listed. Read more: <a href="../../tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="../../tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
-        /// <returns>Allegro Prices consent value for the account was updated successfully</returns>
+        /// <summary>Update consents for the account</summary>
+        /// <remarks>Use this resource to update the Allegro Prices consent value for the account on chosen marketplaces. Read more: <a href="https://developer.allegro.pl/tutorials/jak-przypisac-oferte-kampanii-GRaj0q6Gwuy#allegro-ceny-jak-zarzadzac-zgodami-na-uczestnictwo-w-programie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-submit-offers-to-campaigns-AgGjd6EmyH4#allegro-prices-how-to-manage-program-participation-consents" target="_blank">EN</a>.</remarks>
+        /// <returns>Allegro Prices consents' state for the account was updated successfully.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
         /// 400: Bad request
@@ -3504,7 +3502,7 @@ namespace JadeX.AllegroAPI
         Task<AllegroPricesAccountConsentChangeResponse> UpdateAllegroPricesConsentForAccount([Body] AllegroPricesAccountChangeRequest body);
 
         /// <summary>Get Smart! seller classification report</summary>
-        /// <remarks>Use this resource to get a full Smart! seller classification report. Read more: <a href="../../tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#klasyfikacja-sprzedawcy" target="_blank">PL</a> / <a href="../../tutorials/account-and-user-data-management-jn9vBjqjnsw#seller-classification" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a full Smart! seller classification report. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-kontem-danymi-uzytkownika-ZM9YAKgPgi2#klasyfikacja-sprzedawcy" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/account-and-user-data-management-jn9vBjqjnsw#seller-classification" target="_blank">EN</a>.</remarks>
         /// <param name="marketplaceId">Marketplace for which seller classification report will be returned. If not specified, the classification result for the seller's registration marketplace will be returned.</param>
         /// <returns>Successfully returned seller Smart! classification report</returns>
         /// <throws cref="ApiException">
@@ -3518,7 +3516,7 @@ namespace JadeX.AllegroAPI
         Task<SmartSellerClassificationReport> GetSellerSmartClassificationGET([Query] string? marketplaceId = default);
 
         /// <summary>Get details for all marketplaces in allegro</summary>
-        /// <remarks>Use this resource to get ID of services, on which seller can display offers. Read more: <a href="../../tutorials/wystawianie-i-zarzadzanie-oferta-w-serwisach-zagranicznych-wwzjP4M8gTZ#serwis-bazowy-uzytkownika-oraz-lista-dostepnych-serwisow" target="_blank">PL</a> / <a href="../../tutorials/listing-and-managing-offers-on-foreign-marketplaces-7GndGjeAATn#user-s-base-marketplace-and-list-of-available-marketplaces" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get ID of services, on which seller can display offers. Read more: <a href="https://developer.allegro.pl/tutorials/wystawianie-i-zarzadzanie-oferta-w-serwisach-zagranicznych-wwzjP4M8gTZ#serwis-bazowy-uzytkownika-oraz-lista-dostepnych-serwisow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/listing-and-managing-offers-on-foreign-marketplaces-7GndGjeAATn#user-s-base-marketplace-and-list-of-available-marketplaces" target="_blank">EN</a>.</remarks>
         /// <returns>Successfully returned all available marketplaces in allegro</returns>
         /// <throws cref="ApiException">Thrown when the request returns a non-success status code.</throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json")]
@@ -3526,7 +3524,7 @@ namespace JadeX.AllegroAPI
         Task<AllegroMarketplaces> MarketplacesGET();
 
         /// <summary>List user threads</summary>
-        /// <remarks>Use this resource to get the list of user threads sorted by last message date, starting from newest. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#lista-watkow-na-koncie" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#list-of-threads" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get the list of user threads sorted by last message date, starting from newest. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#lista-watkow-na-koncie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#list-of-threads" target="_blank">EN</a>.</remarks>
         /// <param name="limit">The maximum number of threads returned in the response.</param>
         /// <param name="offset">Index of the first returned thread from all results.</param>
         /// <returns>OK</returns>
@@ -3540,7 +3538,7 @@ namespace JadeX.AllegroAPI
         Task<ThreadsList> ListThreadsGET([Query] int? limit = default, [Query] long? offset = default);
 
         /// <summary>Get user thread</summary>
-        /// <remarks>Use this resource to get thread with provided identifier. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#szczegolowe-informacje-o-danym-watku" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#information-about-a-particular-thread" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get thread with provided identifier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#szczegolowe-informacje-o-danym-watku" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#information-about-a-particular-thread" target="_blank">EN</a>.</remarks>
         /// <param name="threadId">Identifier of thread to get.</param>
         /// <returns>Thread returned successfully</returns>
         /// <throws cref="ApiException">
@@ -3553,7 +3551,7 @@ namespace JadeX.AllegroAPI
         Task<Thread> GetThreadGET(string threadId);
 
         /// <summary>Mark a particular thread as read</summary>
-        /// <remarks>Use this resource to mark thread with provided identifier as read. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#szczegolowe-informacje-o-wiadomosci" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#information-about-a-particular-message" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to mark thread with provided identifier as read. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#szczegolowe-informacje-o-wiadomosci" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#information-about-a-particular-message" target="_blank">EN</a>.</remarks>
         /// <param name="threadId">Identifier of thread to be marked.</param>
         /// <param name="body">Updated read flag</param>
         /// <returns>Thread marked as read successfully</returns>
@@ -3569,7 +3567,7 @@ namespace JadeX.AllegroAPI
         Task<Thread> ChangeReadFlagOnThreadPUT(string threadId, [Body] ThreadReadFlag body);
 
         /// <summary>Write a new message</summary>
-        /// <remarks>Use this resource to write new message to recipient. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#nowa-wiadomosc" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#add-a-new-message" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to write new message to recipient. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#nowa-wiadomosc" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#add-a-new-message" target="_blank">EN</a>.</remarks>
         /// <param name="body">Object representing new message.</param>
         /// <returns>Message successfully written</returns>
         /// <throws cref="ApiException">
@@ -3582,7 +3580,7 @@ namespace JadeX.AllegroAPI
         Task<Message> NewMessagePOST([Body] NewMessage body);
 
         /// <summary>List messages in thread</summary>
-        /// <remarks>Use this resource to list messages in thread with provided identifier. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#lista-wiadomosci-dla-wybranego-watku" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#list-of-the-messages-for-the-particular-thread" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to list messages in thread with provided identifier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#lista-wiadomosci-dla-wybranego-watku" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#list-of-the-messages-for-the-particular-thread" target="_blank">EN</a>.</remarks>
         /// <param name="threadId">Identifier of thread to get messages from.</param>
         /// <param name="limit">The maximum number of messages returned in the response.</param>
         /// <param name="offset">Index of the first returned message from all results.</param>
@@ -3601,7 +3599,7 @@ namespace JadeX.AllegroAPI
         Task<MessagesList> ListMessagesGET(string threadId, [Query] int? limit = default, [Query] long? offset = default, [Query] System.DateTimeOffset? before = default, [Query] System.DateTimeOffset? after = default);
 
         /// <summary>Write a new message in thread</summary>
-        /// <remarks>Use this resource to write new message in existing thread. This resource is rate limited to 1 request per second for a user. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#nowa-wiadomosc" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#add-a-new-message" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to write new message in existing thread. This resource is rate limited to 1 request per second for a user. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#nowa-wiadomosc" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#add-a-new-message" target="_blank">EN</a>.</remarks>
         /// <param name="threadId">Identifier of thread to write message to.</param>
         /// <returns>Message in thread successfully written</returns>
         /// <throws cref="ApiException">
@@ -3616,7 +3614,7 @@ namespace JadeX.AllegroAPI
         Task<Message> NewMessageInThreadPOST(string threadId, [Body] NewMessageInThread body);
 
         /// <summary>Get single message</summary>
-        /// <remarks>Use this resource to get message with provided identifier. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#szczegolowe-informacje-o-wiadomosci" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#information-about-a-particular-message" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get message with provided identifier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#szczegolowe-informacje-o-wiadomosci" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#information-about-a-particular-message" target="_blank">EN</a>.</remarks>
         /// <param name="messageId">Identifier of message to be returned.</param>
         /// <returns>Message returned successfully</returns>
         /// <throws cref="ApiException">
@@ -3629,7 +3627,7 @@ namespace JadeX.AllegroAPI
         Task<Message> GetMessageGET(string messageId);
 
         /// <summary>Delete single message</summary>
-        /// <remarks>Use this resource to delete message with provided identifier. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#usuniecie-wiadomosci" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#delete-a-message" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete message with provided identifier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#usuniecie-wiadomosci" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#delete-a-message" target="_blank">EN</a>.</remarks>
         /// <param name="messageId">Identifier of the message to delete.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -3642,7 +3640,7 @@ namespace JadeX.AllegroAPI
         Task DeleteMessageDELETE(string messageId);
 
         /// <summary>Add attachment declaration</summary>
-        /// <remarks>Use this resource to add attachment declaration before uploading. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#deklaracja-zalacznika" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#attachment-declaration" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to add attachment declaration before uploading. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#deklaracja-zalacznika" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#attachment-declaration" target="_blank">EN</a>.</remarks>
         /// <returns>Attachment declaration successfully added</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3655,7 +3653,7 @@ namespace JadeX.AllegroAPI
         Task<MessageAttachmentId> NewAttachmentDeclarationPOST([Body] NewAttachmentDeclaration body);
 
         /// <summary>Upload attachment binary data</summary>
-        /// <remarks>Use this resource to upload attachment using identifier that was declared. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#dodanie-zalacznika" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#add-an-attachment" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to upload attachment using identifier that was declared. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#dodanie-zalacznika" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#add-an-attachment" target="_blank">EN</a>.</remarks>
         /// <param name="attachmentId">The identifier of attachment that will be uploaded.</param>
         /// <returns>Attachment succesfully uploaded.</returns>
         /// <throws cref="ApiException">
@@ -3671,7 +3669,7 @@ namespace JadeX.AllegroAPI
         Task<MessageAttachmentId> UploadAttachmentPUT(string attachmentId,  StreamPart body);
 
         /// <summary>Download attachment</summary>
-        /// <remarks>Use this resource to download attachment with provided identifier. Read more: <a href="../../tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#pobranie-zalacznika" target="_blank">PL</a> / <a href="../../tutorials/how-to-manage-the-message-center-g05avyGlZUW#attachment-related-to-the-message" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to download attachment with provided identifier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-zarzadzac-centrum-wiadomosci-XxWm2K890Fk#pobranie-zalacznika" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/how-to-manage-the-message-center-g05avyGlZUW#attachment-related-to-the-message" target="_blank">EN</a>.</remarks>
         /// <param name="attachmentId">Identifier of the attachment that will be downloaded.</param>
         /// <returns>Attachment file returned successfully</returns>
         /// <throws cref="ApiException">
@@ -3684,7 +3682,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> DownloadAttachmentGET(string attachmentId);
 
         /// <summary>[BETA] Get customer returns by provided query parameters</summary>
-        /// <remarks>Use this resource to get all customer returns filtered by query parameters. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-liste-zwrotow" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-customer-returns-list" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get all customer returns filtered by query parameters. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-liste-zwrotow" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-customer-returns-list" target="_blank">EN</a>.</remarks>
         /// <param name="customerReturnId">One or more customer return id's.</param>
         /// <param name="orderId">One or more order id's.</param>
         /// <param name="items_offerId">One or more returned item offer id's.</param>
@@ -3711,7 +3709,7 @@ namespace JadeX.AllegroAPI
         Task<CustomerReturnResponse> GetCustomerReturns([Query] string? customerReturnId = default, [Query] string? orderId = default, [Query, AliasAs("items.offerId")] string? items_offerId = default, [Query, AliasAs("items.name")] string? items_name = default, [Query, AliasAs("parcels.waybill")] string? parcels_waybill = default, [Query, AliasAs("parcels.carrierId")] string? parcels_carrierId = default, [Query, AliasAs("parcels.sender.phoneNumber")] string? parcels_sender_phoneNumber = default, [Query] string? referenceNumber = default, [Query] string? from = default, [Query, AliasAs("createdAt.gte")] string? createdAt_gte = default, [Query, AliasAs("createdAt.lte")] string? createdAt_lte = default, [Query] string? marketplaceId = default, [Query] int? limit = default, [Query] int? offset = default);
 
         /// <summary>[BETA] Get customer return by id</summary>
-        /// <remarks>Use this resource to get customer returns by its identifier. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-szczegolowe-informacje-o-zwrocie" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-detailed-information-about-customer-return" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get customer returns by its identifier. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-pobrac-szczegolowe-informacje-o-zwrocie" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-retrieve-detailed-information-about-customer-return" target="_blank">EN</a>.</remarks>
         /// <param name="customerReturnId">Id of the customer return.</param>
         /// <returns>Successfully retrieved customer return.</returns>
         /// <throws cref="ApiException">
@@ -3726,7 +3724,7 @@ namespace JadeX.AllegroAPI
         Task<CustomerReturn> GetCustomerReturnById(string customerReturnId);
 
         /// <summary>[BETA] Reject customer return refund</summary>
-        /// <remarks>Use this resource to reject customer return refund with provided reason. Read more: <a href="../../tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-odmowic-zwrotu-wplaty" target="_blank">PL</a> / <a href="../../tutorials/process-orders-PgPMlWDr8Cv#how-to-reject-customer-return-refund" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to reject customer return refund with provided reason. Read more: <a href="https://developer.allegro.pl/tutorials/jak-obslugiwac-zamowienia-GRaj0qyvwtR#jak-odmowic-zwrotu-wplaty" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/process-orders-PgPMlWDr8Cv#how-to-reject-customer-return-refund" target="_blank">EN</a>.</remarks>
         /// <param name="customerReturnId">Id of the customer return.</param>
         /// <returns>Successfully rejected customer return.</returns>
         /// <throws cref="ApiException">
@@ -3741,7 +3739,7 @@ namespace JadeX.AllegroAPI
         Task<CustomerReturn> RejectCustomerReturnRefund(string customerReturnId, [Body] CustomerReturnRefundRejectionRequest body);
 
         /// <summary>Get list of Advance Ship Notices</summary>
-        /// <remarks>Use this resource to get a list of Advance Ship Notices. The list is ordered by **createdAt** property. Default **offset** is 0, default **limit** is 50. A list can be filtered by statuses. Multiple status query parameters are allowed. In such cases, filters are joined with **OR** logical operator. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-przegladac-utworzone-awizo" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-get-created-advance-ship-notices" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of Advance Ship Notices. The list is ordered by **createdAt** property. Default **offset** is 0, default **limit** is 50. A list can be filtered by statuses. Multiple status query parameters are allowed. In such cases, filters are joined with **OR** logical operator. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-przegladac-utworzone-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-get-created-advance-ship-notices" target="_blank">EN</a>.</remarks>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <param name="limit">Maximum number of elements in response.</param>
         /// <param name="status">A status of the Advance Ship Notices in the response.</param>
@@ -3757,7 +3755,7 @@ namespace JadeX.AllegroAPI
         Task<AdvanceShipNoticeList> GetAdvanceShipNotices([Query] int? offset = default, [Query] int? limit = default, [Query(CollectionFormat.Multi)] IEnumerable<AdvanceShipNoticeStatus>? status = default);
 
         /// <summary>Create an Advance Ship Notice</summary>
-        /// <remarks>Use this resource to create an Advance Ship Notice. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#utworz-draft-awizo" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-a-draft-of-the-advance-ship-notice" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create an Advance Ship Notice. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#utworz-draft-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-a-draft-of-the-advance-ship-notice" target="_blank">EN</a>.</remarks>
         /// <returns>Advance Ship Notice created.</returns>
         /// <throws cref="ApiException">
         /// Thrown when the request returns a non-success status code:
@@ -3771,7 +3769,7 @@ namespace JadeX.AllegroAPI
         Task<CreateAdvanceShipNoticeResponse> CreateAdvanceShipNotice([Body] CreateAdvanceShipNoticeRequest body);
 
         /// <summary>Get single Advance Ship Notice</summary>
-        /// <remarks>Use this resource to get an Advance Ship Notice. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-przegladac-utworzone-awizo" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-get-created-advance-ship-notices" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get an Advance Ship Notice. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-przegladac-utworzone-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-get-created-advance-ship-notices" target="_blank">EN</a>.</remarks>
         /// <param name="id">The identifier of returned Advance Ship Notice.</param>
         /// <returns>Returns single Advance Ship Notice.</returns>
         /// <throws cref="ApiException">
@@ -3787,7 +3785,7 @@ namespace JadeX.AllegroAPI
         /// <summary>Update Advance Ship Notice</summary>
         /// <remarks>
         /// Use this resource to update an Advance Ship Notice. Any content property update will clear labels property. Use Create labels command to create new labels for provided content.
-        /// If a client wants to update read-only property, an error is returned (only in cases when sent value will be different than actual on the server). Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#uzupelnij-dane-o-awizo" target="_blank">PL</a> / <a href="../../one-fulfillment-by-allegro-4R9dXyMPlc9#complete-the-data-of-advance-ship-notice" target="_blank">EN</a>.
+        /// If a client wants to update read-only property, an error is returned (only in cases when sent value will be different than actual on the server). Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#uzupelnij-dane-o-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/one-fulfillment-by-allegro-4R9dXyMPlc9#complete-the-data-of-advance-ship-notice" target="_blank">EN</a>.
         /// </remarks>
         /// <param name="id">An identifier of Advance Ship Notice.</param>
         /// <param name="if_match">A current version of Advance Ship Notice (e.g. from etag header obtained via get).</param>
@@ -3805,7 +3803,7 @@ namespace JadeX.AllegroAPI
         Task<AdvanceShipNoticeResponse> UpdateAdvanceShipNotice(System.Guid id, [Body] AdvanceShipNotice body, [Header("if-match")] string if_match);
 
         /// <summary>Delete Advance Ship Notice</summary>
-        /// <remarks>Use this resource to delete an Advance Ship Notice. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-usunac-awizo" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-delete-advance-ship-notice" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to delete an Advance Ship Notice. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-usunac-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-delete-advance-ship-notice" target="_blank">EN</a>.</remarks>
         /// <param name="id">An identifier of the Advance Ship Notice to delete.</param>
         /// <returns>A <see cref="Task"/> that completes when the request is finished.</returns>
         /// <throws cref="ApiException">
@@ -3819,7 +3817,7 @@ namespace JadeX.AllegroAPI
         Task DeleteAdvanceShipNotice(System.Guid id, [Header("accept")] Accept accept);
 
         /// <summary>Get labels for Advance Ship Notice</summary>
-        /// <remarks>Use this resource to get labels for Advance Ship Notice after being created with "create labels command". Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#wygeneruj-oznaczenia-na-kartony" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-labels-for-boxes" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get labels for Advance Ship Notice after being created with "create labels command". Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#wygeneruj-oznaczenia-na-kartony" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-labels-for-boxes" target="_blank">EN</a>.</remarks>
         /// <param name="id">An identifier of the Advance Ship Notice.</param>
         /// <param name="accept">Content-type of generated labels</param>
         /// <returns>Returns PDF or ZPL file with labels.</returns>
@@ -3834,7 +3832,7 @@ namespace JadeX.AllegroAPI
         Task<FileResponse> GetAdvanceShipNoticeLabels(System.Guid id, [Header("accept")] Accept2 accept);
 
         /// <summary>Create labels</summary>
-        /// <remarks>Use this resource to create labels for the Advance Ship Notice. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#wygeneruj-oznaczenia-na-kartony" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-labels-for-boxes" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to create labels for the Advance Ship Notice. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#wygeneruj-oznaczenia-na-kartony" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-labels-for-boxes" target="_blank">EN</a>.</remarks>
         /// <param name="command_id">The identifier of the command.</param>
         /// <returns>
         /// Returns command output with status and possible errors.
@@ -3855,7 +3853,7 @@ namespace JadeX.AllegroAPI
         Task<CreateLabelsCommand> CreateLabelsCommand([AliasAs("command-id")] System.Guid command_id, [Body] CreateLabelsCommandOnlyInput body);
 
         /// <summary>Get labels</summary>
-        /// <remarks>Use this resource to check the status of the "create labels command" and get the URL to download labels. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#wygeneruj-oznaczenia-na-kartony" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-labels-for-boxes" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to check the status of the "create labels command" and get the URL to download labels. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#wygeneruj-oznaczenia-na-kartony" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#create-labels-for-boxes" target="_blank">EN</a>.</remarks>
         /// <param name="command_id">An identifier of the command.</param>
         /// <returns>Returns command output with status and possible errors.</returns>
         /// <throws cref="ApiException">
@@ -3869,7 +3867,7 @@ namespace JadeX.AllegroAPI
         Task<CreateLabelsCommand> GetLabelCommand([AliasAs("command-id")] System.Guid command_id);
 
         /// <summary>Submit the Advance Ship Notice</summary>
-        /// <remarks>Use this resource to submit the Advance Ship Notice. After this operation, updates of the Advance Ship Notice are limited to selected properties only. See <a href="../../documentation#operation/updateSubmittedAdvanceShipNotice">PUT /fulfillment/advance-ship-notices/{id}/submitted</a>. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#zakoncz-edycje-i-wyslij-awizo" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#finish-editing-and-submit-the-advance-ship-notice" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to submit the Advance Ship Notice. After this operation, updates of the Advance Ship Notice are limited to selected properties only. See <a href="https://developer.allegro.pl/documentation#operation/updateSubmittedAdvanceShipNotice">PUT /fulfillment/advance-ship-notices/{id}/submitted</a>. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#zakoncz-edycje-i-wyslij-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#finish-editing-and-submit-the-advance-ship-notice" target="_blank">EN</a>.</remarks>
         /// <param name="command_id">The identifier of the command.</param>
         /// <returns>
         /// Returns command output with status and possible errors.
@@ -3889,7 +3887,7 @@ namespace JadeX.AllegroAPI
         Task<SubmitCommand> SubmitCommand([AliasAs("command-id")] System.Guid command_id, [Body] SubmitCommand body);
 
         /// <summary>Get submit status</summary>
-        /// <remarks>Use this resource to get submit status of the Advance Ship Notice. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#zakoncz-edycje-i-wyslij-awizo" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#finish-editing-and-submit-the-advance-ship-notice" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get submit status of the Advance Ship Notice. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#zakoncz-edycje-i-wyslij-awizo" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#finish-editing-and-submit-the-advance-ship-notice" target="_blank">EN</a>.</remarks>
         /// <param name="command_id">An identifier of the command.</param>
         /// <returns>Returns command output with status and possible errors.</returns>
         /// <throws cref="ApiException">
@@ -3927,7 +3925,7 @@ namespace JadeX.AllegroAPI
         Task<AdvanceShipNoticeResponse> UpdateSubmittedAdvanceShipNotice(System.Guid id, [Body] UpdateSubmittedAdvanceShipNoticeRequest body, [Header("if-match")] string if_match);
 
         /// <summary>Get available stock</summary>
-        /// <remarks>Use this resource to get a list of the products belonging to the seller, which are in Allegro Warehouse. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-pobrac-aktualne-stany-magazynowe" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#get-available-stock" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of the products belonging to the seller, which are in Allegro Warehouse. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-pobrac-aktualne-stany-magazynowe" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#get-available-stock" target="_blank">EN</a>.</remarks>
         /// <param name="accept_Language">Expected language of product name translation.</param>
         /// <param name="offset">The offset of elements in the response. Ignored for text/csv content type.</param>
         /// <param name="limit">Maximum number of elements in response. Ignored for text/csv content type.</param>
@@ -3966,10 +3964,10 @@ namespace JadeX.AllegroAPI
         /// </throws>
         [Headers("Accept: application/vnd.allegro.public.v1+json, text/csv, application/json")]
         [Get("/fulfillment/stock")]
-        Task<StockProductList> GetFulfillmentStock([Query] int? offset = default, [Query] int? limit = default, [Query] string? phrase = default, [Query] Sort4? sort = default, [Query] System.Guid? productId = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous11>? productAvailability = default, [Query] ProductStatus? productStatus = default, [Query] StorageFee? storageFee = default, [Query] AsnStatus? asnStatus = default, [Query] int? outOfStockInFrom = default, [Query] int? outOfStockInTo = default, [Header("Accept-Language")] AcceptLanguage? accept_Language = default);
+        Task<StockProductList> GetFulfillmentStock([Query] int? offset = default, [Query] int? limit = default, [Query] string? phrase = default, [Query] Sort4? sort = default, [Query] System.Guid? productId = default, [Query(CollectionFormat.Multi)] IEnumerable<Anonymous10>? productAvailability = default, [Query] ProductStatus? productStatus = default, [Query] StorageFee? storageFee = default, [Query] AsnStatus? asnStatus = default, [Query] int? outOfStockInFrom = default, [Query] int? outOfStockInTo = default, [Header("Accept-Language")] AcceptLanguage? accept_Language = default);
 
         /// <summary>Get list of shipped parcels</summary>
-        /// <remarks>Use this resource to get list of parcels and included items for a given order. Items include detailed information such as expiration dates and serial numbers. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-obslugiwac-zamowienia" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-handle-orders" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get list of parcels and included items for a given order. Items include detailed information such as expiration dates and serial numbers. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#jak-obslugiwac-zamowienia" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#how-to-handle-orders" target="_blank">EN</a>.</remarks>
         /// <param name="orderId">The Allegro's platform order identifier.</param>
         /// <returns>Returns list of parcels shipped by warehouse in a given order.</returns>
         /// <throws cref="ApiException">
@@ -3982,7 +3980,7 @@ namespace JadeX.AllegroAPI
         Task<FulfillmentOrder> GetFulfillmentOrderParcels(System.Guid orderId);
 
         /// <summary>Get list of available products</summary>
-        /// <remarks>Use this resource to get a list of products that can be added to Advance Ship Notice. The list contains products for which the seller has created offers and is ordered by product's name. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#sprawdz-dostepne-produkty-do-awizacji" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#check-available-products-for-asn" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to get a list of products that can be added to Advance Ship Notice. The list contains products for which the seller has created offers and is ordered by product's name. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#sprawdz-dostepne-produkty-do-awizacji" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#check-available-products-for-asn" target="_blank">EN</a>.</remarks>
         /// <param name="accept_Language">Expected language of product name translation.</param>
         /// <param name="offset">The offset of elements in the response.</param>
         /// <param name="limit">Maximum number of elements in response.</param>
@@ -3998,7 +3996,7 @@ namespace JadeX.AllegroAPI
         Task<AvailableProductsList> GetAvailableProducts([Query] int? offset = default, [Query] int? limit = default, [Header("Accept-Language")] AcceptLanguage2? accept_Language = default);
 
         /// <summary>Check current state and details of Advance Ship Notice receiving</summary>
-        /// <remarks>Use this resource to check the state of Advance Ship Notice receiving in Fulfillment Center in real time. The response contains a receiving progress and information about particular items - their quantities and conditions. While the Advance Ship Notice is in UNPACKING state, report is updated dynamically, which might result in different responses even at short time intervals. Read more: <a href="../../tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#sprawdz-postep-odbioru-awizo-przez-magazyn" target="_blank">PL</a> / <a href="../../tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#check-current-state-and-details-of-advance-ship-notice-receiving" target="_blank">EN</a>.</remarks>
+        /// <remarks>Use this resource to check the state of Advance Ship Notice receiving in Fulfillment Center in real time. The response contains a receiving progress and information about particular items - their quantities and conditions. While the Advance Ship Notice is in UNPACKING state, report is updated dynamically, which might result in different responses even at short time intervals. Read more: <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-0ADwgOLqWSw#sprawdz-postep-odbioru-awizo-przez-magazyn" target="_blank">PL</a> / <a href="https://developer.allegro.pl/tutorials/one-fulfillment-by-allegro-4R9dXyMPlc9#check-current-state-and-details-of-advance-ship-notice-receiving" target="_blank">EN</a>.</remarks>
         /// <param name="id">An identifier of advance ship notice.</param>
         /// <returns>Returns the state of Advance Ship Notice receiving in Fulfillment Center</returns>
         /// <throws cref="ApiException">
@@ -4018,7 +4016,7 @@ namespace JadeX.AllegroAPI
 
 //----------------------
 // <auto-generated>
-//     Generated using the NSwag toolchain v14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0)) (http://NSwag.org)
+//     Generated using the NSwag toolchain v14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0)) (http://NSwag.org)
 // </auto-generated>
 //----------------------
 
@@ -4042,7 +4040,7 @@ namespace JadeX.AllegroAPI
 
     
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BillingEntries
     {
         /// <summary>
@@ -4054,7 +4052,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BillingEntry
     {
         /// <summary>
@@ -4079,7 +4077,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("offer")]
-        public Offer2? Offer { get; set; } = default!;
+        public Offer? Offer { get; set; } = default!;
 
         /// <summary>
         /// Money value of the returned billing entry.
@@ -4111,7 +4109,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BillingType
     {
         /// <summary>
@@ -4130,7 +4128,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class InitializeRefund
     {
 
@@ -4144,7 +4142,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("reason")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public InitializeRefundReason Reason { get; set; } = default!;
 
         /// <summary>
@@ -4195,7 +4193,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Detailed information about the refund application.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundClaim
     {
         /// <summary>
@@ -4212,7 +4210,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RefundClaimStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -4256,12 +4254,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RefundClaimType? Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundClaimRequest
     {
         /// <summary>
@@ -4281,7 +4279,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundClaimResponse
     {
         /// <summary>
@@ -4296,7 +4294,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Detailed information about the refund.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundDetails
     {
         /// <summary>
@@ -4317,7 +4315,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("reason")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RefundDetailsReason Reason { get; set; } = default!;
 
         /// <summary>
@@ -4326,7 +4324,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RefundDetailsStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -4386,7 +4384,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundLineItem
     {
         /// <summary>
@@ -4403,7 +4401,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RefundLineItemType Type { get; set; } = default!;
 
         /// <summary>
@@ -4426,7 +4424,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Payment affected by refund operation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundPayment
     {
         /// <summary>
@@ -4438,7 +4436,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnRefundRejectionRequest
     {
         /// <summary>
@@ -4451,7 +4449,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnResponse
     {
 
@@ -4468,7 +4466,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturn
     {
 
@@ -4513,7 +4511,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnRejection
     {
         /// <summary>
@@ -4521,7 +4519,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("code")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CustomerReturnRejectionCode? Code { get; set; } = default!;
 
         /// <summary>
@@ -4536,7 +4534,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnItem
     {
 
@@ -4560,7 +4558,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnRefund
     {
 
@@ -4569,7 +4567,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnReturnParcel
     {
 
@@ -4587,7 +4585,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnItemReason
     {
         /// <summary>
@@ -4602,7 +4600,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnRefundBankAccount
     {
 
@@ -4623,7 +4621,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnRefundBankAccountAddress
     {
 
@@ -4641,7 +4639,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomerReturnParcelSender
     {
 
@@ -4650,7 +4648,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PaymentsSurcharge
     {
         /// <summary>
@@ -4665,7 +4663,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceDefinitionRequest
     {
 
@@ -4675,7 +4673,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceRequest
     {
 
@@ -4694,7 +4692,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceResponse
     {
 
@@ -4713,7 +4711,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroup
     {
         /// <summary>
@@ -4725,7 +4723,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroupRequest
     {
         /// <summary>
@@ -4752,7 +4750,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroupResponse
     {
 
@@ -4788,7 +4786,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroups
     {
 
@@ -4797,7 +4795,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroupTranslationRequest
     {
 
@@ -4806,7 +4804,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroupTranslationWrapper
     {
 
@@ -4815,7 +4813,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceTranslation
     {
 
@@ -4831,7 +4829,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceGroupTranslationResponse
     {
 
@@ -4840,7 +4838,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceGroupTranslation
     {
         /// <summary>
@@ -4855,7 +4853,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServicesGroupTranslationWrapperWithType
     {
 
@@ -4867,12 +4865,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AdditionalServicesGroupTranslationWrapperWithTypeType? Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceGroupTranslationPatchResponse
     {
         /// <summary>
@@ -4887,7 +4885,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Address
     {
 
@@ -4922,7 +4920,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Settings for each additional marketplace.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplaces
     {
 
@@ -4931,7 +4929,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Additional marketplace settings.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferAdditionalMarketplace
     {
 
@@ -4943,12 +4941,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacePublication
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AdditionalMarketplacePublicationStatus? Status { get; set; } = default!;
 
     }
@@ -4962,7 +4960,7 @@ namespace JadeX.AllegroAPI
     /// <br/>  - *APPROVED* - the offer is approved to list on given marketplace
     /// <br/>  - *REFUSED* - the offer is refused to list on given marketplace
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AdditionalMarketplacePublicationStatus
     {
 
@@ -4986,7 +4984,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer's selling mode on given marketplace
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplaceSellingMode
     {
 
@@ -4999,7 +4997,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The definitions of the different after sales services assigned to the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AfterSalesServices
     {
 
@@ -5014,7 +5012,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AfterSalesServicesAttachment
     {
         /// <summary>
@@ -5043,7 +5041,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The implied warranty information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarranty
     {
         /// <summary>
@@ -5058,7 +5056,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The return policy information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicy
     {
         /// <summary>
@@ -5073,7 +5071,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The warranty information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Warranty
     {
         /// <summary>
@@ -5085,7 +5083,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WarrantyRequest
     {
         /// <summary>
@@ -5097,7 +5095,7 @@ namespace JadeX.AllegroAPI
         public string? Name { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public WarrantyType? Type { get; set; } = default!;
 
         [JsonPropertyName("individual")]
@@ -5119,7 +5117,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WarrantyResponse
     {
         /// <summary>
@@ -5141,7 +5139,7 @@ namespace JadeX.AllegroAPI
         public string? Name { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public WarrantyType? Type { get; set; } = default!;
 
         [JsonPropertyName("individual")]
@@ -5165,7 +5163,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Defines who is warrantor.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum WarrantyType
     {
 
@@ -5177,7 +5175,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WarrantyPeriod
     {
         /// <summary>
@@ -5196,7 +5194,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WarrantyAttachment
     {
         /// <summary>
@@ -5215,7 +5213,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarrantyRequest
     {
         /// <summary>
@@ -5245,7 +5243,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarrantyResponse
     {
         /// <summary>
@@ -5284,7 +5282,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarrantyPeriod
     {
         /// <summary>
@@ -5296,7 +5294,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AfterSalesServicesAddress
     {
         /// <summary>
@@ -5344,7 +5342,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyAddress
     {
         /// <summary>
@@ -5389,7 +5387,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyRequest
     {
         /// <summary>
@@ -5429,7 +5427,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyResponse
     {
         /// <summary>
@@ -5486,7 +5484,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyAvailability
     {
         /// <summary>
@@ -5494,7 +5492,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("range")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ReturnPolicyAvailabilityRange? Range { get; set; } = default!;
 
         [JsonPropertyName("restrictionCause")]
@@ -5502,7 +5500,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RestrictionCause
     {
         /// <summary>
@@ -5510,7 +5508,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("name")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RestrictionCauseName? Name { get; set; } = default!;
 
         [JsonPropertyName("description")]
@@ -5518,7 +5516,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyReturnCost
     {
         /// <summary>
@@ -5526,12 +5524,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("coveredBy")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ReturnPolicyReturnCostCoveredBy? CoveredBy { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyContact
     {
         /// <summary>
@@ -5550,7 +5548,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyOptions
     {
         /// <summary>
@@ -5593,11 +5591,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("abroadReturnTermsMayDiffer")]
+        [System.Obsolete]
         public bool? AbroadReturnTermsMayDiffer { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Attachment
     {
         /// <summary>
@@ -5612,7 +5611,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Answer for user's rating.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UserRatingAnswerRequest
     {
         /// <summary>
@@ -5629,7 +5628,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Seller's answer, if null seller did not publish answer
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Answer
     {
         /// <summary>
@@ -5650,7 +5649,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AvailableConstraint
     {
         /// <summary>
@@ -5672,7 +5671,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The rates broken down into detailed categories. Note that this information is only available if the seller has received enough detailed ratings.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AverageRates
     {
         /// <summary>
@@ -5709,7 +5708,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BasicDefinitionResponse
     {
         /// <summary>
@@ -5721,7 +5720,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Benefit
     {
 
@@ -5739,13 +5738,13 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("WHOLESALE_PRICE_LIST", typeof(WholesalePriceListBenefitSpecification))]
     [JsonInheritanceAttribute("ORDER_FIXED_DISCOUNT", typeof(BundleBenefitSpecification))]
     [JsonInheritanceAttribute("UNIT_PERCENTAGE_DISCOUNT", typeof(MultiPackBenefitSpecification))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BenefitSpecification
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LargeOrderDiscountBenefitSpecification : BenefitSpecification
     {
 
@@ -5771,7 +5770,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WholesalePriceListBenefitSpecification : BenefitSpecification
     {
 
@@ -5805,7 +5804,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BundleBenefitSpecification : BenefitSpecification
     {
 
@@ -5826,7 +5825,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MultiPackBenefitSpecification : BenefitSpecification
     {
 
@@ -5860,7 +5859,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Caption
     {
 
@@ -5877,7 +5876,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The list of categories.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoriesDto
     {
 
@@ -5886,7 +5885,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Category
     {
         /// <summary>
@@ -5901,7 +5900,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category in which the offer is listed for sale. You can indicate a category from the product's 'similar categories' to set the offer's category.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferCategoryRequest : Category
     {
 
@@ -5910,7 +5909,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The category to which the offer is listed for sale.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferCategory : Category
     {
 
@@ -5919,7 +5918,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Product category
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductCategory : Category
     {
 
@@ -5928,7 +5927,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The category data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryDto
     {
         /// <summary>
@@ -5967,7 +5966,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// A list of the different options which can be used with this category.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryOptionsDto
     {
         /// <summary>
@@ -6024,7 +6023,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category suggestion category object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategorySuggestionCategoryNode
     {
         /// <summary>
@@ -6048,7 +6047,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategorySuggestionResponse
     {
         /// <summary>
@@ -6061,7 +6060,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UnfilledParametersResponse
     {
         /// <summary>
@@ -6089,7 +6088,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParametersScheduledChangesResponse
     {
         /// <summary>
@@ -6107,7 +6106,7 @@ namespace JadeX.AllegroAPI
     /// </summary>
     [JsonInheritanceConverter(typeof(CategoryParametersScheduledBaseChange), "type")]
     [JsonInheritanceAttribute("REQUIREMENT_CHANGE", typeof(RequirementChange))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParametersScheduledBaseChange
     {
         /// <summary>
@@ -6128,7 +6127,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RequirementChange : CategoryParametersScheduledBaseChange
     {
 
@@ -6157,7 +6156,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category parameter scheduled change category data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParametersScheduledBaseChangeCategory
     {
         /// <summary>
@@ -6172,7 +6171,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category parameter scheduled change parameter data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParametersScheduledBaseChangeParameter
     {
         /// <summary>
@@ -6184,7 +6183,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryEventsResponse
     {
         /// <summary>
@@ -6205,7 +6204,7 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("CATEGORY_RENAMED", typeof(CategoryRenamedEvent))]
     [JsonInheritanceAttribute("CATEGORY_MOVED", typeof(CategoryMovedEvent))]
     [JsonInheritanceAttribute("CATEGORY_DELETED", typeof(CategoryDeletedEvent))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryBaseEvent
     {
         /// <summary>
@@ -6227,7 +6226,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryCreatedEvent : CategoryBaseEvent
     {
 
@@ -6249,7 +6248,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryRenamedEvent : CategoryBaseEvent
     {
 
@@ -6271,7 +6270,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryMovedEvent : CategoryBaseEvent
     {
 
@@ -6293,7 +6292,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryDeletedEvent : CategoryBaseEvent
     {
 
@@ -6325,7 +6324,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category event category data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryEventBaseCategory
     {
         /// <summary>
@@ -6358,7 +6357,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListSupportedCategoriesDto
     {
         /// <summary>
@@ -6370,7 +6369,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibleProductsGroupsDto
     {
         /// <summary>
@@ -6398,7 +6397,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibleProductsListDto
     {
         /// <summary>
@@ -6426,7 +6425,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibleProductDto
     {
         /// <summary>
@@ -6459,7 +6458,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Cells
     {
 
@@ -6469,7 +6468,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Rules
     {
         /// <summary>
@@ -6482,7 +6481,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferRules
     {
         /// <summary>
@@ -6503,7 +6502,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPriceAutomationCommand
     {
         /// <summary>
@@ -6527,7 +6526,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPriceAutomationModificationSet
     {
         /// <summary>
@@ -6539,7 +6538,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPriceAutomationModificationRemove
     {
         /// <summary>
@@ -6554,7 +6553,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The rule type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PriceAutomationRuleType
     {
 
@@ -6563,7 +6562,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ChangePrice
     {
         /// <summary>
@@ -6585,7 +6584,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The input of the command, i.e. the new Buy Now price for the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ChangePriceInput
     {
 
@@ -6595,7 +6594,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ChangePriceWithoutOutput
     {
         /// <summary>
@@ -6614,12 +6613,12 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The output of the command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CommandOutput
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ProcessingStatus? Status { get; set; } = default!;
 
         [JsonPropertyName("errors")]
@@ -6630,7 +6629,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Status of single command task.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CommandTask
     {
         /// <summary>
@@ -6641,13 +6640,6 @@ namespace JadeX.AllegroAPI
         public string? Field { get; set; } = default!;
 
         /// <summary>
-        /// Date of completion of the modification. Format (ISO 8601) - yyyy-MM-dd'T'HH:mm:ss.SSSZ
-        /// </summary>
-
-        [JsonPropertyName("finishedAt")]
-        public System.DateTimeOffset? FinishedAt { get; set; } = default!;
-
-        /// <summary>
         /// General fail reason. You should check the errors structure to get more detailed information of the encountered errors.
         /// </summary>
 
@@ -6656,13 +6648,6 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("offer")]
         public OfferId? Offer { get; set; } = default!;
-
-        /// <summary>
-        /// Date of the modification schedule. Format (ISO 8601) - yyyy-MM-dd'T'HH:mm:ss.SSSZ
-        /// </summary>
-
-        [JsonPropertyName("scheduledAt")]
-        public System.DateTimeOffset? ScheduledAt { get; set; } = default!;
 
         /// <summary>
         /// Available statuses: NEW, SUCCESS, FAIL
@@ -6684,20 +6669,20 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("MANUAL", typeof(CompatibilityListManual))]
     [JsonInheritanceAttribute("PRODUCT_BASED", typeof(CompatibilityListProductBased))]
     [JsonInheritanceAttribute("CompatibilityListProductBasedProductOfferResponse", typeof(CompatibilityListProductBasedProductOfferResponse))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityList
     {
 
     }
 
     [JsonInheritanceConverter(typeof(CompatibilityListProductOfferResponse), "type")]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListProductOfferResponse
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListManual : CompatibilityList
     {
         /// <summary>
@@ -6710,7 +6695,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListManualType
     {
         /// <summary>
@@ -6723,7 +6708,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListProductBased : CompatibilityList
     {
         /// <summary>
@@ -6752,7 +6737,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListProductBasedProductOfferResponse : CompatibilityList
     {
         /// <summary>
@@ -6776,13 +6761,13 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceConverter(typeof(CompatibilityListItem), "type")]
     [JsonInheritanceAttribute("TEXT", typeof(CompatibilityListTextItem))]
     [JsonInheritanceAttribute("ID", typeof(CompatibilityListIdItem))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListItem
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListItemProductBased
     {
         /// <summary>
@@ -6794,7 +6779,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListTextItem : CompatibilityListItem
     {
 
@@ -6820,7 +6805,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListIdItem : CompatibilityListItem
     {
 
@@ -6860,7 +6845,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompatibilityListIdItemAdditionalInfo
     {
         /// <summary>
@@ -6873,7 +6858,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Configuration
     {
 
@@ -6885,7 +6870,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ConstraintCriteria
     {
 
@@ -6897,7 +6882,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ConstraintCriteriaType? Type { get; set; } = default!;
 
         /// <summary>
@@ -6909,7 +6894,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ContactRequest
     {
 
@@ -6927,7 +6912,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ContactResponse
     {
 
@@ -6945,7 +6930,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ContactResponseList
     {
 
@@ -6954,7 +6939,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Coordinates
     {
 
@@ -6968,7 +6953,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoriesResponse
     {
 
@@ -6977,7 +6962,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryBasic
     {
         /// <summary>
@@ -7001,7 +6986,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryFull : DeliveryBasic
     {
         /// <summary>
@@ -7022,7 +7007,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DescriptionSection
     {
 
@@ -7037,13 +7022,13 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceConverter(typeof(DescriptionSectionItem), "type")]
     [JsonInheritanceAttribute("TEXT", typeof(DescriptionSectionItemText))]
     [JsonInheritanceAttribute("IMAGE", typeof(DescriptionSectionItemImage))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DescriptionSectionItem
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DescriptionSectionItemText : DescriptionSectionItem
     {
 
@@ -7064,7 +7049,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DescriptionSectionItemImage : DescriptionSectionItem
     {
 
@@ -7085,7 +7070,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class EmailRequest
     {
         /// <summary>
@@ -7098,7 +7083,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class EmailResponse
     {
 
@@ -7107,7 +7092,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Error
     {
         /// <summary>
@@ -7150,13 +7135,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The list of all the error objects explaining the error.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Errors : System.Collections.ObjectModel.Collection<Error>
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ErrorsHolder
     {
 
@@ -7165,7 +7150,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AuthError
     {
         /// <summary>
@@ -7185,7 +7170,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Fee
     {
 
@@ -7197,7 +7182,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryResponse
     {
         /// <summary>
@@ -7212,7 +7197,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryDefinitionResponse
     {
         /// <summary>
@@ -7243,7 +7228,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryDefinitionDescriptionResponse
     {
         /// <summary>
@@ -7269,7 +7254,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FeePreviewResponse
     {
         /// <summary>
@@ -7288,7 +7273,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CommissionResponse
     {
         /// <summary>
@@ -7310,7 +7295,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class QuoteResponse
     {
         /// <summary>
@@ -7345,7 +7330,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Command execution summary
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class GeneralReport
     {
         /// <summary>
@@ -7374,7 +7359,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Header
     {
 
@@ -7387,7 +7372,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Image url
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImageUrl
     {
 
@@ -7396,7 +7381,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarrantyBasic
     {
 
@@ -7408,7 +7393,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class JustId
     {
 
@@ -7420,7 +7405,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The information on the offer in an external system.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ExternalId
     {
         /// <summary>
@@ -7436,7 +7421,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// for offer with a delivery method it is a parcel dispatch location. For offers with personal pick-up it is a pick-up location, additionally we recommend to use points of service (&lt;a href="../../documentation/#tag/Points-of-service" target="_blank"&gt;https://developer.allegro.pl/documentation/#tag/Points-of-service&lt;/a&gt;)
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Location
     {
 
@@ -7472,7 +7457,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains fields to change
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Modification
     {
 
@@ -7502,7 +7487,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains shipping rates to change
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ModificationDelivery
     {
 
@@ -7514,7 +7499,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Allows you to assign/unassign discounts (rebates) to/from offers.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ModificationDiscounts
     {
 
@@ -7526,7 +7511,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Allows you to change duration or additional marketplaces of the offers. You can include only property in a request "duration" or "durationUnlimited" or "marketplaces".
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ModificationPublication
     {
         /// <summary>
@@ -7534,7 +7519,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("duration")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ModificationPublicationDuration? Duration { get; set; } = default!;
 
         /// <summary>
@@ -7553,7 +7538,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ModificationPayments
     {
         /// <summary>
@@ -7561,7 +7546,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("invoice")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ModificationPaymentsInvoice? Invoice { get; set; } = default!;
 
         [JsonPropertyName("tax")]
@@ -7569,7 +7554,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTable
     {
         /// <summary>
@@ -7581,7 +7566,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Contact
     {
         /// <summary>
@@ -7593,7 +7578,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOfferFundraisingCampaignRequest
     {
         /// <summary>
@@ -7612,7 +7597,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOfferFundraisingCampaignResponse
     {
         /// <summary>
@@ -7627,7 +7612,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer additional services.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOfferAdditionalServicesRequest
     {
         /// <summary>
@@ -7646,7 +7631,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOfferAdditionalServicesResponse
     {
         /// <summary>
@@ -7661,13 +7646,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// An array of offer attachments.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class ProductOfferAttachment : System.Collections.ObjectModel.Collection<Anonymous12>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ProductOfferAttachment : System.Collections.ObjectModel.Collection<Anonymous11>
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferAttachment
     {
 
@@ -7676,7 +7661,7 @@ namespace JadeX.AllegroAPI
         public string? Id { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AttachmentType? Type { get; set; } = default!;
 
         [JsonPropertyName("file")]
@@ -7684,12 +7669,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PublicOfferPreviewRequest
     {
 
         [JsonPropertyName("offer")]
-        public Offer? Offer { get; set; } = default!;
+        public PricingOffer? Offer { get; set; } = default!;
 
         [JsonPropertyName("classifiedsPackages")]
         public ClassifiedsPackages? ClassifiedsPackages { get; set; } = default!;
@@ -7703,7 +7688,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedsPackages
     {
 
@@ -7719,7 +7704,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedPackage
     {
         /// <summary>
@@ -7731,7 +7716,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedExtraPackage
     {
         /// <summary>
@@ -7750,12 +7735,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferAttachmentRequest
     {
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AttachmentType? Type { get; set; } = default!;
 
         [JsonPropertyName("file")]
@@ -7766,7 +7751,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// offer attachment type
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AttachmentType
     {
 
@@ -7800,9 +7785,12 @@ namespace JadeX.AllegroAPI
         [System.Runtime.Serialization.EnumMember(Value = @"TIRE_LABEL")]
         TIRE_LABEL = 9,
 
+        [System.Runtime.Serialization.EnumMember(Value = @"SAFETY_INFORMATION_MANUAL")]
+        SAFETY_INFORMATION_MANUAL = 10,
+
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AttachmentFile
     {
 
@@ -7816,7 +7804,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AttachmentFileRequest
     {
 
@@ -7826,7 +7814,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferImageLinkUploadRequest
     {
         /// <summary>
@@ -7839,7 +7827,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferImageUploadResponse
     {
         /// <summary>
@@ -7861,57 +7849,9 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Single offer data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Offer
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class PricingOffer
     {
-
-        [JsonPropertyName("additionalMarketplaces")]
-        public AdditionalMarketplaces? AdditionalMarketplaces { get; set; } = default!;
-
-        [JsonPropertyName("additionalServices")]
-        public JustId? AdditionalServices { get; set; } = default!;
-
-        [JsonPropertyName("afterSalesServices")]
-        public AfterSalesServices? AfterSalesServices { get; set; } = default!;
-
-        /// <summary>
-        /// List of offer attachments. You can attach up to 7 files to the offer – one per each attachment type as described in &lt;a href="/documentation/#operation/createOfferAttachmentUsingPOST" target="_blank"&gt;uploading offer attachments flow&lt;/a&gt;.
-        /// </summary>
-
-        [JsonPropertyName("attachments")]
-        public ICollection<Attachment>? Attachments { get; set; } = default!;
-
-        [JsonPropertyName("compatibilityList")]
-        public CompatibilityList? CompatibilityList { get; set; } = default!;
-
-        [JsonPropertyName("contact")]
-        public JustId? Contact { get; set; } = default!;
-
-        /// <summary>
-        /// Creation date: Format (ISO 8601) - yyyy-MM-dd'T'HH:mm:ss.SSSZ. Cannot be modified.
-        /// </summary>
-
-        [JsonPropertyName("createdAt")]
-        public System.DateTimeOffset? CreatedAt { get; set; } = default!;
-
-        /// <summary>
-        /// List of custom parameters. You can add up to 4 custom parameters, each containing exactly one value.
-        /// </summary>
-
-        [JsonPropertyName("customParameters")]
-        public ICollection<CustomParameter>? CustomParameters { get; set; } = default!;
-
-        [JsonPropertyName("delivery")]
-        public DeliveryFull? Delivery { get; set; } = default!;
-
-        [JsonPropertyName("description")]
-        public StandardizedDescription? Description { get; set; } = default!;
-
-        [JsonPropertyName("discounts")]
-        public Discounts? Discounts { get; set; } = default!;
-
-        [JsonPropertyName("external")]
-        public ExternalId? External { get; set; } = default!;
 
         [JsonPropertyName("fundraisingCampaign")]
         public JustId? FundraisingCampaign { get; set; } = default!;
@@ -7919,85 +7859,27 @@ namespace JadeX.AllegroAPI
         [JsonPropertyName("id")]
         public string? Id { get; set; } = default!;
 
-        [JsonPropertyName("images")]
-        public ICollection<ImageUrl>? Images { get; set; } = default!;
-
-        [JsonPropertyName("location")]
-        public Location? Location { get; set; } = default!;
-
-        /// <summary>
-        /// Name (title) of an offer. Length cannot be more than 75 characters. Read more: &lt;a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA#tytul-oferty" target="_blank"&gt;PL&lt;/a&gt;
-        /// <br/> /
-        /// <br/>&lt;a href="../../tutorials/list-offer-assigned-product-one-request-D7Kj9M71Bu6#offer-title" target="_blank"&gt;EN&lt;/a&gt; .
-        /// </summary>
-
-        [JsonPropertyName("name")]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [System.ComponentModel.DataAnnotations.StringLength(75)]
-        public string Name { get; set; } = default!;
+        [JsonPropertyName("category")]
+        public Category? Category { get; set; } = default!;
 
         [JsonPropertyName("parameters")]
         public ICollection<Parameter>? Parameters { get; set; } = default!;
-
-        [JsonPropertyName("payments")]
-        public Payments? Payments { get; set; } = default!;
-
-        [JsonPropertyName("product")]
-        public JustId? Product { get; set; } = default!;
 
         [JsonPropertyName("promotion")]
         public Promotion? Promotion { get; set; } = default!;
 
         [JsonPropertyName("publication")]
-        public Publication? Publication { get; set; } = default!;
+        public PricingPublication? Publication { get; set; } = default!;
 
         [JsonPropertyName("sellingMode")]
         public SellingModeWithNetPrice? SellingMode { get; set; } = default!;
-
-        [JsonPropertyName("tax")]
-        public ExtendedTax? Tax { get; set; } = default!;
-
-        [JsonPropertyName("taxSettings")]
-        public OfferTaxSettings? TaxSettings { get; set; } = default!;
-
-        [JsonPropertyName("sizeTable")]
-        public JustId? SizeTable { get; set; } = default!;
-
-        [JsonPropertyName("stock")]
-        public Stock? Stock { get; set; } = default!;
-
-        [JsonPropertyName("tecdocSpecification")]
-        public TecdocSpecification? TecdocSpecification { get; set; } = default!;
-
-        [JsonPropertyName("b2b")]
-        public B2b? B2b { get; set; } = default!;
-
-        [JsonPropertyName("messageToSellerSettings")]
-        public MessageToSellerSettings? MessageToSellerSettings { get; set; } = default!;
-
-        /// <summary>
-        /// Last update date: Format (ISO 8601) - yyyy-MM-dd'T'HH:mm:ss.SSSZ. Cannot be modified
-        /// </summary>
-
-        [JsonPropertyName("updatedAt")]
-        public System.DateTimeOffset? UpdatedAt { get; set; } = default!;
-
-        [JsonPropertyName("validation")]
-        public Validation? Validation { get; set; } = default!;
-
-        /// <summary>
-        /// Declared base language of the offer.
-        /// </summary>
-
-        [JsonPropertyName("language")]
-        public string? Language { get; set; } = default!;
 
     }
 
     /// <summary>
     /// Modification command payload
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferChangeCommand
     {
 
@@ -8016,7 +7898,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Price modification command payload
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPriceChangeCommand
     {
 
@@ -8041,7 +7923,7 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("DECREASE_PRICE", typeof(PriceModificationValueChangeDecrease))]
     [JsonInheritanceAttribute("INCREASE_PERCENTAGE", typeof(PriceModificationPercentageChangeIncrease))]
     [JsonInheritanceAttribute("DECREASE_PERCENTAGE", typeof(PriceModificationPercentageChangeDecrease))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModification
     {
         /// <summary>
@@ -8049,12 +7931,11 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("marketplaceId")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public MarketplaceId? MarketplaceId { get; set; } = default!;
+        public string? MarketplaceId { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModificationFixedPrice : PriceModification
     {
 
@@ -8075,7 +7956,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModificationValueChangeIncrease : PriceModification
     {
 
@@ -8096,7 +7977,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModificationValueChangeDecrease : PriceModification
     {
 
@@ -8117,7 +7998,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModificationPercentageChangeIncrease : PriceModification
     {
 
@@ -8138,7 +8019,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModificationPercentageChangeDecrease : PriceModification
     {
 
@@ -8162,7 +8043,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The price data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PriceModificationFixedPriceHolder
     {
         /// <summary>
@@ -8186,7 +8067,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Quantity modification command payload
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferQuantityChangeCommand
     {
 
@@ -8205,7 +8086,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The way the offer quantity should be changed. One of two ways is possible: new quantity, increase/decrease quantity and only one can be chosen at once.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class QuantityModification
     {
         /// <summary>
@@ -8213,7 +8094,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("changeType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public QuantityModificationChangeType? ChangeType { get; set; } = default!;
 
         /// <summary>
@@ -8226,7 +8107,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerRebateOfferCriterion
     {
         /// <summary>
@@ -8242,7 +8123,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SellerRebateOfferCriterionType Type { get; set; } = default!;
 
     }
@@ -8250,7 +8131,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains offers criteria
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferCriterium
     {
         /// <summary>
@@ -8265,12 +8146,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferCriteriumType? Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferId
     {
         /// <summary>
@@ -8282,7 +8163,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferQuoteDto
     {
 
@@ -8306,7 +8187,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferQuotesDto
     {
 
@@ -8322,7 +8203,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Data objects containing details for counted events per offer. Includes a list of OfferStatResponseDto grouped by date and a list of ClassifiedEventStat grouped by EventType for a specific period.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferStatsResponseDto
     {
 
@@ -8334,7 +8215,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Data class for a specific seller events. Includes a list of OfferStatResponseDto grouped by date and a list of ClassifiedEventStat grouped by EventType for a specific period.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerOfferStatsResponseDto
     {
 
@@ -8346,7 +8227,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferStatResponseDto
     {
 
@@ -8364,7 +8245,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer details data, containg offer identifier.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferStatModelDto
     {
 
@@ -8373,7 +8254,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedEventStat
     {
 
@@ -8381,12 +8262,12 @@ namespace JadeX.AllegroAPI
         public int? Count { get; set; } = default!;
 
         [JsonPropertyName("eventType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ClassifiedStatEventType? EventType { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedDailyEventStatResponseDto
     {
         /// <summary>
@@ -8408,7 +8289,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Classified statistical event type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ClassifiedStatEventType
     {
 
@@ -8429,7 +8310,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OpenHour
     {
         /// <summary>
@@ -8458,7 +8339,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Order
     {
         /// <summary>
@@ -8482,7 +8363,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer's parameter.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Parameter
     {
 
@@ -8506,7 +8387,7 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("float", typeof(FloatCategoryParameter))]
     [JsonInheritanceAttribute("string", typeof(StringCategoryParameter))]
     [JsonInheritanceAttribute("dictionary", typeof(DictionaryCategoryParameter))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameter
     {
         /// <summary>
@@ -8560,7 +8441,7 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("float", typeof(FloatCategoryProductParameter))]
     [JsonInheritanceAttribute("string", typeof(StringCategoryProductParameter))]
     [JsonInheritanceAttribute("dictionary", typeof(DictionaryCategoryProductParameter))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryProductParameter
     {
         /// <summary>
@@ -8599,7 +8480,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DictionaryCategoryProductParameter : CategoryProductParameter
     {
 
@@ -8631,7 +8512,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class IntegerCategoryProductParameter : CategoryProductParameter
     {
 
@@ -8656,7 +8537,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FloatCategoryProductParameter : CategoryProductParameter
     {
 
@@ -8681,7 +8562,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StringCategoryProductParameter : CategoryProductParameter
     {
 
@@ -8709,7 +8590,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// A list of the different options which can be used with this parameter.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameterOptions
     {
         /// <summary>
@@ -8759,7 +8640,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DictionaryCategoryParameter : CategoryParameter
     {
 
@@ -8791,7 +8672,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class IntegerCategoryParameter : CategoryParameter
     {
 
@@ -8816,7 +8697,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FloatCategoryParameter : CategoryParameter
     {
 
@@ -8841,7 +8722,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StringCategoryParameter : CategoryParameter
     {
 
@@ -8869,7 +8750,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parameter's range value
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParameterRangeValue
     {
 
@@ -8886,7 +8767,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Restricts the circumstances when this parameter is required. `null` if solely the `required` flag determines if this parameter is required. Present if this parameter is required only if all of the contained conditions of all condition types are fulfilled. At least one condition is contained if this field is present.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameterRequirementConditions
     {
         /// <summary>
@@ -8910,7 +8791,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Restricts the circumstances when this parameter should be displayed e.g. on a user form. `null` if this parameter is displayed always. Present if this parameter should be displayed only if all of the contained conditions of all condition types are fulfilled. At least one condition is contained if this field is present.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameterDisplayConditions
     {
         /// <summary>
@@ -8932,7 +8813,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameterWithValue
     {
         /// <summary>
@@ -8953,7 +8834,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameterWithoutValue
     {
         /// <summary>
@@ -8966,7 +8847,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryParameterList
     {
         /// <summary>
@@ -8978,7 +8859,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryProductParameterList
     {
         /// <summary>
@@ -8990,7 +8871,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Payment
     {
         /// <summary>
@@ -9003,7 +8884,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Payments
     {
         /// <summary>
@@ -9011,12 +8892,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("invoice")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PaymentsInvoice? Invoice { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PhonesRequest
     {
         /// <summary>
@@ -9029,7 +8910,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PhonesResponse
     {
 
@@ -9038,7 +8919,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Pos
     {
         /// <summary>
@@ -9145,7 +9026,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PosLocation
     {
 
@@ -9158,7 +9039,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The processing status of the command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProcessingStatus
     {
 
@@ -9188,28 +9069,25 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Promo options on base marketplace.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Promotion
     {
 
-        [JsonPropertyName("bold")]
-        public bool? Bold { get; set; } = default!;
+        [JsonPropertyName("emphasized1d")]
+        public bool? Emphasized1d { get; set; } = default!;
+
+        [JsonPropertyName("emphasized10d")]
+        public bool? Emphasized10d { get; set; } = default!;
+
+        [JsonPropertyName("promoPackage")]
+        public bool? PromoPackage { get; set; } = default!;
 
         [JsonPropertyName("departmentPage")]
         public bool? DepartmentPage { get; set; } = default!;
 
-        [JsonPropertyName("emphasized")]
-        public bool? Emphasized { get; set; } = default!;
-
-        [JsonPropertyName("emphasizedHighlightBoldPackage")]
-        public bool? EmphasizedHighlightBoldPackage { get; set; } = default!;
-
-        [JsonPropertyName("highlight")]
-        public bool? Highlight { get; set; } = default!;
-
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PublicTableDto
     {
         /// <summary>
@@ -9248,7 +9126,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PublicTablesDto
     {
 
@@ -9261,7 +9139,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// size table template image
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTableTemplateImageResponse
     {
 
@@ -9275,7 +9153,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTableTemplateResponse
     {
         /// <summary>
@@ -9315,7 +9193,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTableTemplatesResponse
     {
         /// <summary>
@@ -9328,7 +9206,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTablePostRequest
     {
         /// <summary>
@@ -9361,7 +9239,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTablePutRequest
     {
         /// <summary>
@@ -9390,7 +9268,16 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class PricingPublication
+    {
+
+        [JsonPropertyName("duration")]
+        public string Duration { get; set; } = default!;
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Publication
     {
 
@@ -9407,7 +9294,7 @@ namespace JadeX.AllegroAPI
         public System.DateTimeOffset StartingAt { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -9423,7 +9310,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("endedBy")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PublicationEndedBy? EndedBy { get; set; } = default!;
 
         /// <summary>
@@ -9438,7 +9325,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Publication modification command payload
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PublicationChangeCommandDto
     {
         /// <summary>
@@ -9453,7 +9340,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Rates
     {
         /// <summary>
@@ -9490,7 +9377,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Reference
     {
 
@@ -9499,7 +9386,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Removal
     {
         /// <summary>
@@ -9518,7 +9405,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Submitted removal request, null if removal was not requested
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RemovalRequest
     {
         /// <summary>
@@ -9542,12 +9429,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("source")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RemovalRequestSource? Source { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UserRatingRemovalRequest
     {
 
@@ -9557,7 +9444,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicyBasic
     {
 
@@ -9569,7 +9456,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SearchResult
     {
 
@@ -9578,7 +9465,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Seller
     {
 
@@ -9588,7 +9475,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerCreateRebateRequestDto
     {
         /// <summary>
@@ -9609,7 +9496,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerRebateDto
     {
         /// <summary>
@@ -9645,12 +9532,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SellerRebateDtoStatus Status { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerRebatesDto
     {
 
@@ -9664,7 +9551,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingRate
     {
 
@@ -9712,7 +9599,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingRates
     {
         /// <summary>
@@ -9724,7 +9611,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferShippingRates
     {
         /// <summary>
@@ -9736,7 +9623,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingRatesSet
     {
         /// <summary>
@@ -9767,7 +9654,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliverySettingsResponse
     {
         /// <summary>
@@ -9818,7 +9705,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliverySettingsRequest
     {
         /// <summary>
@@ -9863,7 +9750,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The description section cannot have more than 40000 bytes in length.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StandardizedDescription
     {
 
@@ -9872,7 +9759,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Discounts
     {
 
@@ -9881,7 +9768,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Stock
     {
         /// <summary>
@@ -9897,7 +9784,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("unit")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public StockUnit? Unit { get; set; } = default!;
 
     }
@@ -9905,7 +9792,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offers updates summary
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaskCount
     {
         /// <summary>
@@ -9937,7 +9824,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains list of task results
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaskReport
     {
         /// <summary>
@@ -9949,7 +9836,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class User
     {
         /// <summary>
@@ -9970,7 +9857,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UserRating
     {
 
@@ -10050,7 +9937,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UserRatingListResponse
     {
         /// <summary>
@@ -10063,7 +9950,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UserRatingSummaryResponse
     {
 
@@ -10096,7 +9983,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Validation
     {
 
@@ -10112,7 +9999,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ValidationError
     {
 
@@ -10133,7 +10020,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ValidationWarning
     {
 
@@ -10154,7 +10041,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WarrantyBasic
     {
 
@@ -10166,7 +10053,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Describes_listing_fee
     {
 
@@ -10192,7 +10079,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Describes_success_commission_fee
     {
 
@@ -10210,7 +10097,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarrantiesList_ImpliedWarrantyBasic_
     {
 
@@ -10223,7 +10110,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParametersForPreviewPrice
     {
 
@@ -10236,11 +10123,11 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("condition")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParametersForPreviewPriceCondition? Condition { get; set; } = default!;
 
         [JsonPropertyName("duration")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParametersForPreviewPriceDuration? Duration { get; set; } = default!;
 
         [JsonPropertyName("hasAnyQuantity")]
@@ -10290,7 +10177,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParametersForPreviewPriceType? Type { get; set; } = default!;
 
         [JsonPropertyName("unitPrice")]
@@ -10320,7 +10207,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains publication's fields to change
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Publication_modification
     {
         /// <summary>
@@ -10328,7 +10215,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("action")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Publication_modificationAction? Action { get; set; } = default!;
 
         /// <summary>
@@ -10340,7 +10227,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPoliciesList_ReturnPolicyBasic_
     {
 
@@ -10353,7 +10240,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WarrantiesList_WarrantyBasic_
     {
 
@@ -10366,7 +10253,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Wrapper_type_for_preview_conditions
     {
         /// <summary>
@@ -10381,7 +10268,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Wraps_listing_and_commissions_fees
     {
 
@@ -10395,7 +10282,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VariantSet
     {
 
@@ -10414,7 +10301,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VariantSetResponse : VariantSet
     {
 
@@ -10432,7 +10319,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VariantSet_Offer
     {
 
@@ -10450,7 +10337,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VariantSet_Parameter
     {
 
@@ -10460,7 +10347,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VariantSets
     {
         /// <summary>
@@ -10476,7 +10363,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VariantSets_VariantSet
     {
         /// <summary>
@@ -10495,7 +10382,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingOffer
     {
         /// <summary>
@@ -10545,7 +10432,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingCategoryWithCount
     {
         /// <summary>
@@ -10572,7 +10459,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingCategory
     {
         /// <summary>
@@ -10591,7 +10478,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponse
     {
 
@@ -10623,7 +10510,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about the seller.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferSeller
     {
         /// <summary>
@@ -10659,7 +10546,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about the stock.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferStock
     {
         /// <summary>
@@ -10667,7 +10554,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("unit")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferStockUnit? Unit { get; set; } = default!;
 
         /// <summary>
@@ -10683,7 +10570,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about promotion options for the item.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPromotion
     {
         /// <summary>
@@ -10712,7 +10599,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The lowest shipping cost available. Lack of this entity means that the offer has no shipping options (i.e. it is an advertisement or an offer with electronic delivery only).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferLowestPrice
     {
         /// <summary>
@@ -10734,7 +10621,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The price of the offer. It is the buy now price for *BUY_NOW* selling format and current auction price for *AUCTION* format.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPrice
     {
         /// <summary>
@@ -10756,7 +10643,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Fixed (buy now) price of the offer in case of *AUCTION* selling format with buy now option enabled.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferFixedPrice
     {
         /// <summary>
@@ -10778,7 +10665,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about shipping options for the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferDelivery
     {
         /// <summary>
@@ -10793,7 +10680,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferImages
     {
         /// <summary>
@@ -10808,12 +10695,12 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// This section describes the selling format and prices.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferSellingMode
     {
 
         [JsonPropertyName("format")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SellingModeFormat? Format { get; set; } = default!;
 
         [JsonPropertyName("price")]
@@ -10850,7 +10737,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// This section is available only for the charity, allegrolokalnie.pl, morizon.pl and ebilet.pl offers.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferVendor
     {
         /// <summary>
@@ -10858,7 +10745,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("id")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferVendorId? Id { get; set; } = default!;
 
         /// <summary>
@@ -10873,7 +10760,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// This section is available only for offers with a defined end of publication.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPublication
     {
         /// <summary>
@@ -10888,7 +10775,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The lists of search results.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponseOffers
     {
         /// <summary>
@@ -10910,7 +10797,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about categories.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponseCategories
     {
         /// <summary>
@@ -10929,7 +10816,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponseFiltersValues
     {
         /// <summary>
@@ -10974,7 +10861,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponseFilters
     {
         /// <summary>
@@ -10995,7 +10882,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ListingResponseFiltersType? Type { get; set; } = default!;
 
         /// <summary>
@@ -11038,7 +10925,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Search metadata.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponseSearchMeta
     {
         /// <summary>
@@ -11069,7 +10956,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Available sort options.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ListingResponseSort
     {
         /// <summary>
@@ -11105,7 +10992,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The definition of the additional services assigned to the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferAdditionalServices
     {
         /// <summary>
@@ -11117,7 +11004,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OffersSearchResultDto
     {
         /// <summary>
@@ -11148,7 +11035,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// An offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDto
     {
         /// <summary>
@@ -11212,7 +11099,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The image used as a thumbnail on the listings.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoImage
     {
         /// <summary>
@@ -11227,12 +11114,12 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information on the offer's selling mode.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellingMode
     {
 
         [JsonPropertyName("format")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SellingModeFormat? Format { get; set; } = default!;
 
         [JsonPropertyName("price")]
@@ -11249,12 +11136,12 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information on the offer's selling mode.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellingModeWithNetPrice
     {
 
         [JsonPropertyName("format")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SellingModeFormat? Format { get; set; } = default!;
 
         [JsonPropertyName("price")]
@@ -11274,7 +11161,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The selling format of the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SellingModeFormat
     {
 
@@ -11292,7 +11179,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// VAT tax rate.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Tax
     {
         /// <summary>
@@ -11307,7 +11194,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// VAT tax settings. Available settings can be found under &lt;a href="#operation/getTaxSettingsForCategory" target="_blank"&gt;"get all tax settings for category" resource&lt;/a&gt;. This field is deprecated in favor of taxSettings.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     [System.Obsolete]
     public partial class ExtendedTax
     {
@@ -11352,7 +11239,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Tax settings for offer. Available settings can be found under &lt;a href="#operation/getTaxSettingsForCategory" target="_blank"&gt;"get all tax settings for category" resource&lt;/a&gt;.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferTaxSettings
     {
         /// <summary>
@@ -11382,7 +11269,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer tax rate for country.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferTaxRate
     {
         /// <summary>
@@ -11404,7 +11291,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about offer's business properties.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1B2b
     {
 
@@ -11416,7 +11303,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Delivery information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1Delivery
     {
 
@@ -11428,7 +11315,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Additional information about offers in auction format.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1SaleInfo
     {
 
@@ -11448,7 +11335,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information on the offer's stock.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1Stock
     {
         /// <summary>
@@ -11472,7 +11359,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The offer's statistics on the base marketplace.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1Stats
     {
         /// <summary>
@@ -11496,12 +11383,12 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information on the offer's publication status and dates.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1Publication
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -11540,7 +11427,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Marketplace identifier
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferMarketplaceReference
     {
 
@@ -11553,7 +11440,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer marketplaces.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferMarketplaces
     {
         /// <summary>
@@ -11580,7 +11467,7 @@ namespace JadeX.AllegroAPI
     /// <br/>  - *ACTIVE* - the offer is active
     /// <br/>  - *ENDED* - the offer was active and is now ended (for whatever reason)
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OfferStatus
     {
 
@@ -11601,7 +11488,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information on the offer's publication marketplaces.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1PublicationMarketplaces
     {
         /// <summary>
@@ -11623,36 +11510,20 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Identifies a marketplace.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceReference
     {
 
         [JsonPropertyName("id")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public MarketplaceId Id { get; set; } = default!;
-
-    }
-
-    /// <summary>
-    /// The id of a marketplace.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum MarketplaceId
-    {
-
-        [System.Runtime.Serialization.EnumMember(Value = @"allegro-pl")]
-        AllegroPl = 0,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"allegro-cz")]
-        AllegroCz = 1,
+        public string Id { get; set; } = default!;
 
     }
 
     /// <summary>
     /// Properties of the offer for each additional marketplace.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1AdditionalMarketplaces
     {
 
@@ -11661,7 +11532,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Properties of the offer for the given marketplace.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferListingDtoV1AdditionalMarketplace
     {
         /// <summary>
@@ -11703,7 +11574,7 @@ namespace JadeX.AllegroAPI
     /// <br/>  - *APPROVED* - The offer is approved to be listed on the marketplace
     /// <br/>  - *REFUSED* - The offer will not be listed on the marketplace; the offer may be re-qualified if is corrected
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AdditionalMarketplacePublicationState
     {
 
@@ -11727,7 +11598,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Order events list
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderEventsList
     {
 
@@ -11740,7 +11611,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Order event
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderEvent
     {
         /// <summary>
@@ -11771,7 +11642,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Order event data
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderEventData
     {
 
@@ -11798,7 +11669,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Seller identifier
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerReference
     {
 
@@ -11811,7 +11682,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer identifier.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferReference
     {
 
@@ -11838,7 +11709,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// If the offer was a product set, you can see a list of component products (product id with quantity).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferProductSetReference
     {
         /// <summary>
@@ -11854,7 +11725,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Product element definition.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferProductSetProductReference
     {
         /// <summary>
@@ -11878,7 +11749,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Buyer data
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BuyerReference
     {
         /// <summary>
@@ -11909,7 +11780,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BuyerPreferencesReference
     {
         /// <summary>
@@ -11924,7 +11795,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Order item
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderLineItem
     {
         /// <summary>
@@ -11966,7 +11837,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer identifier.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderLineItemOfferReference
     {
 
@@ -11990,7 +11861,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Event statistics, currently contains only basic information about the latest event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderEventStats
     {
 
@@ -12002,7 +11873,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Basic information about the latest order event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LatestOrderEvent
     {
         /// <summary>
@@ -12023,7 +11894,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderMarketplace
     {
         /// <summary>
@@ -12036,7 +11907,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormReference
     {
         /// <summary>
@@ -12060,7 +11931,7 @@ namespace JadeX.AllegroAPI
     /// Describes status of the form delivery and purchase options based on payment and purchase status. * `BOUGHT` - purchase without checkout form filled in * `FILLED_IN` - checkout form filled in but payment is not completed yet so data could still change * `READY_FOR_PROCESSING` - payment completed. Purchase is ready for processing. * `CANCELLED` - purchase cancelled by buyer.
     /// <br/>
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormStatus
     {
 
@@ -12082,7 +11953,7 @@ namespace JadeX.AllegroAPI
     /// Type of order event. * `BOUGHT` - purchase without checkout form filled in * `FILLED_IN` - checkout form filled in but payment is not completed yet so data could still change * `READY_FOR_PROCESSING` - payment completed. Purchase is ready for processing. * `BUYER_CANCELLED` - purchase cancelled by buyer * `FULFILLMENT_STATUS_CHANGED`: fulfillment status changed. * `BUYER_MODIFIED` - purchase modified by buyer * `AUTO_CANCELLED` - purchase cancelled automatically by Allegro
     /// <br/>
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OrderEventType
     {
 
@@ -12109,7 +11980,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutForms
     {
 
@@ -12136,7 +12007,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutForm
     {
         /// <summary>
@@ -12214,7 +12085,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Buyer data
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormBuyerReference
     {
         /// <summary>
@@ -12286,7 +12157,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Buyer address
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormBuyerAddressReference
     {
         /// <summary>
@@ -12319,7 +12190,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormPaymentReference
     {
         /// <summary>
@@ -12332,11 +12203,11 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CheckoutFormPaymentType Type { get; set; } = default!;
 
         [JsonPropertyName("provider")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CheckoutFormPaymentProvider? Provider { get; set; } = default!;
 
         /// <summary>
@@ -12357,7 +12228,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Payment type
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormPaymentType
     {
 
@@ -12381,7 +12252,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Payment provider
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormPaymentProvider
     {
 
@@ -12399,7 +12270,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormFulfillment
     {
 
@@ -12415,7 +12286,7 @@ namespace JadeX.AllegroAPI
     /// Order seller status.
     /// <br/>
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormFulfillmentStatus
     {
 
@@ -12445,7 +12316,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormFulfillmentShipmentSummary
     {
 
@@ -12458,7 +12329,7 @@ namespace JadeX.AllegroAPI
     /// Indicates how many line items have tracking number specified.
     /// <br/>
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormFulfillmentShipmentSummaryLineItemsSent
     {
 
@@ -12473,7 +12344,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryReference
     {
 
@@ -12509,7 +12380,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryAddress
     {
         /// <summary>
@@ -12583,7 +12454,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryMethod
     {
         /// <summary>
@@ -12602,7 +12473,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryPickupPoint
     {
         /// <summary>
@@ -12631,7 +12502,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryPickupPointAddress
     {
         /// <summary>
@@ -12664,7 +12535,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryTime
     {
         /// <summary>
@@ -12692,7 +12563,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Guaranteed date when first delivery attempt takes place. This is always filled for Allegro One Courier delivery method. This field is deprecated in favor of `delivery.time.from` and `delivery.time.to`.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     [System.Obsolete]
     public partial class CheckoutFormDeliveryTimeGuaranteed
     {
@@ -12715,7 +12586,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Dates when delivery should be dispatched, passed to the provider.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDeliveryTimeDispatch
     {
         /// <summary>
@@ -12734,7 +12605,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormInvoiceInfo
     {
         /// <summary>
@@ -12756,7 +12627,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormInvoiceAddress
     {
         /// <summary>
@@ -12799,7 +12670,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormInvoiceAddressCompany
     {
         /// <summary>
@@ -12819,7 +12690,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormInvoiceAddressNaturalPerson
     {
         /// <summary>
@@ -12843,7 +12714,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Order item
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormLineItem
     {
         /// <summary>
@@ -12892,7 +12763,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LineItemReconciliation
     {
 
@@ -12905,7 +12776,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LineItemReconciliationType? Type { get; set; } = default!;
 
         /// <summary>
@@ -12918,7 +12789,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormAdditionalService
     {
         /// <summary>
@@ -12948,7 +12819,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LineItemVoucher
     {
         /// <summary>
@@ -12965,7 +12836,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LineItemVoucherType Type { get; set; } = default!;
 
         /// <summary>
@@ -12974,7 +12845,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LineItemVoucherStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -12989,7 +12860,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormDiscount
     {
         /// <summary>
@@ -12999,12 +12870,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CheckoutFormDiscountType Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormNoteReference
     {
         /// <summary>
@@ -13016,7 +12887,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormMarketplace
     {
         /// <summary>
@@ -13029,7 +12900,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormSummary
     {
 
@@ -13039,7 +12910,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormsOrderInvoices
     {
 
@@ -13055,7 +12926,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormsOrderInvoice
     {
 
@@ -13071,12 +12942,9 @@ namespace JadeX.AllegroAPI
         [JsonPropertyName("file")]
         public CheckoutFormsOrderInvoiceFile? File { get; set; } = default!;
 
-        [JsonPropertyName("eptVerification")]
-        public CheckoutFormsOrderInvoiceEptVerification? EptVerification { get; set; } = default!;
-
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormsOrderInvoiceFile
     {
 
@@ -13091,12 +12959,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormsOrderInvoiceFileSecurityVerification
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CheckoutFormsOrderInvoiceFileSecurityVerificationStatus? Status { get; set; } = default!;
 
         [JsonPropertyName("verifiedAt")]
@@ -13104,35 +12972,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class CheckoutFormsOrderInvoiceEptVerification
-    {
-
-        [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public CheckoutFormsOrderInvoiceEptVerificationStatus? Status { get; set; } = default!;
-
-        [JsonPropertyName("verifiedAt")]
-        public System.DateTimeOffset? VerifiedAt { get; set; } = default!;
-
-        [JsonPropertyName("reasons")]
-        public ICollection<CheckoutFormsOrderInvoiceEptVerificationReasons>? Reasons { get; set; } = default!;
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class CheckoutFormsOrderInvoiceEptVerificationReasons
-    {
-
-        [JsonPropertyName("id")]
-        public string? Id { get; set; } = default!;
-
-        [JsonPropertyName("message")]
-        public string? Message { get; set; } = default!;
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckFormsNewOrderInvoice
     {
 
@@ -13145,7 +12985,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckFormsNewOrderInvoiceFile
     {
 
@@ -13155,7 +12995,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckFormsNewOrderInvoiceId
     {
 
@@ -13164,7 +13004,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeListResponse
     {
 
@@ -13173,7 +13013,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Dispute
     {
         /// <summary>
@@ -13190,12 +13030,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DisputeStatus Status { get; set; } = default!;
 
         [JsonPropertyName("messagesStatus")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DisputeMessagesStatus MessagesStatus { get; set; } = default!;
 
         [JsonPropertyName("buyer")]
@@ -13233,7 +13073,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Subject of the dispute
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Subject
     {
         /// <summary>
@@ -13248,7 +13088,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Buyer's claim data for the dispute.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeClaim
     {
         /// <summary>
@@ -13267,7 +13107,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeUser
     {
 
@@ -13279,7 +13119,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeMessageList
     {
 
@@ -13291,7 +13131,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Initial dispute message with text OR attachment OR both
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeFirstMessage
     {
 
@@ -13318,7 +13158,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Initial dispute message with text OR attachment OR both
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeMessage
     {
 
@@ -13345,7 +13185,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Author of the message
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeMessageAuthor
     {
         /// <summary>
@@ -13357,12 +13197,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("role")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MessageAuthorRole Role { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeAttachment
     {
 
@@ -13381,7 +13221,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeAttachmentId
     {
 
@@ -13391,7 +13231,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AttachmentDeclaration
     {
 
@@ -13405,7 +13245,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeCheckoutForm
     {
 
@@ -13419,7 +13259,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DisputeAuthor
     {
         /// <summary>
@@ -13431,12 +13271,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("role")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DisputeAuthorRole Role { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DisputeAuthorRole
     {
 
@@ -13454,7 +13294,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum MessageAuthorRole
     {
 
@@ -13478,7 +13318,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Request body to add message to the dispute. Presence of text or attachment fields or both is required.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageRequest
     {
 
@@ -13493,12 +13333,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MessageRequestType Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TagRequest
     {
 
@@ -13512,7 +13352,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TagId
     {
 
@@ -13522,7 +13362,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TagResponse
     {
 
@@ -13539,7 +13379,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TagListResponse
     {
 
@@ -13549,7 +13389,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TagIdsRequest
     {
 
@@ -13559,7 +13399,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromotionResponseDto
     {
 
@@ -13569,7 +13409,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CampaignResponseDto
     {
 
@@ -13579,7 +13419,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SinglePromotionCampaignResponseDto
     {
 
@@ -13593,12 +13433,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SinglePromotionCampaignResponseDtoStatus Status { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromotionCampaignsResponseDto
     {
 
@@ -13612,7 +13452,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromotionCampaignResponseDto
     {
 
@@ -13630,12 +13470,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PromotionCampaignResponseDtoStatus Status { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CampaignRequestDto
     {
 
@@ -13645,7 +13485,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromotionRequestDto
     {
 
@@ -13655,21 +13495,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class PromotionCampaignRequestDto
-    {
-
-        [JsonPropertyName("promotion")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public PromotionRequestDto Promotion { get; set; } = new PromotionRequestDto();
-
-        [JsonPropertyName("campaign")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public CampaignRequestDto Campaign { get; set; } = new CampaignRequestDto();
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormAddWaybillRequest
     {
         /// <summary>
@@ -13706,7 +13532,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrdersShippingCarrier
     {
         /// <summary>
@@ -13727,7 +13553,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormAddWaybillCreated
     {
         /// <summary>
@@ -13774,7 +13600,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrdersShippingCarriersResponse
     {
         /// <summary>
@@ -13786,7 +13612,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CheckoutFormOrderWaybillResponse
     {
         /// <summary>
@@ -13798,7 +13624,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPickupDropOffPointsResponse
     {
         /// <summary>
@@ -13810,7 +13636,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CarrierParcelTrackingResponse
     {
         /// <summary>
@@ -13831,7 +13657,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class GetSaleProductsResponse
     {
 
@@ -13850,7 +13676,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductProposalsRequest
     {
         /// <summary>
@@ -13895,7 +13721,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductChangeProposalDto
     {
         /// <summary>
@@ -13952,7 +13778,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Image proposal.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductImageProposal
     {
         /// <summary>
@@ -13981,7 +13807,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("resolutionType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ProductImageProposalResolutionType? ResolutionType { get; set; } = default!;
 
     }
@@ -13989,7 +13815,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Name proposal status.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductNameProposal
     {
         /// <summary>
@@ -14025,7 +13851,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Name proposal status.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductCategoryProposal
     {
         /// <summary>
@@ -14061,7 +13887,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Product parameter values proposal status.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductParameterProposal
     {
         /// <summary>
@@ -14083,7 +13909,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parameter value proposal status.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductParameterValueProposal
     {
         /// <summary>
@@ -14116,7 +13942,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductChangeProposalRequest
     {
         /// <summary>
@@ -14173,7 +13999,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductChangesResponse
     {
         /// <summary>
@@ -14185,7 +14011,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductChangeDto
     {
 
@@ -14201,7 +14027,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ChangedParameterDto
     {
         /// <summary>
@@ -14220,7 +14046,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductDto
     {
         /// <summary>
@@ -14281,7 +14107,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductProposalsResponse
     {
         /// <summary>
@@ -14337,7 +14163,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BaseSaleProductResponseDto
     {
 
@@ -14381,7 +14207,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category in which the product can be listed for sale
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductCategoryWithPath
     {
         /// <summary>
@@ -14413,7 +14239,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category in which the product can be listed for sale
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductSimilarCategoryWithPath
     {
         /// <summary>
@@ -14438,7 +14264,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Compatibility list assigned to this product, based on information from TecDoc database.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductCompatibilityList
     {
         /// <summary>
@@ -14466,7 +14292,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductResponseCategoriesDto
     {
         /// <summary>
@@ -14485,7 +14311,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductsCategorySubcategories
     {
         /// <summary>
@@ -14512,7 +14338,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductsCategoryPath
     {
         /// <summary>
@@ -14534,7 +14360,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Product's parameter
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductParameter
     {
 
@@ -14565,7 +14391,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Supplier id.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SupplierDto
     {
 
@@ -14574,7 +14400,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NewProductParameterDto
     {
 
@@ -14595,7 +14421,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Product's parameter
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductParameterDto
     {
 
@@ -14629,7 +14455,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Each path will point to a specific field in object which is co-created by AI.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AiCoCreatedContent
     {
 
@@ -14642,7 +14468,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Single offer data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOffer
     {
         /// <summary>
@@ -14687,7 +14513,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferRequestBase : SaleProductOffer
     {
 
@@ -14734,7 +14560,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOffersRequestStock
     {
         /// <summary>
@@ -14750,12 +14576,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("unit")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SaleProductOffersRequestStockUnit? Unit { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferRequestV1 : SaleProductOfferRequestBase
     {
 
@@ -14803,7 +14629,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferPatchRequestV1 : SaleProductOfferRequestBase
     {
 
@@ -14850,7 +14676,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferResponseV1 : SaleProductOffer
     {
 
@@ -14948,7 +14774,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Single opertion data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferStatusResponse
     {
 
@@ -14960,7 +14786,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOfferBase
     {
         /// <summary>
@@ -14977,7 +14803,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("idType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ProductOfferBaseIdType? IdType { get; set; } = default!;
 
         /// <summary>
@@ -14996,7 +14822,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOffer : ProductOfferBase
     {
         /// <summary>
@@ -15021,7 +14847,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductSetElement
     {
         /// <summary>
@@ -15033,7 +14859,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductSetElementQuantity
     {
         /// <summary>
@@ -15045,7 +14871,19 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ProductSetElementResponsiblePersonRequest
+    {
+        /// <summary>
+        /// Reference to the responsible person configured using &lt;a href="https://developer.allegro.pl/documentation#tag/Responsible-persons"&gt;Responsible Persons API&lt;/a&gt;. Provide either id or name - id will be used if both are provided. Setting this object to null will result in no responsible person assigned to this product.&lt;br/&gt; &lt;b&gt;This property is valid only for the first product in the product set.&lt;/b&gt;
+        /// </summary>
+
+        [JsonPropertyName("responsiblePerson")]
+        public ResponsiblePerson? ResponsiblePerson { get; set; } = default!;
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductOfferResponse
     {
         /// <summary>
@@ -15063,7 +14901,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The definitions of the different after sales services assigned to the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AfterSalesServicesProductOfferRequest
     {
 
@@ -15078,7 +14916,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryProductOfferRequest
     {
         /// <summary>
@@ -15102,7 +14940,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryProductOfferResponse
     {
         /// <summary>
@@ -15136,7 +14974,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about publication in multiple marketplaces.&lt;br/&gt; See [Changes in listing offers - we will add the possibility to display offers in foreign domains of Allegro's marketplaces](https://developer.allegro.pl/news/changes-in-listing-offers-we-will-add-the-possibility-to-display-offers-in-foreign-domains-of-allegro-s-marketplaces-9gKv0RVzRTK) for more details regarding this field
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferPublicationMarketplacesRequest
     {
         /// <summary>
@@ -15151,7 +14989,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about publication in multiple marketplaces.&lt;br/&gt; See [Changes in listing offers - we will add the possibility to display offers in foreign domains of Allegro's marketplaces](https://developer.allegro.pl/news/changes-in-listing-offers-we-will-add-the-possibility-to-display-offers-in-foreign-domains-of-allegro-s-marketplaces-9gKv0RVzRTK) for more details regarding this field
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferPublicationMarketplacesResponse
     {
         /// <summary>
@@ -15170,7 +15008,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferPublicationRequest : Publication
     {
 
@@ -15188,7 +15026,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SaleProductOfferPublicationResponse : Publication
     {
 
@@ -15209,7 +15047,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Selected information about the offer in each additional service. This field does not contain information about the base marketplace of the offer.&lt;br/&gt; Possible values of `marketplaceId` can be obtained from `GET /marketplaces` resource.&lt;/br&gt; See [Allegro foreign marketplaces](https://developer.allegro.pl/tutorials/listing-and-managing-offers-on-foreign-marketplaces-7GndGjeAATn) for more details regarding this field.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacesRequest
     {
 
@@ -15218,13 +15056,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Selected information about the offer in each additional service. This field does not contain information about the base marketplace of the offer. You will find all available marketplaces here. Even if the seller does not want the offer to be visible in the additional service, we will return it in response.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacesResponse
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacesRefusalReasonResponse
     {
         /// <summary>
@@ -15253,7 +15091,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer's parameter.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParameterProductOfferRequest
     {
 
@@ -15281,7 +15119,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parameter.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParameterProductOfferResponse
     {
 
@@ -15306,7 +15144,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DiscountsProductOfferRequest
     {
 
@@ -15315,7 +15153,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DiscountsProductOfferResponse
     {
 
@@ -15327,7 +15165,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Conditions which an offer must meet to be assigned with the product, i.e. Condition parameter must be set to New.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferRequirements
     {
         /// <summary>
@@ -15342,7 +15180,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalEmailsResponse
     {
 
@@ -15355,7 +15193,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Details of a single additional email address.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalEmail
     {
 
@@ -15373,7 +15211,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalEmailRequest
     {
         /// <summary>
@@ -15386,7 +15224,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedPackages
     {
 
@@ -15399,7 +15237,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedResponse
     {
 
@@ -15413,7 +15251,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedExtension
     {
         /// <summary>
@@ -15432,7 +15270,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedPackageConfig
     {
 
@@ -15467,12 +15305,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ClassifiedPackageConfigType Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedPackageConfigs
     {
 
@@ -15482,7 +15320,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedPromotion
     {
         /// <summary>
@@ -15503,7 +15341,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ClassifiedPublication
     {
         /// <summary>
@@ -15516,7 +15354,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PaymentOperations
     {
         /// <summary>
@@ -15559,7 +15397,7 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("BLOCKADE", typeof(BlockadeOperation))]
     [JsonInheritanceAttribute("BLOCKADE_RELEASE", typeof(BlockadeReleaseOperation))]
     [JsonInheritanceAttribute("COMPENSATION", typeof(CompensationOperation))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BaseOperation
     {
         /// <summary>
@@ -15568,7 +15406,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("group")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BaseOperationGroup Group { get; set; } = default!;
 
         [JsonPropertyName("wallet")]
@@ -15599,7 +15437,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The state of the wallet after the operation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Wallet
     {
         /// <summary>
@@ -15608,7 +15446,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("paymentOperator")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public WalletPaymentOperator PaymentOperator { get; set; } = default!;
 
         /// <summary>
@@ -15617,7 +15455,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public WalletType Type { get; set; } = default!;
 
         [JsonPropertyName("balance")]
@@ -15629,7 +15467,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The wallet balance after the operation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WalletBalance : PriceModificationFixedPriceHolder
     {
 
@@ -15647,7 +15485,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The operation value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OperationValue : PriceModificationFixedPriceHolder
     {
 
@@ -15665,7 +15503,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Delivery amount for payment refund.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundDeliveryValue : PriceModificationFixedPriceHolder
     {
 
@@ -15683,7 +15521,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Overpaid amount for payment refund.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundOverpaidValue : PriceModificationFixedPriceHolder
     {
 
@@ -15701,7 +15539,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Additional services amount for payment refund.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundAdditionalServicesValue : PriceModificationFixedPriceHolder
     {
 
@@ -15719,7 +15557,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Surcharge refund amount.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundSurchargeValue : PriceModificationFixedPriceHolder
     {
 
@@ -15737,7 +15575,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Total amount for payment refund.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundTotalValue : PriceModificationFixedPriceHolder
     {
 
@@ -15752,7 +15590,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CorrectionOperation : BaseOperation
     {
 
@@ -15770,7 +15608,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ContributionOperation : BaseOperation
     {
 
@@ -15794,7 +15632,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PayoutOperation : BaseOperation
     {
 
@@ -15815,7 +15653,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PayoutOperationCancel : BaseOperation
     {
 
@@ -15836,7 +15674,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundIncreaseOperation : BaseOperation
     {
 
@@ -15860,7 +15698,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundCancelOperation : BaseOperation
     {
 
@@ -15881,7 +15719,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefundChargeOperation : BaseOperation
     {
 
@@ -15905,7 +15743,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SurchargeOperation : BaseOperation
     {
 
@@ -15932,7 +15770,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeductionChargeOperation : BaseOperation
     {
 
@@ -15953,7 +15791,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeductionIncreaseOperation : BaseOperation
     {
 
@@ -15974,7 +15812,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BlockadeOperation : BaseOperation
     {
 
@@ -15995,7 +15833,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BlockadeReleaseOperation : BaseOperation
     {
 
@@ -16016,7 +15854,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CompensationOperation : BaseOperation
     {
 
@@ -16037,7 +15875,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Payment.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OperationPayment
     {
         /// <summary>
@@ -16050,7 +15888,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Participant
     {
         /// <summary>
@@ -16092,7 +15930,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The seller's data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerParticipant : Participant
     {
         /// <summary>
@@ -16116,7 +15954,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The buyer's data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BuyerParticipant : Participant
     {
         /// <summary>
@@ -16140,7 +15978,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Address.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OperationParticipantAddress
     {
         /// <summary>
@@ -16172,7 +16010,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Payout.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Payout
     {
         /// <summary>
@@ -16188,7 +16026,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Surcharge.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Surcharge
     {
         /// <summary>
@@ -16204,7 +16042,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Deduction.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Deduction
     {
         /// <summary>
@@ -16220,7 +16058,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains additional information describing products from automotive categories. Technical specification is created based on TecDoc database and can only be used while creating offer with assigned product to it. &lt;a href="../../tutorials/jak-jednym-requestem-wystawic-oferte-powiazana-z-produktem-D7Kj9gw4xFA" target="_blank"&gt;Read more&lt;/a&gt;.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TecdocSpecification
     {
         /// <summary>
@@ -16240,7 +16078,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TecdocSpecificationItem
     {
         /// <summary>
@@ -16259,7 +16097,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BlackListResponse
     {
 
@@ -16282,7 +16120,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BlacklistRequest
     {
 
@@ -16298,7 +16136,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BlacklistUser
     {
         /// <summary>
@@ -16318,7 +16156,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MeResponse
     {
         /// <summary>
@@ -16373,7 +16211,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Company
     {
         /// <summary>
@@ -16395,7 +16233,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// bid response
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MyBidResponse
     {
 
@@ -16427,7 +16265,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerOfferEventsResponse
     {
         /// <summary>
@@ -16454,7 +16292,7 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("OFFER_BID_CANCELED", typeof(OfferBidCanceledEvent))]
     [JsonInheritanceAttribute("OFFER_TRANSLATION_UPDATED", typeof(OfferTranslationUpdatedEvent))]
     [JsonInheritanceAttribute("OFFER_VISIBILITY_CHANGED", typeof(OfferVisibilityChangedEvent))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellerOfferBaseEvent
     {
         /// <summary>
@@ -16476,7 +16314,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferActivatedEvent : SellerOfferBaseEvent
     {
 
@@ -16498,7 +16336,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferChangedEvent : SellerOfferBaseEvent
     {
 
@@ -16520,7 +16358,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferEndedEvent : SellerOfferBaseEvent
     {
 
@@ -16542,7 +16380,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferStockChangedEvent : SellerOfferBaseEvent
     {
 
@@ -16564,7 +16402,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPriceChangedEvent : SellerOfferBaseEvent
     {
 
@@ -16586,7 +16424,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferArchivedEvent : SellerOfferBaseEvent
     {
 
@@ -16608,7 +16446,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferBidPlacedEvent : SellerOfferBaseEvent
     {
 
@@ -16630,7 +16468,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferBidCanceledEvent : SellerOfferBaseEvent
     {
 
@@ -16652,7 +16490,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferTranslationUpdatedEvent : SellerOfferBaseEvent
     {
 
@@ -16680,7 +16518,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The changed translation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ChangedTranslation
     {
         /// <summary>
@@ -16692,7 +16530,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferVisibilityChangedEvent : SellerOfferBaseEvent
     {
 
@@ -16717,7 +16555,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The data of the offer, for which the event occurred.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferEventBaseOffer
     {
         /// <summary>
@@ -16730,7 +16568,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferEventExternalOffer : OfferEventBaseOffer
     {
 
@@ -16748,7 +16586,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferEventExternalOfferWithPublication : OfferEventBaseOffer
     {
 
@@ -16773,7 +16611,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer publication data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferMarketplacesPublication
     {
 
@@ -16794,7 +16632,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer marketplaces visibility information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplacesVisibility
     {
         /// <summary>
@@ -16817,7 +16655,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer additional marketplaces visibility information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacesVisibility
     {
         /// <summary>
@@ -16834,7 +16672,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AdditionalMarketplacesVisibilityStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -16846,19 +16684,19 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class RefusalReason : Anonymous13
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class RefusalReason : Anonymous12
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class RelatedReason : Anonymous14
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class RelatedReason : Anonymous13
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferEventEndedOffer : OfferEventExternalOffer
     {
         /// <summary>
@@ -16871,7 +16709,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class GetBadgeCampaignsList
     {
         /// <summary>
@@ -16884,7 +16722,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeCampaign
     {
         /// <summary>
@@ -16903,9 +16741,13 @@ namespace JadeX.AllegroAPI
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string Name { get; set; } = default!;
 
+        [JsonPropertyName("marketplace")]
+        [System.ComponentModel.DataAnnotations.Required]
+        public MarketplaceReference Marketplace { get; set; } = new MarketplaceReference();
+
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BadgeCampaignType Type { get; set; } = default!;
 
         [JsonPropertyName("eligibility")]
@@ -16937,7 +16779,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Summary of user eligibility for participation in the campaign.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UserCampaignEligibility
     {
         /// <summary>
@@ -16957,7 +16799,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CampaignRefusalReason
     {
         /// <summary>
@@ -16978,7 +16820,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RefusalMessage
     {
         /// <summary>
@@ -17001,13 +16843,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Time period when the campaign is open for applying for badge.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ApplicationTimePolicy
     {
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ApplicationTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -17029,13 +16871,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Time period when the campaign is visible in &lt;a href="https://allegro.pl/moje-allegro/sprzedaz/moje-oferty" target="_blank"&gt;My Allegro&lt;/a&gt; and &lt;a href="https://ms.allegro.pl/seller-offers/" target="_blank"&gt;Sales Manager (Menedżer sprzedaży)&lt;/a&gt; (it is not equal to the time period when badges are displayed on the list of offers or on the offer page).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class VisibilityTimePolicy
     {
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public VisibilityTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -17057,13 +16899,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Time period when the badge is displayed on the list of offers or on the offer page.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PublicationTimePolicy
     {
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PublicationTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -17085,13 +16927,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Time period when the badge is displayed on the list of offers or on the offer page.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgePublicationTimePolicy
     {
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BadgePublicationTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -17110,7 +16952,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationRequest
     {
 
@@ -17130,7 +16972,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgePatchRequest
     {
 
@@ -17139,7 +16981,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationCampaign
     {
         /// <summary>
@@ -17152,7 +16994,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferBadgeCampaign
     {
         /// <summary>
@@ -17172,7 +17014,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationOffer
     {
         /// <summary>
@@ -17188,7 +17030,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Required by DISCOUNT and SOURCING campaign.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationPrices
     {
 
@@ -17206,7 +17048,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Required by DISCOUNT and SOURCING campaign.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationSubmittedPrices
     {
 
@@ -17221,7 +17063,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Required by DISCOUNT and SOURCING campaign.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgePatchPrices
     {
 
@@ -17233,18 +17075,18 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Suggested market price. Calculated automatically based on the offer's price history.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationMarketPrice
     {
         /// <summary>
-        /// Positive number. Must be equal to or greater than 1.
+        /// Value must be greater than minimal, decimal places aligned with market rules.
         /// </summary>
 
         [JsonPropertyName("amount")]
         public string? Amount { get; set; } = default!;
 
         /// <summary>
-        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only PLN values is supported.
+        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only base currency for a given marketplace is supported, example: PLN for allegro-pl, CZK for allegro-cz, EUR for allegro-sk.
         /// </summary>
 
         [JsonPropertyName("currency")]
@@ -17255,18 +17097,18 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Bargain price. Required by DISCOUNT and SOURCING campaign.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationBargainPrice
     {
         /// <summary>
-        /// Positive number. Must be equal to or greater than 1.
+        /// Value must be greater than minimal, decimal places aligned with market rules.
         /// </summary>
 
         [JsonPropertyName("amount")]
         public string? Amount { get; set; } = default!;
 
         /// <summary>
-        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only PLN values is supported.
+        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only base currency for a given marketplace is supported, example: PLN for allegro-pl, CZK for allegro-cz, EUR for allegro-sk.
         /// </summary>
 
         [JsonPropertyName("currency")]
@@ -17277,7 +17119,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Prices that relate to the price reconciliation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationSubsidyPrices
     {
 
@@ -17292,18 +17134,18 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The price visible as the Buy Now price.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationSubsidyTargetPrice
     {
         /// <summary>
-        /// Positive number. Must be equal to or greater than 1.
+        /// Value must be greater than minimal, decimal places aligned with market rules.
         /// </summary>
 
         [JsonPropertyName("amount")]
         public string? Amount { get; set; } = default!;
 
         /// <summary>
-        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only PLN values is supported.
+        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only base currency for a given marketplace is supported, example: PLN for allegro-pl, CZK for allegro-cz, EUR for allegro-sk.
         /// </summary>
 
         [JsonPropertyName("currency")]
@@ -17314,18 +17156,18 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The price requested by partner.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationSubsidySellerPrice
     {
         /// <summary>
-        /// Positive number. Must be equal to or greater than 1.
+        /// Value must be greater than minimal, decimal places aligned with market rules.
         /// </summary>
 
         [JsonPropertyName("amount")]
         public string? Amount { get; set; } = default!;
 
         /// <summary>
-        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only PLN values is supported.
+        /// The currency provided as a 3-letter code in accordance with ISO 4217 standard (https://en.wikipedia.org/wiki/ISO_4217). Only base currency for a given marketplace is supported, example: PLN for allegro-pl, CZK for allegro-cz, EUR for allegro-sk.
         /// </summary>
 
         [JsonPropertyName("currency")]
@@ -17336,7 +17178,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Constraints of purchase of this offer while it participates in the campaign. Optional for all campaigns types.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationPurchaseConstraints
     {
 
@@ -17348,7 +17190,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Limits of purchase of this offer while it participates in the campaign. Only DISCOUNT and SOURCING campaigns.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationPurchaseConstraintsLimit
     {
 
@@ -17360,7 +17202,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Limits of purchase of this offer per user while it participates in the campaign.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationPurchaseConstraintsLimitPerUser
     {
         /// <summary>
@@ -17373,7 +17215,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplications
     {
 
@@ -17383,7 +17225,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplication
     {
         /// <summary>
@@ -17433,13 +17275,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about processing of the application.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationProcess
     {
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BadgeApplicationProcessStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -17452,7 +17294,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationRejectionReason
     {
         /// <summary>
@@ -17473,7 +17315,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeApplicationRejectionReasonMessage
     {
         /// <summary>
@@ -17496,7 +17338,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// List of badges
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgesList
     {
 
@@ -17506,7 +17348,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Badge
     {
 
@@ -17533,13 +17375,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about badge processing.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeProcess
     {
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BadgeProcessStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -17552,7 +17394,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeOperation
     {
         /// <summary>
@@ -17569,7 +17411,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BadgeOperationType Type { get; set; } = default!;
 
         /// <summary>
@@ -17605,13 +17447,13 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about processing of the request/operation
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BadgeOperationProcess
     {
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public BadgeOperationProcessStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -17624,7 +17466,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferRating
     {
         /// <summary>
@@ -17658,7 +17500,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FundraisingCampaigns
     {
         /// <summary>
@@ -17670,7 +17512,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FundraisingCampaign
     {
         /// <summary>
@@ -17692,7 +17534,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CharityOrganization
     {
         /// <summary>
@@ -17704,7 +17546,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomParameter
     {
         /// <summary>
@@ -17723,7 +17565,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupDateParcelsProposals
     {
         /// <summary>
@@ -17735,7 +17577,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupDateProposals
     {
         /// <summary>
@@ -17757,7 +17599,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parcel pickup date. In pickup request you have to use exactly the same values as you get from `/parcel-management/pickup-date-proposals`.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupDateProposal
     {
         /// <summary>
@@ -17783,7 +17625,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryServices
     {
         /// <summary>
@@ -17795,7 +17637,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryService
     {
         /// <summary>
@@ -17830,12 +17672,12 @@ namespace JadeX.AllegroAPI
         public ParcelAdditionalServicesAvailability? AdditionalServices { get; set; } = default!;
 
         [JsonPropertyName("owner")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DeliveryServiceOwner? Owner { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelAdditionalServicesAvailability
     {
 
@@ -17851,7 +17693,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelAdditionalServicesCashOnDeliveryAvailability
     {
         /// <summary>
@@ -17870,7 +17712,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelAdditionalServicesOptionAvailability
     {
         /// <summary>
@@ -17889,7 +17731,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelCreationParameters
     {
         /// <summary>
@@ -17921,7 +17763,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParcelCreationParametersType? Type { get; set; } = default!;
 
         [JsonPropertyName("label")]
@@ -17935,7 +17777,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parcel's sender data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Sender
     {
 
@@ -17976,7 +17818,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parcel's receiver data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Receiver
     {
 
@@ -18024,7 +17866,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parcel's pickup data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Pickup
     {
 
@@ -18072,7 +17914,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Address data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelCreationAddress
     {
 
@@ -18104,7 +17946,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Address data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelCreationAddressWithMandatoryPlace
     {
         /// <summary>
@@ -18150,7 +17992,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parcel item details.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelItemDetailsWithWaybill
     {
         /// <summary>
@@ -18185,7 +18027,7 @@ namespace JadeX.AllegroAPI
         public Value4? Value { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParcelItemDetailsWithWaybillType? Type { get; set; } = default!;
 
     }
@@ -18193,7 +18035,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Parcel item details.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelItemDetails
     {
         /// <summary>
@@ -18221,12 +18063,12 @@ namespace JadeX.AllegroAPI
         public Value5? Value { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParcelItemDetailsType? Type { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelDetails
     {
         /// <summary>
@@ -18261,7 +18103,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParcelDetailsType? Type { get; set; } = default!;
 
         [JsonPropertyName("label")]
@@ -18271,12 +18113,12 @@ namespace JadeX.AllegroAPI
         public ParcelAdditionalServices? AdditionalServices { get; set; } = default!;
 
         [JsonPropertyName("state")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParcelDetailsState? State { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupParcelParameters
     {
         /// <summary>
@@ -18294,7 +18136,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Additional services.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelAdditionalServices
     {
         /// <summary>
@@ -18313,7 +18155,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CancelParcelParameters
     {
         /// <summary>
@@ -18325,7 +18167,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Error200
     {
         /// <summary>
@@ -18365,7 +18207,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Error400
     {
         /// <summary>
@@ -18405,7 +18247,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Error403
     {
         /// <summary>
@@ -18445,7 +18287,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Error404
     {
         /// <summary>
@@ -18485,7 +18327,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Error504
     {
         /// <summary>
@@ -18525,7 +18367,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DimensionItem
     {
         /// <summary>
@@ -18544,7 +18386,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AvailablePromotionPackages
     {
 
@@ -18574,7 +18416,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceAvailablePromotionPackages
     {
 
@@ -18597,7 +18439,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AvailablePromotionPackage
     {
         /// <summary>
@@ -18623,7 +18465,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoOptionsModifications
     {
         /// <summary>
@@ -18642,7 +18484,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoOptionsModification
     {
         /// <summary>
@@ -18650,7 +18492,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("modificationType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PromoOptionsModificationModificationType? ModificationType { get; set; } = default!;
 
         /// <summary>
@@ -18658,7 +18500,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("packageType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PromoOptionsModificationPackageType? PackageType { get; set; } = default!;
 
         /// <summary>
@@ -18670,7 +18512,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacePromoOptionsModification
     {
 
@@ -18686,7 +18528,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPromoOptionsForSeller
     {
         /// <summary>
@@ -18714,7 +18556,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPromoOptions
     {
         /// <summary>
@@ -18749,7 +18591,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceOfferPromoOption
     {
 
@@ -18771,7 +18613,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPromoOption
     {
         /// <summary>
@@ -18804,7 +18646,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferPromoOptionsPendingChanges
     {
 
@@ -18813,7 +18655,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoOptionsCommand
     {
         /// <summary>
@@ -18831,7 +18673,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoOptionsCommandModification
     {
         /// <summary>
@@ -18853,12 +18695,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("modificationTime")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PromoOptionsCommandModificationModificationTime? ModificationTime { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalMarketplacePromoOptionsCommandModification
     {
 
@@ -18870,7 +18712,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoOptionsCommandModificationPackage
     {
 
@@ -18882,7 +18724,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Command execution summary
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoGeneralReport
     {
         /// <summary>
@@ -18897,7 +18739,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoModificationReport
     {
         /// <summary>
@@ -18915,7 +18757,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PromoModificationTask
     {
 
@@ -18940,7 +18782,7 @@ namespace JadeX.AllegroAPI
         public System.DateTimeOffset? FinishedAt { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PromoModificationTaskStatus? Status { get; set; } = default!;
 
         [JsonPropertyName("errors")]
@@ -18951,7 +18793,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Allegro pickup drop off point.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPickupDropOffPoint
     {
         /// <summary>
@@ -18976,7 +18818,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPickupDropOffPointType Type { get; set; } = default!;
 
         /// <summary>
@@ -19034,7 +18876,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroParcelTrackingHistory
     {
         /// <summary>
@@ -19054,7 +18896,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelTrackingHistory
     {
         /// <summary>
@@ -19074,7 +18916,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroParcelTrackingStatus
     {
         /// <summary>
@@ -19091,7 +18933,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("code")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroParcelTrackingStatusCode Code { get; set; } = default!;
 
         /// <summary>
@@ -19110,7 +18952,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ParcelTrackingStatus
     {
         /// <summary>
@@ -19127,7 +18969,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("code")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ParcelTrackingStatusCode Code { get; set; } = default!;
 
         /// <summary>
@@ -19139,7 +18981,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaxSettings
     {
         /// <summary>
@@ -19151,7 +18993,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaxSetting
     {
         /// <summary>
@@ -19198,7 +19040,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CategoryTaxSettings
     {
         /// <summary>
@@ -19224,7 +19066,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaxSubject
     {
         /// <summary>
@@ -19243,7 +19085,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaxRate
     {
         /// <summary>
@@ -19262,7 +19104,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaxRateValue
     {
         /// <summary>
@@ -19288,7 +19130,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TaxExemption
     {
         /// <summary>
@@ -19307,27 +19149,34 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPricesAccountChangeRequest
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPricesAccountChangeRequestStatus? Status { get; set; } = default!;
+
+        /// <summary>
+        /// Consent statuses on marketplaces other than the base marketplace of the account.
+        /// </summary>
+
+        [JsonPropertyName("additionalMarketplaces")]
+        public IDictionary<string, Anonymous14>? AdditionalMarketplaces { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPricesAccountConsentChangeResponse
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPricesAccountConsentChangeResponseStatus? Status { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPricesOfferChangeRequest
     {
         /// <summary>
@@ -19335,7 +19184,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPricesOfferChangeRequestStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -19347,7 +19196,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPricesOfferConsentChangeResponse
     {
         /// <summary>
@@ -19355,7 +19204,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPricesOfferConsentChangeResponseStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -19367,30 +19216,37 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPricesEligibilityResponse
     {
 
         [JsonPropertyName("consent")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPricesEligibilityResponseConsent? Consent { get; set; } = default!;
 
         [JsonPropertyName("qualification")]
         public AllegroPricesQualificationResponse? Qualification { get; set; } = default!;
 
+        /// <summary>
+        /// Eligibility state on marketplces other than the base marketplace of the account.
+        /// </summary>
+
+        [JsonPropertyName("additionalMarketplaces")]
+        public IDictionary<string, Anonymous17>? AdditionalMarketplaces { get; set; } = default!;
+
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroPricesQualificationResponse
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AllegroPricesQualificationResponseStatus? Status { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Interlocutor
     {
 
@@ -19404,7 +19260,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageAuthor
     {
 
@@ -19417,7 +19273,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Thread
     {
 
@@ -19436,7 +19292,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ThreadId
     {
 
@@ -19446,7 +19302,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ThreadsList
     {
 
@@ -19464,7 +19320,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ThreadReadFlag
     {
 
@@ -19473,7 +19329,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageOffer
     {
 
@@ -19483,7 +19339,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageOrder
     {
 
@@ -19493,7 +19349,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageRelatedObject
     {
 
@@ -19508,7 +19364,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains optional contextual information linked to message.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageAdditionalInformation
     {
         /// <summary>
@@ -19520,7 +19376,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageAttachmentInfo
     {
 
@@ -19536,12 +19392,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MessageAttachmentInfoStatus Status { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Message
     {
 
@@ -19551,12 +19407,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MessageStatus Status { get; set; } = default!;
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MessageType Type { get; set; } = default!;
 
         [JsonPropertyName("createdAt")]
@@ -19594,7 +19450,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessagesList
     {
 
@@ -19612,7 +19468,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageAttachmentId
     {
 
@@ -19622,7 +19478,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NewMessageInThread
     {
 
@@ -19636,7 +19492,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Recipient
     {
 
@@ -19646,7 +19502,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NewMessage
     {
 
@@ -19664,7 +19520,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NewAttachmentDeclaration
     {
 
@@ -19681,7 +19537,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Defines offer properties for buyers with company account (Allegro Biznes).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class B2b
     {
         /// <summary>
@@ -19696,7 +19552,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Defines message to the seller settings options.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MessageToSellerSettings
     {
         /// <summary>
@@ -19707,7 +19563,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("mode")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public MessageToSellerSettingsMode? Mode { get; set; } = default!;
 
         /// <summary>
@@ -19722,7 +19578,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Type of content: BASE - initial content for offer in declared offer language. AUTO - automatic translation from BASE content. MANUAL - manual translation provided by the user.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OfferTranslationType
     {
 
@@ -19740,7 +19596,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer description translation
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferDescriptionTranslation
     {
 
@@ -19748,7 +19604,7 @@ namespace JadeX.AllegroAPI
         public StandardizedDescription? Translation { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferTranslationType? Type { get; set; } = default!;
 
     }
@@ -19756,7 +19612,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Offer title translation
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferTitleTranslation
     {
         /// <summary>
@@ -19767,7 +19623,7 @@ namespace JadeX.AllegroAPI
         public string? Translation { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferTranslationType? Type { get; set; } = default!;
 
     }
@@ -19775,7 +19631,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Manual offer description translation
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ManualDescriptionTranslation
     {
 
@@ -19787,7 +19643,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Manual offer title translation
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ManualTitleTranslation
     {
         /// <summary>
@@ -19799,7 +19655,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ManualTranslationUpdateRequest
     {
 
@@ -19811,7 +19667,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferTranslation
     {
 
@@ -19831,7 +19687,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OfferTranslations
     {
 
@@ -19840,7 +19696,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SmartDeliveryMethod
     {
         /// <summary>
@@ -19852,7 +19708,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryMethodId
     {
         /// <summary>
@@ -19864,7 +19720,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SmartOfferClassificationReport
     {
         /// <summary>
@@ -19897,7 +19753,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SmartSellerClassificationReport
     {
         /// <summary>
@@ -19923,7 +19779,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdvanceShipNotice
     {
         /// <summary>
@@ -19942,7 +19798,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateAdvanceShipNoticeRequest
     {
         /// <summary>
@@ -19961,7 +19817,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UpdateSubmittedAdvanceShipNoticeRequest
     {
         /// <summary>
@@ -19982,7 +19838,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents information about handling unit.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UpdateSubmittedHandlingUnitInput
     {
         /// <summary>
@@ -19997,7 +19853,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents information about package shipment.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class UpdateSubmittedShippingInput
     {
         /// <summary>
@@ -20019,7 +19875,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdvanceShipNoticeResponse
     {
         /// <summary>
@@ -20040,7 +19896,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AdvanceShipNoticeStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -20085,7 +19941,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateAdvanceShipNoticeResponse
     {
         /// <summary>
@@ -20106,7 +19962,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AdvanceShipNoticeStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -20147,7 +20003,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The list of Advance Ship Notices.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdvanceShipNoticeList
     {
 
@@ -20174,7 +20030,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The Advance Ship Notice Status.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AdvanceShipNoticeStatus
     {
 
@@ -20195,7 +20051,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents input of create labels command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsCommandInput
     {
         /// <summary>
@@ -20215,13 +20071,13 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("RUNNING", typeof(CreateLabelsRunningCommandOutput))]
     [JsonInheritanceAttribute("SUCCESSFUL", typeof(CreateLabelsSuccessfulCommandOutput))]
     [JsonInheritanceAttribute("FAILED", typeof(CreateLabelsFailedCommandOutput))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsCommandOutput
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsRunningCommandOutput : CreateLabelsCommandOutput
     {
 
@@ -20239,7 +20095,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsSuccessfulCommandOutput : CreateLabelsCommandOutput
     {
 
@@ -20265,7 +20121,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsFailedCommandOutput : CreateLabelsCommandOutput
     {
 
@@ -20290,7 +20146,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The created labels command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsCommandOnlyInput
     {
 
@@ -20303,7 +20159,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The created labels command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateLabelsCommand
     {
         /// <summary>
@@ -20325,7 +20181,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents input of the Advance Ship Notice submit command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SubmitCommandInput
     {
         /// <summary>
@@ -20345,13 +20201,13 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("RUNNING", typeof(SubmitRunningCommandOutput))]
     [JsonInheritanceAttribute("SUCCESSFUL", typeof(SubmitSuccessfulCommandOutput))]
     [JsonInheritanceAttribute("FAILED", typeof(SubmitFailedCommandOutput))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SubmitCommandOutput
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SubmitRunningCommandOutput : SubmitCommandOutput
     {
 
@@ -20369,7 +20225,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SubmitSuccessfulCommandOutput : SubmitCommandOutput
     {
 
@@ -20387,7 +20243,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SubmitFailedCommandOutput : SubmitCommandOutput
     {
 
@@ -20412,7 +20268,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The submit command.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SubmitCommand
     {
         /// <summary>
@@ -20434,7 +20290,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The product data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Product
     {
         /// <summary>
@@ -20450,7 +20306,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Groups together product and quantity.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductItem
     {
 
@@ -20471,7 +20327,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents information about handling unit.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class HandlingUnit
     {
         /// <summary>
@@ -20500,7 +20356,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents created labels.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Labels
     {
         /// <summary>
@@ -20523,13 +20379,13 @@ namespace JadeX.AllegroAPI
     [JsonInheritanceAttribute("OWN_TRANSPORT", typeof(OwnTransportShipping))]
     [JsonInheritanceAttribute("COURIER_BY_SELLER", typeof(CourierBySellerShipping))]
     [JsonInheritanceAttribute("THIRD_PARTY_DELIVERY", typeof(ThirdPartyDeliveryShipping))]
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Shipping
     {
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OwnTransportShipping : Shipping
     {
 
@@ -20568,7 +20424,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CourierBySellerShipping : Shipping
     {
 
@@ -20607,7 +20463,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ThirdPartyDeliveryShipping : Shipping
     {
 
@@ -20645,7 +20501,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents shipping details from third party.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ThirdParty
     {
         /// <summary>
@@ -20667,7 +20523,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents the current stock for the seller.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StockProductList
     {
         /// <summary>
@@ -20696,7 +20552,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Groups together product and its quantity.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StockProductItem
     {
 
@@ -20720,7 +20576,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The product.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StockProduct
     {
         /// <summary>
@@ -20756,7 +20612,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents stock quantity.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StockQuantity
     {
         /// <summary>
@@ -20792,7 +20648,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Represents selling stats of given product in merchant's stock.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StockSellingStats
     {
         /// <summary>
@@ -20814,7 +20670,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Information about storage fee for a given product in merchant's stock.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class StockStorageFee
     {
         /// <summary>
@@ -20827,7 +20683,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public StockStorageFeeStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -20849,7 +20705,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Contains information about amount of reserve and its sufficiency for next days. If status is set to NOT_ENOUGH_DATA value of will not be sent.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReserveInfo
     {
         /// <summary>
@@ -20864,7 +20720,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ReserveInfoStatus? Status { get; set; } = default!;
 
     }
@@ -20872,7 +20728,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The list of available seller's products.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AvailableProductsList
     {
         /// <summary>
@@ -20901,7 +20757,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The product.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AvailableProductResponse
     {
         /// <summary>
@@ -20934,7 +20790,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReceivingState
     {
         /// <summary>
@@ -20949,7 +20805,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("stage")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ReceivingStateStage? Stage { get; set; } = default!;
 
         /// <summary>
@@ -20968,7 +20824,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReceivingEntry
     {
         /// <summary>
@@ -20987,7 +20843,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReceivingStatus
     {
         /// <summary>
@@ -21003,7 +20859,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("receivedType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ReceivingStatusReceivedType? ReceivedType { get; set; } = default!;
 
         /// <summary>
@@ -21011,12 +20867,12 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("reasonCode")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ReceivingStatusReasonCode? ReasonCode { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FulfillmentOrder
     {
         /// <summary>
@@ -21031,7 +20887,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FulfillmentOrderParcel
     {
         /// <summary>
@@ -21050,7 +20906,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FulfillmentOrderParcelItem
     {
         /// <summary>
@@ -21091,7 +20947,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AllegroCarrier
     {
 
@@ -21103,7 +20959,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AllegroMarketplaces
     {
         /// <summary>
@@ -21115,7 +20971,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceItem
     {
         /// <summary>
@@ -21148,7 +21004,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceItemLanguage
     {
         /// <summary>
@@ -21160,7 +21016,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceItemCurrency
     {
         /// <summary>
@@ -21172,7 +21028,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MarketplaceItemShippingCountry
     {
         /// <summary>
@@ -21184,122 +21040,10 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class GetSelectionInsightsResponse
-    {
-        /// <summary>
-        /// Products from selection insights.
-        /// </summary>
-
-        [JsonPropertyName("products")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public ICollection<SelectionProductDto> Products { get; set; } = new System.Collections.ObjectModel.Collection<SelectionProductDto>();
-
-        /// <summary>
-        /// Report generation date.
-        /// </summary>
-
-        [JsonPropertyName("reportDate")]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(DateFormatConverter))]
-        public System.DateTimeOffset ReportDate { get; set; } = default!;
-
-        /// <summary>
-        /// The number of products returned for the current query.
-        /// </summary>
-
-        [JsonPropertyName("count")]
-        [System.ComponentModel.DataAnnotations.Range(0, int.MaxValue)]
-        public int Count { get; set; } = default!;
-
-        /// <summary>
-        /// The total number of products in selection insights with current filters.
-        /// </summary>
-
-        [JsonPropertyName("totalCount")]
-        [System.ComponentModel.DataAnnotations.Range(0, int.MaxValue)]
-        public int TotalCount { get; set; } = default!;
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class SelectionProductDto
-    {
-        /// <summary>
-        /// Product category.
-        /// </summary>
-
-        [JsonPropertyName("category")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public Category4 Category { get; set; } = new Category4();
-
-        /// <summary>
-        /// Name of the product.
-        /// </summary>
-
-        [JsonPropertyName("name")]
-        public string? Name { get; set; } = default!;
-
-        /// <summary>
-        /// Reference id.
-        /// </summary>
-
-        [JsonPropertyName("referenceId")]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        public string ReferenceId { get; set; } = default!;
-
-        /// <summary>
-        /// Product id.
-        /// </summary>
-
-        [JsonPropertyName("productIds")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public ICollection<string> ProductIds { get; set; } = new System.Collections.ObjectModel.Collection<string>();
-
-        /// <summary>
-        /// EANs, ISBNs or other product identifiers.
-        /// </summary>
-
-        [JsonPropertyName("gtins")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public ICollection<string> Gtins { get; set; } = new System.Collections.ObjectModel.Collection<string>();
-
-        /// <summary>
-        /// External product id.
-        /// </summary>
-
-        [JsonPropertyName("manufacturerCode")]
-        public string? ManufacturerCode { get; set; } = default!;
-
-        /// <summary>
-        /// Product brands.
-        /// </summary>
-
-        [JsonPropertyName("brands")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public ICollection<string> Brands { get; set; } = new System.Collections.ObjectModel.Collection<string>();
-
-        /// <summary>
-        /// Model name.
-        /// </summary>
-
-        [JsonPropertyName("model")]
-        public string? Model { get; set; } = default!;
-
-        /// <summary>
-        /// The marketplace IDs on which the product is GAP.
-        /// </summary>
-
-        [JsonPropertyName("marketplaceIds")]
-        [System.ComponentModel.DataAnnotations.Required]
-        public ICollection<string> MarketplaceIds { get; set; } = new System.Collections.ObjectModel.Collection<string>();
-
-    }
-
     /// <summary>
     /// Receiver address data with optional point ID.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReceiverAddressDto : AddressDto
     {
         /// <summary>
@@ -21323,7 +21067,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Pickup address with optionaly drop-off point. If empty, then sender object will be used.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupAddressDto : AddressDto
     {
         /// <summary>
@@ -21347,7 +21091,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Shipment owner data. This address will be provided on label and will be used to operation return.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SenderAddressDto : AddressDto
     {
         /// <summary>
@@ -21371,7 +21115,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Address object
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AddressDto
     {
         /// <summary>
@@ -21445,7 +21189,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShipmentCreateCommandDto
     {
         /// <summary>
@@ -21461,7 +21205,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CashOnDeliveryDto
     {
         /// <summary>
@@ -21498,7 +21242,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class InsuranceDto
     {
         /// <summary>
@@ -21521,7 +21265,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PackageRequestDto
     {
         /// <summary>
@@ -21551,7 +21295,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShipmentCreateRequestDto
     {
         /// <summary>
@@ -21622,7 +21366,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("labelFormat")]
         [System.ComponentModel.DataAnnotations.RegularExpression(@"PDF|ZPL|EPL")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ShipmentCreateRequestDtoLabelFormat? LabelFormat { get; set; } = default!;
 
         /// <summary>
@@ -21634,7 +21378,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShipmentCancelCommandDto
     {
         /// <summary>
@@ -21650,7 +21394,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShipmentCancelRequestDto
     {
 
@@ -21660,7 +21404,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShipmentIdsDto
     {
 
@@ -21672,7 +21416,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupCreateCommandDto
     {
         /// <summary>
@@ -21688,7 +21432,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupCreateRequestDto
     {
 
@@ -21708,7 +21452,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupDateProposalDto
     {
         /// <summary>
@@ -21736,7 +21480,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupProposalsRequestDto
     {
 
@@ -21755,7 +21499,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupDateProposalsDto
     {
 
@@ -21767,7 +21511,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PickupProposalsResponseDto
     {
 
@@ -21776,7 +21520,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LabelRequestDto
     {
 
@@ -21791,7 +21535,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("pageSize")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LabelRequestDtoPageSize? PageSize { get; set; } = default!;
 
         /// <summary>
@@ -21803,7 +21547,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class PackageDto
     {
         /// <summary>
@@ -21814,7 +21558,7 @@ namespace JadeX.AllegroAPI
         public string? Waybill { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PackageDtoType? Type { get; set; } = default!;
 
         [JsonPropertyName("length")]
@@ -21831,7 +21575,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShipmentDto
     {
 
@@ -21922,7 +21666,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("labelFormat")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ShipmentDtoLabelFormat? LabelFormat { get; set; } = default!;
 
         /// <summary>
@@ -21941,7 +21685,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreateShipmentCommandStatusDto
     {
         /// <summary>
@@ -21952,7 +21696,7 @@ namespace JadeX.AllegroAPI
         public string? CommandId { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CreateShipmentCommandStatusDtoStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -21971,7 +21715,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CancelShipmentCommandStatusDto
     {
         /// <summary>
@@ -21982,7 +21726,7 @@ namespace JadeX.AllegroAPI
         public string? CommandId { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CancelShipmentCommandStatusDtoStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -22001,7 +21745,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CreatePickupCommandStatusDto
     {
         /// <summary>
@@ -22012,7 +21756,7 @@ namespace JadeX.AllegroAPI
         public string? CommandId { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CreatePickupCommandStatusDtoStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -22038,7 +21782,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServiceDto
     {
         /// <summary>
@@ -22069,7 +21813,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Definition of cash on delivery specification for method. If null, then COD is not supported.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CashOnDeliveryLimitDto
     {
         /// <summary>
@@ -22091,7 +21835,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("paymentType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public CashOnDeliveryLimitDtoPaymentType? PaymentType { get; set; } = default!;
 
         /// <summary>
@@ -22106,7 +21850,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Primary object for Ship with Allegro. It's strongly related to delivery-method selected by buyer in purchase process and represent how shipment will be delivered. Delivery services contains set of features like cash on delivery support, insurance, additional services used to shipment creation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryServiceDto
     {
 
@@ -22131,7 +21875,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("owner")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DeliveryServiceDtoOwner? Owner { get; set; } = default!;
 
         /// <summary>
@@ -22165,7 +21909,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryServiceIdDto
     {
         /// <summary>
@@ -22187,7 +21931,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// List of all available delivery services for merchant. List will be unique for each merchant.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryServicesDto
     {
 
@@ -22196,7 +21940,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LimitWithCurrencyDto
     {
         /// <summary>
@@ -22215,7 +21959,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WeightValue
     {
         /// <summary>
@@ -22231,12 +21975,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("unit")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public WeightValueUnit Unit { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DimensionValue
     {
         /// <summary>
@@ -22252,12 +21996,146 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("unit")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DimensionValueUnit Unit { get; set; } = default!;
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ResponsiblePersonResponse
+    {
+        /// <summary>
+        /// Responsible person ID.
+        /// </summary>
+
+        [JsonPropertyName("id")]
+        public string? Id { get; set; } = default!;
+
+        /// <summary>
+        /// Internal name of responsible person in dictionary.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        public string? Name { get; set; } = default!;
+
+        /// <summary>
+        /// Responsible person personal data.
+        /// </summary>
+
+        [JsonPropertyName("personalData")]
+        public PersonalData? PersonalData { get; set; } = default!;
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class CreateResponsiblePersonRequest
+    {
+        /// <summary>
+        /// Internal name of responsible person in dictionary.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        [System.ComponentModel.DataAnnotations.StringLength(50)]
+        public string? Name { get; set; } = default!;
+
+        /// <summary>
+        /// Responsible person personal data.
+        /// </summary>
+
+        [JsonPropertyName("personalData")]
+        public PersonalData2? PersonalData { get; set; } = default!;
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class UpdateResponsiblePersonRequest
+    {
+        /// <summary>
+        /// Responsible person ID.
+        /// </summary>
+
+        [JsonPropertyName("id")]
+        public string? Id { get; set; } = default!;
+
+        /// <summary>
+        /// Internal name of responsible person in dictionary.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        [System.ComponentModel.DataAnnotations.StringLength(50)]
+        public string? Name { get; set; } = default!;
+
+        /// <summary>
+        /// Responsible person personal data.
+        /// </summary>
+
+        [JsonPropertyName("personalData")]
+        public PersonalData3? PersonalData { get; set; } = default!;
+
+    }
+
+    /// <summary>
+    /// Responsible person address.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ResponsiblePersonAddress
+    {
+        /// <summary>
+        /// Code of responsible person country (ISO 3166).
+        /// </summary>
+
+        [JsonPropertyName("countryCode")]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public ResponsiblePersonAddressCountryCode? CountryCode { get; set; } = default!;
+
+        /// <summary>
+        /// Street and number.
+        /// </summary>
+
+        [JsonPropertyName("street")]
+        [System.ComponentModel.DataAnnotations.StringLength(200)]
+        public string? Street { get; set; } = default!;
+
+        /// <summary>
+        /// Postal code.
+        /// </summary>
+
+        [JsonPropertyName("postalCode")]
+        public string? PostalCode { get; set; } = default!;
+
+        /// <summary>
+        /// City.
+        /// </summary>
+
+        [JsonPropertyName("city")]
+        [System.ComponentModel.DataAnnotations.StringLength(100)]
+        public string? City { get; set; } = default!;
+
+    }
+
+    /// <summary>
+    /// Contact to responsible person.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ResponsiblePersonContact
+    {
+        /// <summary>
+        /// Email of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("email")]
+        public string? Email { get; set; } = default!;
+
+        /// <summary>
+        /// Phone number of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("phoneNumber")]
+        public string? PhoneNumber { get; set; } = default!;
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Anonymous
     {
 
@@ -22275,7 +22153,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Anonymous2
     {
 
@@ -22290,7 +22168,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Sort
     {
 
@@ -22314,7 +22192,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Element
     {
 
@@ -22326,7 +22204,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Recommended
     {
 
@@ -22338,7 +22216,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PromotionType
     {
 
@@ -22353,7 +22231,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Anonymous3
     {
 
@@ -22362,7 +22240,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Anonymous4
     {
 
@@ -22380,7 +22258,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Body
     {
 
@@ -22398,7 +22276,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SearchMode
     {
 
@@ -22413,7 +22291,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Sort2
     {
 
@@ -22440,7 +22318,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Sort3
     {
 
@@ -22458,7 +22336,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Anonymous5
     {
 
@@ -22473,7 +22351,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Mode
     {
 
@@ -22485,7 +22363,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SearchFeatures
     {
 
@@ -22494,25 +22372,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Anonymous6
-    {
-
-        [System.Runtime.Serialization.EnumMember(Value = @"NEVER_WAS_ON_ALLEGRO")]
-        NEVER_WAS_ON_ALLEGRO = 0,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"UNAVAILABLE_LESS_THAN_30_DAYS")]
-        UNAVAILABLE_LESS_THAN_30_DAYS = 1,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"UNAVAILABLE_MORE_THAN_30_DAYS")]
-        UNAVAILABLE_MORE_THAN_30_DAYS = 2,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"AVAILABLE_1P_ONLY")]
-        AVAILABLE_1P_ONLY = 3,
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParameterType
     {
 
@@ -22524,7 +22384,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Type
     {
 
@@ -22536,7 +22396,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PaymentOperator
     {
 
@@ -22548,8 +22408,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Anonymous7
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Anonymous6
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"INCOME")]
@@ -22566,8 +22426,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum MarketplaceId2
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum MarketplaceId
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"allegro-pl")]
@@ -22581,7 +22441,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// The bid request.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BidRequest
     {
 
@@ -22600,8 +22460,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Anonymous8
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Anonymous7
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"OFFER_ACTIVATED")]
@@ -22636,8 +22496,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Anonymous9
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Anonymous8
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"WAITING")]
@@ -22657,7 +22517,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Status
     {
 
@@ -22684,7 +22544,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PageFormat
     {
 
@@ -22696,8 +22556,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Anonymous10
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Anonymous9
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"PL")]
@@ -22711,7 +22571,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Accept
     {
 
@@ -22720,7 +22580,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Accept2
     {
 
@@ -22732,7 +22592,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AcceptLanguage
     {
 
@@ -22747,7 +22607,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Sort4
     {
 
@@ -22795,8 +22655,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Anonymous11
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Anonymous10
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"SUFFICIENT")]
@@ -22810,7 +22670,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProductStatus
     {
 
@@ -22819,7 +22679,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum StorageFee
     {
 
@@ -22834,7 +22694,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AsnStatus
     {
 
@@ -22846,7 +22706,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AcceptLanguage2
     {
 
@@ -22861,7 +22721,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response
     {
 
@@ -22879,8 +22739,26 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response2
+    {
+
+        [JsonPropertyName("responsiblePersons")]
+        public ICollection<ResponsiblePersonResponse>? ResponsiblePersons { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response3
     {
 
         [JsonPropertyName("deliveryMethods")]
@@ -22897,8 +22775,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response3
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response4
     {
         /// <summary>
         /// Array of errors.
@@ -22918,8 +22796,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response4
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response5
     {
         /// <summary>
         /// Array of errors.
@@ -22939,8 +22817,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response5
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response6
     {
         /// <summary>
         /// Operation Id
@@ -22960,8 +22838,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response6
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response7
     {
         /// <summary>
         /// Array of errors.
@@ -22981,8 +22859,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response7
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response8
     {
         /// <summary>
         /// Collection of payments refunds.
@@ -23018,8 +22896,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response8
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response9
     {
         /// <summary>
         /// Array of errors.
@@ -23039,8 +22917,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response9
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response10
     {
         /// <summary>
         /// Collection of refund applications.
@@ -23068,28 +22946,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response10
-    {
-        /// <summary>
-        /// Array of errors.
-        /// </summary>
-
-        [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
-
-        private IDictionary<string, object>? _additionalProperties;
-
-        [JsonExtensionData]
-        public IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
-            set { _additionalProperties = value; }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response11
     {
         /// <summary>
@@ -23097,7 +22954,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23110,7 +22967,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response12
     {
         /// <summary>
@@ -23118,7 +22975,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23131,7 +22988,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response13
     {
         /// <summary>
@@ -23139,7 +22996,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23152,7 +23009,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response14
     {
         /// <summary>
@@ -23160,7 +23017,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23173,7 +23030,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response15
     {
         /// <summary>
@@ -23181,7 +23038,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23194,7 +23051,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response16
     {
         /// <summary>
@@ -23202,7 +23059,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23215,7 +23072,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response17
     {
         /// <summary>
@@ -23223,7 +23080,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23236,7 +23093,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response18
     {
         /// <summary>
@@ -23244,7 +23101,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23257,7 +23114,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response19
     {
         /// <summary>
@@ -23265,7 +23122,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23278,7 +23135,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response20
     {
         /// <summary>
@@ -23286,7 +23143,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23299,7 +23156,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response21
     {
         /// <summary>
@@ -23307,7 +23164,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23320,7 +23177,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response22
     {
         /// <summary>
@@ -23328,7 +23185,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23341,7 +23198,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response23
     {
         /// <summary>
@@ -23349,7 +23206,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23362,7 +23219,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response24
     {
         /// <summary>
@@ -23370,7 +23227,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23383,7 +23240,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response25
     {
         /// <summary>
@@ -23391,7 +23248,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error404>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23404,7 +23261,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response26
     {
         /// <summary>
@@ -23412,7 +23269,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error404>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23425,7 +23282,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response27
     {
         /// <summary>
@@ -23433,7 +23290,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23446,7 +23303,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response28
     {
         /// <summary>
@@ -23454,7 +23311,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23467,7 +23324,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response29
     {
         /// <summary>
@@ -23475,7 +23332,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error404>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23488,7 +23345,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response30
     {
         /// <summary>
@@ -23496,6 +23353,27 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
+        public ICollection<Error404>? Errors { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response31
+    {
+        /// <summary>
+        /// Array of errors.
+        /// </summary>
+
+        [JsonPropertyName("errors")]
         public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -23509,8 +23387,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response31
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response32
     {
         /// <summary>
         /// Array of errors.
@@ -23530,8 +23408,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response32
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response33
     {
         /// <summary>
         /// Array of errors.
@@ -23551,8 +23429,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response33
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response34
     {
         /// <summary>
         /// Array of errors.
@@ -23572,28 +23450,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response34
-    {
-        /// <summary>
-        /// Array of errors.
-        /// </summary>
-
-        [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
-
-        private IDictionary<string, object>? _additionalProperties;
-
-        [JsonExtensionData]
-        public IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
-            set { _additionalProperties = value; }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response35
     {
         /// <summary>
@@ -23601,7 +23458,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23614,7 +23471,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response36
     {
         /// <summary>
@@ -23622,7 +23479,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23635,7 +23492,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response37
     {
         /// <summary>
@@ -23643,7 +23500,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23656,7 +23513,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response38
     {
         /// <summary>
@@ -23664,7 +23521,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23677,7 +23534,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response39
     {
         /// <summary>
@@ -23685,6 +23542,27 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
+        public ICollection<Error400>? Errors { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response40
+    {
+        /// <summary>
+        /// Array of errors.
+        /// </summary>
+
+        [JsonPropertyName("errors")]
         public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -23698,8 +23576,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response40
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response41
     {
         /// <summary>
         /// Array of errors.
@@ -23719,28 +23597,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response41
-    {
-        /// <summary>
-        /// Array of errors.
-        /// </summary>
-
-        [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
-
-        private IDictionary<string, object>? _additionalProperties;
-
-        [JsonExtensionData]
-        public IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
-            set { _additionalProperties = value; }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response42
     {
         /// <summary>
@@ -23748,6 +23605,27 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
+        public ICollection<Error403>? Errors { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response43
+    {
+        /// <summary>
+        /// Array of errors.
+        /// </summary>
+
+        [JsonPropertyName("errors")]
         public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -23761,8 +23639,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response43
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response44
     {
         /// <summary>
         /// Array of errors.
@@ -23782,8 +23660,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response44
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response45
     {
         /// <summary>
         /// Array of errors.
@@ -23803,8 +23681,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response45
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response46
     {
         /// <summary>
         /// The unique command UUID provided in the input.
@@ -23827,8 +23705,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response46
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response47
     {
         /// <summary>
         /// Array of errors.
@@ -23848,8 +23726,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response47
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response48
     {
         /// <summary>
         /// Array of errors.
@@ -23869,8 +23747,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response48
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response49
     {
         /// <summary>
         /// Sent command UUID.
@@ -23891,8 +23769,8 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public Response48Status? Status { get; set; } = default!;
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public Response49Status? Status { get; set; } = default!;
 
         /// <summary>
         /// Array of errors.
@@ -23912,28 +23790,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response49
-    {
-        /// <summary>
-        /// Array of errors.
-        /// </summary>
-
-        [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
-
-        private IDictionary<string, object>? _additionalProperties;
-
-        [JsonExtensionData]
-        public IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
-            set { _additionalProperties = value; }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response50
     {
         /// <summary>
@@ -23941,7 +23798,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23954,7 +23811,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response51
     {
         /// <summary>
@@ -23962,7 +23819,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23975,7 +23832,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response52
     {
         /// <summary>
@@ -23983,7 +23840,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -23996,7 +23853,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response53
     {
         /// <summary>
@@ -24004,6 +23861,27 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
+        public ICollection<Error400>? Errors { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response54
+    {
+        /// <summary>
+        /// Array of errors.
+        /// </summary>
+
+        [JsonPropertyName("errors")]
         public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -24017,8 +23895,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response54
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response55
     {
         /// <summary>
         /// Array of errors.
@@ -24038,8 +23916,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response55
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response56
     {
         /// <summary>
         /// Array of errors.
@@ -24059,8 +23937,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response56
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response57
     {
         /// <summary>
         /// Array of errors.
@@ -24080,8 +23958,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response57
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response58
     {
         /// <summary>
         /// Array of errors.
@@ -24101,8 +23979,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response58
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response59
     {
         /// <summary>
         /// Array of errors.
@@ -24122,8 +24000,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response59
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response60
     {
         /// <summary>
         /// Array of errors.
@@ -24143,8 +24021,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response60
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response61
     {
         /// <summary>
         /// The unique command UUID provided in the input.
@@ -24167,8 +24045,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response61
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response62
     {
         /// <summary>
         /// Array of errors.
@@ -24188,8 +24066,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response62
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response63
     {
         /// <summary>
         /// Array of errors.
@@ -24209,8 +24087,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response63
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response64
     {
         /// <summary>
         /// Sent command UUID.
@@ -24224,8 +24102,8 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public Response63Status? Status { get; set; } = default!;
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public Response64Status? Status { get; set; } = default!;
 
         /// <summary>
         /// Array of errors.
@@ -24245,28 +24123,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response64
-    {
-        /// <summary>
-        /// Array of errors.
-        /// </summary>
-
-        [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
-
-        private IDictionary<string, object>? _additionalProperties;
-
-        [JsonExtensionData]
-        public IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
-            set { _additionalProperties = value; }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response65
     {
         /// <summary>
@@ -24274,7 +24131,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error403>? Errors { get; set; } = default!;
+        public ICollection<Error400>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -24287,7 +24144,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response66
     {
         /// <summary>
@@ -24295,7 +24152,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error504>? Errors { get; set; } = default!;
+        public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -24308,7 +24165,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response67
     {
         /// <summary>
@@ -24316,7 +24173,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
-        public ICollection<Error400>? Errors { get; set; } = default!;
+        public ICollection<Error504>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -24329,7 +24186,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Response68
     {
         /// <summary>
@@ -24337,6 +24194,27 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("errors")]
+        public ICollection<Error400>? Errors { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response69
+    {
+        /// <summary>
+        /// Array of errors.
+        /// </summary>
+
+        [JsonPropertyName("errors")]
         public ICollection<Error403>? Errors { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -24350,8 +24228,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response69
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response70
     {
         /// <summary>
         /// Array of errors.
@@ -24371,8 +24249,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response70
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response71
     {
         /// <summary>
         /// Array of errors.
@@ -24392,8 +24270,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response71
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response72
     {
         /// <summary>
         /// Array of errors.
@@ -24413,8 +24291,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response72
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response73
     {
         /// <summary>
         /// Array of errors.
@@ -24434,8 +24312,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response73
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response74
     {
         /// <summary>
         /// Array of errors.
@@ -24455,8 +24333,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response74
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response75
     {
         /// <summary>
         /// Array of errors.
@@ -24476,8 +24354,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response75
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response76
     {
         /// <summary>
         /// The unique command UUID provided in the input.
@@ -24500,8 +24378,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response76
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response77
     {
         /// <summary>
         /// Array of errors.
@@ -24521,8 +24399,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response77
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response78
     {
         /// <summary>
         /// Array of errors.
@@ -24542,8 +24420,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response78
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response79
     {
         /// <summary>
         /// Sent command UUID.
@@ -24557,8 +24435,8 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public Response78Status? Status { get; set; } = default!;
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public Response79Status? Status { get; set; } = default!;
 
         /// <summary>
         /// Array of errors.
@@ -24578,8 +24456,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response79
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response80
     {
         /// <summary>
         /// Array of errors.
@@ -24599,8 +24477,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response80
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response81
     {
         /// <summary>
         /// Array of errors.
@@ -24620,8 +24498,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Response81
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Response82
     {
         /// <summary>
         /// Array of errors.
@@ -24641,7 +24519,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Type2
     {
         /// <summary>
@@ -24669,8 +24547,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Offer2
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Offer
     {
         /// <summary>
         /// ID of the offer associated with the billing entry.
@@ -24697,7 +24575,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Value
     {
         /// <summary>
@@ -24725,7 +24603,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Tax2
     {
         /// <summary>
@@ -24753,7 +24631,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Balance
     {
         /// <summary>
@@ -24781,7 +24659,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Order2
     {
         /// <summary>
@@ -24802,7 +24680,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum InitializeRefundReason
     {
 
@@ -24829,7 +24707,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Delivery
     {
 
@@ -24847,7 +24725,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Overpaid
     {
 
@@ -24865,7 +24743,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServices
     {
 
@@ -24883,7 +24761,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RefundClaimStatus
     {
 
@@ -24910,7 +24788,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Commission
     {
         /// <summary>
@@ -24938,7 +24816,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Buyer
     {
         /// <summary>
@@ -24966,7 +24844,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LineItem
     {
         /// <summary>
@@ -24996,7 +24874,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("offer")]
-        public Offer3? Offer { get; set; } = default!;
+        public Offer2? Offer { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -25009,7 +24887,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RefundClaimType
     {
 
@@ -25021,7 +24899,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LineItem2
     {
         /// <summary>
@@ -25042,7 +24920,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RefundDetailsReason
     {
 
@@ -25069,7 +24947,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RefundDetailsStatus
     {
 
@@ -25096,7 +24974,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Delivery2
     {
 
@@ -25114,7 +24992,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Overpaid2
     {
 
@@ -25132,7 +25010,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AdditionalServices2
     {
 
@@ -25150,7 +25028,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RefundLineItemType
     {
 
@@ -25162,7 +25040,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Value2
     {
         /// <summary>
@@ -25192,7 +25070,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Rejection
     {
         /// <summary>
@@ -25201,7 +25079,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("code")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RejectionCode Code { get; set; } = default!;
 
         /// <summary>
@@ -25223,7 +25101,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CustomerReturnRejectionCode
     {
 
@@ -25241,7 +25119,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AdditionalServicesGroupTranslationWrapperWithTypeType
     {
 
@@ -25253,7 +25131,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ReturnPolicyAvailabilityRange
     {
 
@@ -25268,7 +25146,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RestrictionCauseName
     {
 
@@ -25301,7 +25179,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ReturnPolicyReturnCostCoveredBy
     {
 
@@ -25313,7 +25191,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Thresholds
     {
 
@@ -25336,7 +25214,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class thresholds
     {
 
@@ -25359,7 +25237,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Configuration2
     {
         /// <summary>
@@ -25381,7 +25259,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Trigger
     {
         /// <summary>
@@ -25411,7 +25289,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Parent
     {
         /// <summary>
@@ -25432,7 +25310,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Offers
     {
         /// <summary>
@@ -25454,7 +25332,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("category")]
-        public Category5? Category { get; set; } = default!;
+        public Category4? Category { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -25467,7 +25345,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class RedirectCategory
     {
         /// <summary>
@@ -25488,7 +25366,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Parent2
     {
         /// <summary>
@@ -25509,7 +25387,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SupportedCategories
     {
         /// <summary>
@@ -25538,7 +25416,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("inputType")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public SupportedCategoriesInputType? InputType { get; set; } = default!;
 
         /// <summary>
@@ -25559,7 +25437,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Groups
     {
         /// <summary>
@@ -25588,7 +25466,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Group
     {
         /// <summary>
@@ -25609,7 +25487,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Attributes
     {
         /// <summary>
@@ -25637,7 +25515,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class rules
     {
 
@@ -25647,7 +25525,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PriceAutomationRuleType Type { get; set; } = default!;
 
         /// <summary>
@@ -25669,7 +25547,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class rules2
     {
 
@@ -25700,7 +25578,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Set
     {
 
@@ -25723,7 +25601,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Remove
     {
 
@@ -25742,7 +25620,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ConstraintCriteriaType
     {
 
@@ -25754,7 +25632,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WholesalePriceList
     {
         /// <summary>
@@ -25775,7 +25653,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ModificationPublicationDuration
     {
 
@@ -25817,7 +25695,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Marketplaces
     {
 
@@ -25835,7 +25713,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ModificationPaymentsInvoice
     {
 
@@ -25853,8 +25731,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Anonymous12
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous11
     {
         /// <summary>
         /// Id of attachment.
@@ -25874,7 +25752,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum QuantityModificationChangeType
     {
 
@@ -25886,7 +25764,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class offers
     {
         /// <summary>
@@ -25923,7 +25801,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SellerRebateOfferCriterionType
     {
 
@@ -25938,7 +25816,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OfferCriteriumType
     {
 
@@ -25947,7 +25825,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class offers2
     {
         /// <summary>
@@ -25984,7 +25862,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions
     {
         /// <summary>
@@ -26005,7 +25883,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Dictionary
     {
         /// <summary>
@@ -26033,7 +25911,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions2
     {
         /// <summary>
@@ -26068,7 +25946,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions3
     {
         /// <summary>
@@ -26111,7 +25989,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions4
     {
         /// <summary>
@@ -26149,7 +26027,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions5
     {
         /// <summary>
@@ -26170,7 +26048,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class dictionary
     {
         /// <summary>
@@ -26205,7 +26083,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions6
     {
         /// <summary>
@@ -26240,7 +26118,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions7
     {
         /// <summary>
@@ -26283,7 +26161,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Restrictions8
     {
         /// <summary>
@@ -26321,7 +26199,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PaymentsInvoice
     {
 
@@ -26339,7 +26217,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PublicationEndedBy
     {
 
@@ -26363,7 +26241,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RatesDelivery
     {
 
@@ -26379,7 +26257,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RatesDeliveryCost
     {
 
@@ -26395,7 +26273,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RatesDescription
     {
 
@@ -26411,7 +26289,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RatesService
     {
 
@@ -26427,7 +26305,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RemovalRequestSource
     {
 
@@ -26439,7 +26317,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Request
     {
         /// <summary>
@@ -26462,7 +26340,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SellerRebateDtoStatus
     {
 
@@ -26477,7 +26355,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryMethod
     {
         /// <summary>
@@ -26498,7 +26376,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MaxPackageWeight
     {
         /// <summary>
@@ -26526,7 +26404,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FirstItemRate
     {
         /// <summary>
@@ -26554,7 +26432,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NextItemRate
     {
         /// <summary>
@@ -26582,7 +26460,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingTime
     {
         /// <summary>
@@ -26610,7 +26488,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Marketplace
     {
         /// <summary>
@@ -26632,7 +26510,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FreeDelivery
     {
         /// <summary>
@@ -26662,7 +26540,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AbroadFreeDelivery
     {
         /// <summary>
@@ -26692,7 +26570,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class JoinPolicy
     {
         /// <summary>
@@ -26705,7 +26583,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("strategy")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public JoinPolicyStrategy Strategy { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -26719,7 +26597,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomCost
     {
         /// <summary>
@@ -26740,7 +26618,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Marketplace2
     {
         /// <summary>
@@ -26762,7 +26640,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FreeDelivery2
     {
         /// <summary>
@@ -26792,7 +26670,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class AbroadFreeDelivery2
     {
         /// <summary>
@@ -26822,7 +26700,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class JoinPolicy2
     {
         /// <summary>
@@ -26835,7 +26713,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("strategy")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public JoinPolicy2Strategy Strategy { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -26849,7 +26727,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CustomCost2
     {
         /// <summary>
@@ -26870,7 +26748,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WholesalePriceList2
     {
         /// <summary>
@@ -26891,7 +26769,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum StockUnit
     {
 
@@ -26906,7 +26784,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NotRecommended
     {
         /// <summary>
@@ -26936,7 +26814,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Recommended2
     {
         /// <summary>
@@ -26966,7 +26844,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParametersForPreviewPriceCondition
     {
 
@@ -26981,7 +26859,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParametersForPreviewPriceDuration
     {
 
@@ -27008,7 +26886,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParametersForPreviewPriceType
     {
 
@@ -27023,7 +26901,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Publication_modificationAction
     {
 
@@ -27035,7 +26913,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OfferStockUnit
     {
 
@@ -27050,7 +26928,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OfferVendorId
     {
 
@@ -27068,7 +26946,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ListingResponseFiltersType
     {
 
@@ -27089,12 +26967,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Publication2
     {
 
         [JsonPropertyName("state")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AdditionalMarketplacePublicationState? State { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -27108,7 +26986,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SellingMode2
     {
         /// <summary>
@@ -27129,7 +27007,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Stock2
     {
         /// <summary>
@@ -27151,7 +27029,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum LineItemReconciliationType
     {
 
@@ -27163,7 +27041,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum LineItemVoucherType
     {
 
@@ -27172,7 +27050,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum LineItemVoucherStatus
     {
 
@@ -27184,7 +27062,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Value3 : PriceModificationFixedPriceHolder
     {
 
@@ -27199,7 +27077,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormDiscountType
     {
 
@@ -27220,7 +27098,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TotalToPay : PriceModificationFixedPriceHolder
     {
 
@@ -27235,7 +27113,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CheckoutFormsOrderInvoiceFileSecurityVerificationStatus
     {
 
@@ -27250,22 +27128,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum CheckoutFormsOrderInvoiceEptVerificationStatus
-    {
-
-        [System.Runtime.Serialization.EnumMember(Value = @"ACCEPTED")]
-        ACCEPTED = 0,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"REJECTED")]
-        REJECTED = 1,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"WAITING")]
-        WAITING = 2,
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DisputeStatus
     {
 
@@ -27280,7 +27143,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DisputeMessagesStatus
     {
 
@@ -27298,7 +27161,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum MessageRequestType
     {
 
@@ -27310,7 +27173,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SinglePromotionCampaignResponseDtoStatus
     {
 
@@ -27325,7 +27188,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PromotionCampaignResponseDtoStatus
     {
 
@@ -27352,7 +27215,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class LineItems
     {
         /// <summary>
@@ -27374,7 +27237,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NextPage
     {
         /// <summary>
@@ -27395,7 +27258,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProductImageProposalResolutionType
     {
 
@@ -27410,7 +27273,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProductNameProposalResolutionType
     {
 
@@ -27425,7 +27288,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProductCategoryProposalResolutionType
     {
 
@@ -27440,7 +27303,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProductParameterValueProposalResolutionType
     {
 
@@ -27455,7 +27318,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Product2
     {
         /// <summary>
@@ -27476,7 +27339,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Category2 : ProductCategory
     {
         /// <summary>
@@ -27497,7 +27360,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Options
     {
 
@@ -27515,7 +27378,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Options2
     {
 
@@ -27536,7 +27399,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Category3 : OfferCategoryRequest
     {
 
@@ -27551,7 +27414,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Publication3
     {
 
@@ -27562,7 +27425,7 @@ namespace JadeX.AllegroAPI
         public System.DateTimeOffset StartingAt { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OfferStatus? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -27576,7 +27439,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Delivery3 : DeliveryProductOfferRequest
     {
         /// <summary>
@@ -27597,7 +27460,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeTable2 : SizeTable
     {
         /// <summary>
@@ -27618,7 +27481,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Contact2 : Contact
     {
         /// <summary>
@@ -27639,7 +27502,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SaleProductOffersRequestStockUnit
     {
 
@@ -27657,7 +27520,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// List of products sold in the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ProductSet : ProductSetElement
     {
         /// <summary>
@@ -27666,6 +27529,13 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("quantity")]
         public Quantity? Quantity { get; set; } = default!;
+
+        /// <summary>
+        /// Reference to the responsible person configured using &lt;a href="https://developer.allegro.pl/documentation#tag/Responsible-persons"&gt;Responsible Persons API&lt;/a&gt;. Provide either id or name - id will be used if both are provided. Setting this object to null will result in no responsible person assigned to this product.&lt;br/&gt; &lt;b&gt;This property is valid only for the first product in the product set.&lt;/b&gt;
+        /// </summary>
+
+        [JsonPropertyName("responsiblePerson")]
+        public ResponsiblePerson? ResponsiblePerson { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -27678,7 +27548,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Delivery4 : DeliveryProductOfferRequest
     {
         /// <summary>
@@ -27709,7 +27579,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// List of products sold in the offer.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class productSet : ProductSetElement
     {
         /// <summary>
@@ -27718,6 +27588,13 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("quantity")]
         public Quantity? Quantity { get; set; } = default!;
+
+        /// <summary>
+        /// Reference to the responsible person configured using &lt;a href="https://developer.allegro.pl/documentation#tag/Responsible-persons"&gt;Responsible Persons API&lt;/a&gt;. Provide either id or name - id will be used if both are provided. Setting this object to null will result in no responsible person assigned to this product.&lt;br/&gt; &lt;b&gt;This property is valid only for the first product in the product set.&lt;/b&gt;
+        /// </summary>
+
+        [JsonPropertyName("responsiblePerson")]
+        public ResponsiblePerson? ResponsiblePerson { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -27730,7 +27607,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Delivery5 : DeliveryProductOfferRequest
     {
         /// <summary>
@@ -27758,12 +27635,19 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class productSet2 : ProductSetElementQuantity
     {
 
         [JsonPropertyName("product")]
         public Product3? Product { get; set; } = default!;
+
+        /// <summary>
+        /// Reference to the responsible person configured using &lt;a href="https://developer.allegro.pl/documentation#tag/Responsible-persons"&gt;Responsible Persons API&lt;/a&gt;.
+        /// </summary>
+
+        [JsonPropertyName("responsiblePerson")]
+        public ResponsiblePerson2? ResponsiblePerson { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -27776,7 +27660,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Operation
     {
         /// <summary>
@@ -27791,7 +27675,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public OperationStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -27812,7 +27696,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProductOfferBaseIdType
     {
 
@@ -27824,7 +27708,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Quantity
     {
 
@@ -27843,7 +27727,35 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ResponsiblePerson
+    {
+        /// <summary>
+        /// Identifier of a responsible person.
+        /// </summary>
+
+        [JsonPropertyName("id")]
+        public string? Id { get; set; } = default!;
+
+        /// <summary>
+        /// Name of a responsible person. Note that this references name of the person object, not the name in their personal data section.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        public string? Name { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Publication4
     {
         /// <summary>
@@ -27854,7 +27766,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Publication4Status? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -27868,7 +27780,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ImpliedWarranty2 : ImpliedWarranty
     {
         /// <summary>
@@ -27889,7 +27801,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ReturnPolicy2 : ReturnPolicy
     {
         /// <summary>
@@ -27910,7 +27822,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Warranty2 : Warranty
     {
         /// <summary>
@@ -27931,7 +27843,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingRates2 : JustId
     {
         /// <summary>
@@ -27952,7 +27864,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class WholesalePriceList3
     {
         /// <summary>
@@ -27980,7 +27892,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ClassifiedPackageConfigType
     {
 
@@ -27992,7 +27904,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BaseOperationGroup
     {
 
@@ -28010,7 +27922,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum WalletPaymentOperator
     {
 
@@ -28022,7 +27934,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum WalletType
     {
 
@@ -28034,7 +27946,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class BaseMarketplace
     {
         /// <summary>
@@ -28055,7 +27967,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Auction
     {
 
@@ -28074,7 +27986,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AdditionalMarketplacesVisibilityStatus
     {
 
@@ -28089,8 +28001,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Anonymous13
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous12
     {
         /// <summary>
         /// Refusal reason code.
@@ -28125,8 +28037,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Anonymous14
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous13
     {
         /// <summary>
         /// Refusal reason code.
@@ -28154,7 +28066,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Publication5
     {
         /// <summary>
@@ -28172,7 +28084,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("endedBy")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Publication5EndedBy EndedBy { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28186,7 +28098,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BadgeCampaignType
     {
 
@@ -28201,7 +28113,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ApplicationTimePolicyType
     {
 
@@ -28222,7 +28134,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum VisibilityTimePolicyType
     {
 
@@ -28243,7 +28155,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PublicationTimePolicyType
     {
 
@@ -28264,7 +28176,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BadgePublicationTimePolicyType
     {
 
@@ -28285,12 +28197,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Process
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ProcessStatus? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28304,7 +28216,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Prices
     {
 
@@ -28322,7 +28234,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BadgeApplicationProcessStatus
     {
 
@@ -28337,7 +28249,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BadgeProcessStatus
     {
 
@@ -28358,7 +28270,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BadgeOperationType
     {
 
@@ -28370,7 +28282,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum BadgeOperationProcessStatus
     {
 
@@ -28385,7 +28297,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ScoreDistribution
     {
         /// <summary>
@@ -28414,7 +28326,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class SizeFeedback
     {
         /// <summary>
@@ -28443,7 +28355,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DeliveryServiceOwner
     {
 
@@ -28455,7 +28367,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParcelCreationParametersType
     {
 
@@ -28470,7 +28382,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Label
     {
 
@@ -28482,7 +28394,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("fileFormat")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public LabelFileFormat? FileFormat { get; set; } = default!;
 
         /// <summary>
@@ -28503,7 +28415,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Dimensions
     {
 
@@ -28527,7 +28439,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Weight
     {
         /// <summary>
@@ -28555,7 +28467,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Value4
     {
         /// <summary>
@@ -28585,7 +28497,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParcelItemDetailsWithWaybillType
     {
 
@@ -28600,7 +28512,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Dimensions2
     {
 
@@ -28624,7 +28536,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Weight2
     {
         /// <summary>
@@ -28652,7 +28564,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Value5
     {
         /// <summary>
@@ -28682,7 +28594,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParcelItemDetailsType
     {
 
@@ -28697,7 +28609,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParcelDetailsType
     {
 
@@ -28712,7 +28624,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Label2
     {
 
@@ -28724,7 +28636,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("fileFormat")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Label2FileFormat? FileFormat { get; set; } = default!;
 
         /// <summary>
@@ -28745,7 +28657,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParcelDetailsState
     {
 
@@ -28760,7 +28672,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class CashOnDelivery
     {
         /// <summary>
@@ -28803,7 +28715,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PromoOptionsModificationModificationType
     {
 
@@ -28818,7 +28730,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PromoOptionsModificationPackageType
     {
 
@@ -28830,7 +28742,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PromoOptionsCommandModificationModificationTime
     {
 
@@ -28842,7 +28754,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PromoModificationTaskStatus
     {
 
@@ -28857,7 +28769,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AllegroPickupDropOffPointType
     {
 
@@ -28869,7 +28781,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Services
     {
         /// <summary>
@@ -28878,7 +28790,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ServicesType Type { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28892,7 +28804,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class restrictions
     {
         /// <summary>
@@ -28901,7 +28813,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public RestrictionsType Type { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28915,13 +28827,13 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class payments
     {
 
         [JsonPropertyName("method")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PaymentsMethod Method { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28935,7 +28847,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Address2
     {
         /// <summary>
@@ -28985,7 +28897,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Opening
     {
         /// <summary>
@@ -29023,7 +28935,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TrackingDetails
     {
         /// <summary>
@@ -29061,7 +28973,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class TrackingDetails2
     {
         /// <summary>
@@ -29099,7 +29011,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AllegroParcelTrackingStatusCode
     {
 
@@ -29129,7 +29041,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ParcelTrackingStatusCode
     {
 
@@ -29159,7 +29071,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Rate
     {
         /// <summary>
@@ -29187,7 +29099,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Subject2
     {
         /// <summary>
@@ -29215,7 +29127,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Exemption
     {
         /// <summary>
@@ -29243,7 +29155,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AllegroPricesAccountChangeRequestStatus
     {
 
@@ -29255,36 +29167,12 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum AllegroPricesAccountConsentChangeResponseStatus
-    {
-
-        [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
-        ALLOWED = 0,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"DENIED")]
-        DENIED = 1,
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum AllegroPricesOfferChangeRequestStatus
-    {
-
-        [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
-        ALLOWED = 0,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"DENIED")]
-        DENIED = 1,
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Anonymous15
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous14
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Status2? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -29298,8 +29186,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum AllegroPricesOfferConsentChangeResponseStatus
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum AllegroPricesAccountConsentChangeResponseStatus
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
@@ -29310,12 +29198,24 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Anonymous16
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum AllegroPricesOfferChangeRequestStatus
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
+        ALLOWED = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DENIED")]
+        DENIED = 1,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous15
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public Status3? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -29329,7 +29229,38 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum AllegroPricesOfferConsentChangeResponseStatus
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
+        ALLOWED = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DENIED")]
+        DENIED = 1,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous16
+    {
+
+        [JsonPropertyName("status")]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public Status4? Status { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AllegroPricesEligibilityResponseConsent
     {
 
@@ -29341,7 +29272,29 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Anonymous17
+    {
+
+        [JsonPropertyName("consent")]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public Consent? Consent { get; set; } = default!;
+
+        [JsonPropertyName("qualification")]
+        public AllegroPricesQualificationResponse? Qualification { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum AllegroPricesQualificationResponseStatus
     {
 
@@ -29353,7 +29306,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum MessageAttachmentInfoStatus
     {
 
@@ -29371,7 +29324,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum MessageStatus
     {
 
@@ -29392,7 +29345,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum MessageType
     {
 
@@ -29407,7 +29360,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum MessageToSellerSettingsMode
     {
 
@@ -29422,7 +29375,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Classification
     {
         /// <summary>
@@ -29450,7 +29403,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Conditions
     {
         /// <summary>
@@ -29506,7 +29459,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Classification2
     {
         /// <summary>
@@ -29534,7 +29487,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class conditions
     {
         /// <summary>
@@ -29597,7 +29550,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Labels2
     {
         /// <summary>
@@ -29619,7 +29572,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum StockStorageFeeStatus
     {
 
@@ -29637,7 +29590,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Details
     {
         /// <summary>
@@ -29679,7 +29632,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ReserveInfoStatus
     {
 
@@ -29697,7 +29650,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ReceivingStateStage
     {
 
@@ -29709,7 +29662,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ReceivingStatusReceivedType
     {
 
@@ -29724,7 +29677,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ReceivingStatusReasonCode
     {
 
@@ -29766,7 +29719,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Languages
     {
         /// <summary>
@@ -29794,7 +29747,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Currencies
     {
         /// <summary>
@@ -29822,29 +29775,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Category4
-    {
-        /// <summary>
-        /// Category id.
-        /// </summary>
-
-        [JsonPropertyName("id")]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        public string Id { get; set; } = default!;
-
-        private IDictionary<string, object>? _additionalProperties;
-
-        [JsonExtensionData]
-        public IDictionary<string, object> AdditionalProperties
-        {
-            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
-            set { _additionalProperties = value; }
-        }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ShipmentCreateRequestDtoLabelFormat
     {
 
@@ -29859,7 +29790,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum LabelRequestDtoPageSize
     {
 
@@ -29871,7 +29802,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PackageDtoType
     {
 
@@ -29889,7 +29820,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ShipmentDtoLabelFormat
     {
 
@@ -29904,7 +29835,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CreateShipmentCommandStatusDtoStatus
     {
 
@@ -29919,7 +29850,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CancelShipmentCommandStatusDtoStatus
     {
 
@@ -29934,7 +29865,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CreatePickupCommandStatusDtoStatus
     {
 
@@ -29949,7 +29880,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum CashOnDeliveryLimitDtoPaymentType
     {
 
@@ -29961,7 +29892,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DeliveryServiceDtoOwner
     {
 
@@ -29973,7 +29904,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PackageTypes
     {
 
@@ -29991,7 +29922,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum WeightValueUnit
     {
 
@@ -30000,7 +29931,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DimensionValueUnit
     {
 
@@ -30009,7 +29940,185 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class PersonalData
+    {
+        /// <summary>
+        /// Name of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        public string? Name { get; set; } = default!;
+
+        /// <summary>
+        /// Responsible person address.
+        /// </summary>
+
+        [JsonPropertyName("address")]
+        public Address3? Address { get; set; } = default!;
+
+        /// <summary>
+        /// Contact to responsible person.
+        /// </summary>
+
+        [JsonPropertyName("contact")]
+        public Contact3? Contact { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class PersonalData2
+    {
+        /// <summary>
+        /// Name of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        [System.ComponentModel.DataAnnotations.StringLength(200)]
+        public string? Name { get; set; } = default!;
+
+        [JsonPropertyName("address")]
+        public ResponsiblePersonAddress? Address { get; set; } = default!;
+
+        [JsonPropertyName("contact")]
+        public ResponsiblePersonContact? Contact { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class PersonalData3
+    {
+        /// <summary>
+        /// Name of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("name")]
+        [System.ComponentModel.DataAnnotations.StringLength(200)]
+        public string? Name { get; set; } = default!;
+
+        [JsonPropertyName("address")]
+        public ResponsiblePersonAddress? Address { get; set; } = default!;
+
+        [JsonPropertyName("contact")]
+        public ResponsiblePersonContact? Contact { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum ResponsiblePersonAddressCountryCode
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"AT")]
+        AT = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"BE")]
+        BE = 1,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"BG")]
+        BG = 2,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"HR")]
+        HR = 3,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"CY")]
+        CY = 4,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"CZ")]
+        CZ = 5,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DK")]
+        DK = 6,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"EE")]
+        EE = 7,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"FI")]
+        FI = 8,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"FR")]
+        FR = 9,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"GR")]
+        GR = 10,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"ES")]
+        ES = 11,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"IE")]
+        IE = 12,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"LT")]
+        LT = 13,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"LU")]
+        LU = 14,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"LV")]
+        LV = 15,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"MT")]
+        MT = 16,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"NL")]
+        NL = 17,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DE")]
+        DE = 18,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"PL")]
+        PL = 19,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"PT")]
+        PT = 20,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"RO")]
+        RO = 21,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"SK")]
+        SK = 22,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"SI")]
+        SI = 23,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"SE")]
+        SE = 24,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"HU")]
+        HU = 25,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"IT")]
+        IT = 26,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class shippingRates
     {
         /// <summary>
@@ -30037,7 +30146,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class DeliveryMethods
     {
         /// <summary>
@@ -30066,7 +30175,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("paymentPolicy")]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public DeliveryMethodsPaymentPolicy? PaymentPolicy { get; set; } = default!;
 
         /// <summary>
@@ -30094,8 +30203,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Response48Status
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Response49Status
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"IN_PROGRESS")]
@@ -30109,8 +30218,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Response63Status
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Response64Status
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"IN_PROGRESS")]
@@ -30127,8 +30236,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum Response78Status
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Response79Status
     {
 
         [System.Runtime.Serialization.EnumMember(Value = @"IN_PROGRESS")]
@@ -30142,8 +30251,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Offer3
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Offer2
     {
         /// <summary>
         /// ID of the offer associated with the purchase.
@@ -30170,7 +30279,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RejectionCode
     {
 
@@ -30188,7 +30297,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class OrderValue
     {
 
@@ -30207,7 +30316,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Discount
     {
         /// <summary>
@@ -30229,7 +30338,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Quantity2
     {
         /// <summary>
@@ -30251,7 +30360,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Discount2
     {
         /// <summary>
@@ -30273,7 +30382,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Parameters
     {
         /// <summary>
@@ -30294,8 +30403,8 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class Category5
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Category4
     {
         /// <summary>
         /// Category identifier.
@@ -30315,7 +30424,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum SupportedCategoriesInputType
     {
 
@@ -30327,7 +30436,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ValidationRules
     {
         /// <summary>
@@ -30357,14 +30466,13 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Marketplace3
     {
 
         [JsonPropertyName("id")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public MarketplaceId Id { get; set; } = default!;
+        public string Id { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -30377,7 +30485,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Rule
     {
 
@@ -30387,7 +30495,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public PriceAutomationRuleType Type { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -30401,14 +30509,13 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Marketplace4
     {
 
         [JsonPropertyName("id")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public MarketplaceId Id { get; set; } = default!;
+        public string Id { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -30421,7 +30528,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Rule2
     {
 
@@ -30440,14 +30547,13 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Marketplace5
     {
 
         [JsonPropertyName("id")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
-        public MarketplaceId Id { get; set; } = default!;
+        public string Id { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
 
@@ -30460,7 +30566,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Additional
     {
         /// <summary>
@@ -30488,7 +30594,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum JoinPolicyStrategy
     {
 
@@ -30503,7 +30609,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum JoinPolicy2Strategy
     {
 
@@ -30521,7 +30627,7 @@ namespace JadeX.AllegroAPI
     /// <summary>
     /// Category in which the product can be listed for sale
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Similar : Category
     {
 
@@ -30536,7 +30642,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Product3 : ProductOfferResponse
     {
         /// <summary>
@@ -30557,7 +30663,25 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class ResponsiblePerson2
+    {
+
+        [JsonPropertyName("id")]
+        public string? Id { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum OperationStatus
     {
 
@@ -30572,7 +30696,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Publication4Status
     {
 
@@ -30587,7 +30711,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Publication5EndedBy
     {
 
@@ -30614,7 +30738,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ProcessStatus
     {
 
@@ -30623,7 +30747,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Bargain
     {
 
@@ -30641,7 +30765,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum LabelFileFormat
     {
 
@@ -30656,7 +30780,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Label2FileFormat
     {
 
@@ -30671,7 +30795,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Value6
     {
         /// <summary>
@@ -30701,7 +30825,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum ServicesType
     {
 
@@ -30713,7 +30837,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum RestrictionsType
     {
 
@@ -30722,7 +30846,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum PaymentsMethod
     {
 
@@ -30734,7 +30858,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Status2
     {
 
@@ -30746,7 +30870,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum Status3
     {
 
@@ -30758,7 +30882,101 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Status4
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
+        ALLOWED = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DENIED")]
+        DENIED = 1,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public enum Consent
+    {
+
+        [System.Runtime.Serialization.EnumMember(Value = @"ALLOWED")]
+        ALLOWED = 0,
+
+        [System.Runtime.Serialization.EnumMember(Value = @"DENIED")]
+        DENIED = 1,
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Address3
+    {
+        /// <summary>
+        /// Code of responsible person country (ISO 3166).
+        /// </summary>
+
+        [JsonPropertyName("countryCode")]
+        public string? CountryCode { get; set; } = default!;
+
+        /// <summary>
+        /// Street and number.
+        /// </summary>
+
+        [JsonPropertyName("street")]
+        public string? Street { get; set; } = default!;
+
+        /// <summary>
+        /// Postal code.
+        /// </summary>
+
+        [JsonPropertyName("postalCode")]
+        public string? PostalCode { get; set; } = default!;
+
+        /// <summary>
+        /// City.
+        /// </summary>
+
+        [JsonPropertyName("city")]
+        public string? City { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class Contact3
+    {
+        /// <summary>
+        /// Email of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("email")]
+        public string? Email { get; set; } = default!;
+
+        /// <summary>
+        /// Phone number of responsible person.
+        /// </summary>
+
+        [JsonPropertyName("phoneNumber")]
+        public string? PhoneNumber { get; set; } = default!;
+
+        private IDictionary<string, object>? _additionalProperties;
+
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties
+        {
+            get { return _additionalProperties ?? (_additionalProperties = new Dictionary<string, object>()); }
+            set { _additionalProperties = value; }
+        }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public enum DeliveryMethodsPaymentPolicy
     {
 
@@ -30770,7 +30988,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingRatesConstraints
     {
         /// <summary>
@@ -30826,7 +31044,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MaxQuantityPerPackage
     {
         /// <summary>
@@ -30848,7 +31066,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class MaxPackageWeight2
     {
         /// <summary>
@@ -30890,7 +31108,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FirstItemRate2
     {
         /// <summary>
@@ -30927,7 +31145,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class NextItemRate2
     {
         /// <summary>
@@ -30964,7 +31182,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class ShippingTime2
     {
         /// <summary>
@@ -30992,7 +31210,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class Default
     {
         /// <summary>
@@ -31020,7 +31238,7 @@ namespace JadeX.AllegroAPI
 
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple = true)]
     internal class JsonInheritanceAttribute : System.Attribute
     {
@@ -31035,7 +31253,7 @@ namespace JadeX.AllegroAPI
         public System.Type Type { get; }
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     internal class JsonInheritanceConverterAttribute : JsonConverterAttribute
     {
         public string DiscriminatorName { get; }
@@ -31151,7 +31369,7 @@ namespace JadeX.AllegroAPI
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     internal class DateFormatConverter : JsonConverter<System.DateTimeOffset>
     {
         public override System.DateTimeOffset Read(ref System.Text.Json.Utf8JsonReader reader, System.Type typeToConvert, System.Text.Json.JsonSerializerOptions options)
@@ -31171,7 +31389,7 @@ namespace JadeX.AllegroAPI
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FileParameter
     {
         public FileParameter(System.IO.Stream data)
@@ -31198,7 +31416,7 @@ namespace JadeX.AllegroAPI
         public string? ContentType { get; private set; }
     }
 
-    [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.0.2.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))")]
     public partial class FileResponse : System.IDisposable
     {
         private System.IDisposable? _client;

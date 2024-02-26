@@ -1,11 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\JadeX.AllegroAPI.csproj" />
-  </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UserSecretsId>22371725-6e3c-47c1-8fe4-d8addffe57d1</UserSecretsId>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\JadeX.AllegroAPI.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.2.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.2.0" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+  </ItemGroup>
 </Project>
