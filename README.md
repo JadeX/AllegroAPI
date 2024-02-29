@@ -25,7 +25,7 @@ Unofficial implementation of Allegro.pl commerce platform REST API for .NET as d
 ## Install with NuGet
 
 ```sh
-dotnet add package JadeX.AllegroAPI –IncludePrerelease
+dotnet add package JadeX.AllegroAPI --prerelease
 ```
 
 ## Basic Usage (Console)
