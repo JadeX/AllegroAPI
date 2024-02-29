@@ -40,7 +40,7 @@ public class AllegroRestClient
         jsonSerializerOptions.Converters.Add(new JsonStringEnumMemberConverter());
         jsonSerializerOptions.Converters.Add(new DateTimeOffsetNullHandlingConverter());
 
-        _ = services.AddRefitClient<IAllegroAPI>(new RefitSettings()
+        var refit = services.AddRefitClient<IAllegroAPI>(new RefitSettings()
         {
             ContentSerializer = new SystemTextJsonContentSerializer(jsonSerializerOptions),
         })
@@ -53,9 +53,10 @@ public class AllegroRestClient
                 c.Timeout = options.Timeout;
             }
         })
-        .AddHttpMessageHandler<AuthenticationHeaderHandler>()
+        .AddHttpMessageHandler<AuthenticationHeaderHandler>();
+
 #if DEBUG
-        .AddHttpMessageHandler<DebugHandler>();
+        refit.AddHttpMessageHandler<DebugHandler>();
 #endif
 
         var provider = services.BuildServiceProvider();
