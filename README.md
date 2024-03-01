@@ -1,14 +1,16 @@
 # Allegro.pl REST API
 
 [![License](https://img.shields.io/github/license/JadeX/AllegroAPI)](https://github.com/JadeX/Allegro/blob/master/LICENSE.txt)
-[![NuGet Downloads](https://img.shields.io/nuget/dt/JadeX.Allegro.svg)](https://www.nuget.org/packages/JadeX.AllegroAPI/)
-[![NuGet](https://img.shields.io/nuget/vpre/JadeX.Allegro.svg)](https://www.nuget.org/packages/JadeX.AllegroAPI/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/JadeX.AllegroAPI.svg)](https://www.nuget.org/packages/JadeX.AllegroAPI/)
+[![NuGet](https://img.shields.io/nuget/vpre/JadeX.AllegroAPI.svg)](https://www.nuget.org/packages/JadeX.AllegroAPI/)
 ![.NET Standard](https://img.shields.io/badge/NETStandard-2.0/2.1-blue.svg)
 ![.NET 6-8](https://img.shields.io/badge/NET-6.0--8.0-purple.svg)
 [![build](https://github.com/JadeX/Allegro/actions/workflows/build.yml/badge.svg)](https://github.com/JadeX/Allegro/actions/workflows/build.yml)
 
 Unofficial implementation of Allegro.pl commerce platform REST API for .NET as documented on
 [https://developer.allegro.pl](https://developer.allegro.pl)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T01MRCA)
 
 > [!WARNING] 
 > ## Current state: ALPHA
