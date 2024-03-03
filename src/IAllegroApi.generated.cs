@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 #nullable enable
 namespace JadeX.AllegroAPI
 {
-    [System.CodeDom.Compiler.GeneratedCode("Refitter", "0.9.7.0")]
+    [System.CodeDom.Compiler.GeneratedCode("Refitter", "0.9.8.0")]
     public partial interface IAllegroAPI
     {
         /// <summary>Create offer based on product</summary>
@@ -1799,21 +1799,21 @@ namespace JadeX.AllegroAPI
         /// <param name="seller_login">The login of a seller, to limit the results to offers from this seller. May be provided more than once. Should not be provided when seller.id is given.</param>
         /// <param name="marketplaceId">
         /// Id of a marketplace where offers are visible.
-        /// *Acceptable values* : `allegro-pl`, `allegro-cz`.
+        /// *Acceptable values* : `allegro-pl`, `allegro-cz`, `allegro-sk`.
         /// </param>
         /// <param name="shipping_country">
         /// Limits the result to offers with specified delivery country.
-        /// *Default value* : depends on marketplace, for allegro-pl: `PL`, for allegro-cz: `CZ`.
+        /// *Default value* : depends on marketplace, for allegro-pl: `PL`, for allegro-cz: `CZ`, for allegro-sk: `SK`.
         /// Check endpoint GET /marketplaces for acceptable values.
         /// </param>
         /// <param name="currency">
         /// Currency of the offer prices.
-        /// *Default value* : depends on marketplace, for allegro-pl: `PLN`, for allegro-cz: `CZK`.
+        /// *Default value* : depends on marketplace, for allegro-pl: `PLN`, for allegro-cz: `CZK`, for allegro-sk: `EUR`.
         /// Check endpoint GET /marketplaces for acceptable currency values.
         /// </param>
         /// <param name="accept_Language">
         /// Limits offers to the only translated to specified language. Also expected language of messages.
-        /// *Default value* : depends on marketplace, for allegro-pl: `pl-PL`, for allegro-cz: `cs-CZ`.
+        /// *Default value* : depends on marketplace, for allegro-pl: `pl-PL`, for allegro-cz: `cs-CZ`, for allegro-sk: `sk-SK`.
         /// Check endpoint GET /marketplaces for acceptable language values.
         /// </param>
         /// <param name="searchMode">
@@ -4142,7 +4142,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("reason")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public InitializeRefundReason Reason { get; set; } = default!;
 
         /// <summary>
@@ -4210,7 +4210,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RefundClaimStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -4254,7 +4254,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RefundClaimType? Type { get; set; } = default!;
 
     }
@@ -4315,7 +4315,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("reason")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RefundDetailsReason Reason { get; set; } = default!;
 
         /// <summary>
@@ -4324,7 +4324,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RefundDetailsStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -4401,7 +4401,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RefundLineItemType Type { get; set; } = default!;
 
         /// <summary>
@@ -4519,7 +4519,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("code")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CustomerReturnRejectionCode? Code { get; set; } = default!;
 
         /// <summary>
@@ -4865,7 +4865,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AdditionalServicesGroupTranslationWrapperWithTypeType? Type { get; set; } = default!;
 
     }
@@ -4946,7 +4946,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AdditionalMarketplacePublicationStatus? Status { get; set; } = default!;
 
     }
@@ -5095,7 +5095,7 @@ namespace JadeX.AllegroAPI
         public string? Name { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public WarrantyType? Type { get; set; } = default!;
 
         [JsonPropertyName("individual")]
@@ -5139,7 +5139,7 @@ namespace JadeX.AllegroAPI
         public string? Name { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public WarrantyType? Type { get; set; } = default!;
 
         [JsonPropertyName("individual")]
@@ -5492,7 +5492,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("range")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ReturnPolicyAvailabilityRange? Range { get; set; } = default!;
 
         [JsonPropertyName("restrictionCause")]
@@ -5508,7 +5508,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("name")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RestrictionCauseName? Name { get; set; } = default!;
 
         [JsonPropertyName("description")]
@@ -5524,7 +5524,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("coveredBy")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ReturnPolicyReturnCostCoveredBy? CoveredBy { get; set; } = default!;
 
     }
@@ -6618,7 +6618,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ProcessingStatus? Status { get; set; } = default!;
 
         [JsonPropertyName("errors")]
@@ -6882,7 +6882,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ConstraintCriteriaType? Type { get; set; } = default!;
 
         /// <summary>
@@ -7519,7 +7519,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("duration")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ModificationPublicationDuration? Duration { get; set; } = default!;
 
         /// <summary>
@@ -7546,7 +7546,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("invoice")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ModificationPaymentsInvoice? Invoice { get; set; } = default!;
 
         [JsonPropertyName("tax")]
@@ -7661,7 +7661,7 @@ namespace JadeX.AllegroAPI
         public string? Id { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AttachmentType? Type { get; set; } = default!;
 
         [JsonPropertyName("file")]
@@ -7740,7 +7740,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AttachmentType? Type { get; set; } = default!;
 
         [JsonPropertyName("file")]
@@ -8094,7 +8094,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("changeType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public QuantityModificationChangeType? ChangeType { get; set; } = default!;
 
         /// <summary>
@@ -8123,7 +8123,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SellerRebateOfferCriterionType Type { get; set; } = default!;
 
     }
@@ -8146,7 +8146,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferCriteriumType? Type { get; set; } = default!;
 
     }
@@ -8262,7 +8262,7 @@ namespace JadeX.AllegroAPI
         public int? Count { get; set; } = default!;
 
         [JsonPropertyName("eventType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ClassifiedStatEventType? EventType { get; set; } = default!;
 
     }
@@ -8892,7 +8892,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("invoice")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PaymentsInvoice? Invoice { get; set; } = default!;
 
     }
@@ -9294,7 +9294,7 @@ namespace JadeX.AllegroAPI
         public System.DateTimeOffset StartingAt { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -9310,7 +9310,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("endedBy")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PublicationEndedBy? EndedBy { get; set; } = default!;
 
         /// <summary>
@@ -9429,7 +9429,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("source")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RemovalRequestSource? Source { get; set; } = default!;
 
     }
@@ -9532,7 +9532,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SellerRebateDtoStatus Status { get; set; } = default!;
 
     }
@@ -9784,7 +9784,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("unit")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public StockUnit? Unit { get; set; } = default!;
 
     }
@@ -10123,11 +10123,11 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("condition")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParametersForPreviewPriceCondition? Condition { get; set; } = default!;
 
         [JsonPropertyName("duration")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParametersForPreviewPriceDuration? Duration { get; set; } = default!;
 
         [JsonPropertyName("hasAnyQuantity")]
@@ -10177,7 +10177,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParametersForPreviewPriceType? Type { get; set; } = default!;
 
         [JsonPropertyName("unitPrice")]
@@ -10215,7 +10215,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("action")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Publication_modificationAction? Action { get; set; } = default!;
 
         /// <summary>
@@ -10554,7 +10554,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("unit")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferStockUnit? Unit { get; set; } = default!;
 
         /// <summary>
@@ -10700,7 +10700,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("format")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SellingModeFormat? Format { get; set; } = default!;
 
         [JsonPropertyName("price")]
@@ -10745,7 +10745,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("id")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferVendorId? Id { get; set; } = default!;
 
         /// <summary>
@@ -10882,7 +10882,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ListingResponseFiltersType? Type { get; set; } = default!;
 
         /// <summary>
@@ -11119,7 +11119,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("format")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SellingModeFormat? Format { get; set; } = default!;
 
         [JsonPropertyName("price")]
@@ -11141,7 +11141,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("format")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SellingModeFormat? Format { get; set; } = default!;
 
         [JsonPropertyName("price")]
@@ -11388,7 +11388,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -12203,11 +12203,11 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CheckoutFormPaymentType Type { get; set; } = default!;
 
         [JsonPropertyName("provider")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CheckoutFormPaymentProvider? Provider { get; set; } = default!;
 
         /// <summary>
@@ -12776,7 +12776,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public LineItemReconciliationType? Type { get; set; } = default!;
 
         /// <summary>
@@ -12836,7 +12836,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public LineItemVoucherType Type { get; set; } = default!;
 
         /// <summary>
@@ -12845,7 +12845,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public LineItemVoucherStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -12870,7 +12870,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CheckoutFormDiscountType Type { get; set; } = default!;
 
     }
@@ -12964,7 +12964,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CheckoutFormsOrderInvoiceFileSecurityVerificationStatus? Status { get; set; } = default!;
 
         [JsonPropertyName("verifiedAt")]
@@ -13030,12 +13030,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DisputeStatus Status { get; set; } = default!;
 
         [JsonPropertyName("messagesStatus")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DisputeMessagesStatus MessagesStatus { get; set; } = default!;
 
         [JsonPropertyName("buyer")]
@@ -13197,7 +13197,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("role")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public MessageAuthorRole Role { get; set; } = default!;
 
     }
@@ -13271,7 +13271,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("role")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DisputeAuthorRole Role { get; set; } = default!;
 
     }
@@ -13333,7 +13333,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public MessageRequestType Type { get; set; } = default!;
 
     }
@@ -13433,7 +13433,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SinglePromotionCampaignResponseDtoStatus Status { get; set; } = default!;
 
     }
@@ -13470,7 +13470,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PromotionCampaignResponseDtoStatus Status { get; set; } = default!;
 
     }
@@ -13807,7 +13807,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("resolutionType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ProductImageProposalResolutionType? ResolutionType { get; set; } = default!;
 
     }
@@ -14576,7 +14576,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("unit")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SaleProductOffersRequestStockUnit? Unit { get; set; } = default!;
 
     }
@@ -14803,7 +14803,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("idType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ProductOfferBaseIdType? IdType { get; set; } = default!;
 
         /// <summary>
@@ -15305,7 +15305,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ClassifiedPackageConfigType Type { get; set; } = default!;
 
     }
@@ -15406,7 +15406,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("group")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BaseOperationGroup Group { get; set; } = default!;
 
         [JsonPropertyName("wallet")]
@@ -15446,7 +15446,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("paymentOperator")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public WalletPaymentOperator PaymentOperator { get; set; } = default!;
 
         /// <summary>
@@ -15455,7 +15455,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public WalletType Type { get; set; } = default!;
 
         [JsonPropertyName("balance")]
@@ -16672,7 +16672,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AdditionalMarketplacesVisibilityStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -16747,7 +16747,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BadgeCampaignType Type { get; set; } = default!;
 
         [JsonPropertyName("eligibility")]
@@ -16849,7 +16849,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ApplicationTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -16877,7 +16877,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public VisibilityTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -16905,7 +16905,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PublicationTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -16933,7 +16933,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BadgePublicationTimePolicyType Type { get; set; } = default!;
 
         /// <summary>
@@ -17281,7 +17281,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BadgeApplicationProcessStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -17381,7 +17381,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BadgeProcessStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -17411,7 +17411,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BadgeOperationType Type { get; set; } = default!;
 
         /// <summary>
@@ -17453,7 +17453,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public BadgeOperationProcessStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -17672,7 +17672,7 @@ namespace JadeX.AllegroAPI
         public ParcelAdditionalServicesAvailability? AdditionalServices { get; set; } = default!;
 
         [JsonPropertyName("owner")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DeliveryServiceOwner? Owner { get; set; } = default!;
 
     }
@@ -17763,7 +17763,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParcelCreationParametersType? Type { get; set; } = default!;
 
         [JsonPropertyName("label")]
@@ -18027,7 +18027,7 @@ namespace JadeX.AllegroAPI
         public Value4? Value { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParcelItemDetailsWithWaybillType? Type { get; set; } = default!;
 
     }
@@ -18063,7 +18063,7 @@ namespace JadeX.AllegroAPI
         public Value5? Value { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParcelItemDetailsType? Type { get; set; } = default!;
 
     }
@@ -18103,7 +18103,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParcelDetailsType? Type { get; set; } = default!;
 
         [JsonPropertyName("label")]
@@ -18113,7 +18113,7 @@ namespace JadeX.AllegroAPI
         public ParcelAdditionalServices? AdditionalServices { get; set; } = default!;
 
         [JsonPropertyName("state")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParcelDetailsState? State { get; set; } = default!;
 
     }
@@ -18492,7 +18492,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("modificationType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PromoOptionsModificationModificationType? ModificationType { get; set; } = default!;
 
         /// <summary>
@@ -18500,7 +18500,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("packageType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PromoOptionsModificationPackageType? PackageType { get; set; } = default!;
 
         /// <summary>
@@ -18695,7 +18695,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("modificationTime")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PromoOptionsCommandModificationModificationTime? ModificationTime { get; set; } = default!;
 
     }
@@ -18782,7 +18782,7 @@ namespace JadeX.AllegroAPI
         public System.DateTimeOffset? FinishedAt { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PromoModificationTaskStatus? Status { get; set; } = default!;
 
         [JsonPropertyName("errors")]
@@ -18818,7 +18818,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPickupDropOffPointType Type { get; set; } = default!;
 
         /// <summary>
@@ -18933,7 +18933,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("code")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroParcelTrackingStatusCode Code { get; set; } = default!;
 
         /// <summary>
@@ -18969,7 +18969,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("code")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ParcelTrackingStatusCode Code { get; set; } = default!;
 
         /// <summary>
@@ -19154,7 +19154,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPricesAccountChangeRequestStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -19171,7 +19171,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPricesAccountConsentChangeResponseStatus? Status { get; set; } = default!;
 
     }
@@ -19184,7 +19184,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPricesOfferChangeRequestStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -19204,7 +19204,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPricesOfferConsentChangeResponseStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -19221,7 +19221,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("consent")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPricesEligibilityResponseConsent? Consent { get; set; } = default!;
 
         [JsonPropertyName("qualification")]
@@ -19241,7 +19241,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AllegroPricesQualificationResponseStatus? Status { get; set; } = default!;
 
     }
@@ -19392,7 +19392,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public MessageAttachmentInfoStatus Status { get; set; } = default!;
 
     }
@@ -19407,12 +19407,12 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public MessageStatus Status { get; set; } = default!;
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public MessageType Type { get; set; } = default!;
 
         [JsonPropertyName("createdAt")]
@@ -19563,7 +19563,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("mode")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public MessageToSellerSettingsMode? Mode { get; set; } = default!;
 
         /// <summary>
@@ -19604,7 +19604,7 @@ namespace JadeX.AllegroAPI
         public StandardizedDescription? Translation { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferTranslationType? Type { get; set; } = default!;
 
     }
@@ -19623,7 +19623,7 @@ namespace JadeX.AllegroAPI
         public string? Translation { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferTranslationType? Type { get; set; } = default!;
 
     }
@@ -19896,7 +19896,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AdvanceShipNoticeStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -19962,7 +19962,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("status")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AdvanceShipNoticeStatus Status { get; set; } = default!;
 
         /// <summary>
@@ -20683,7 +20683,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public StockStorageFeeStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -20720,7 +20720,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ReserveInfoStatus? Status { get; set; } = default!;
 
     }
@@ -20805,7 +20805,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("stage")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ReceivingStateStage? Stage { get; set; } = default!;
 
         /// <summary>
@@ -20859,7 +20859,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("receivedType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ReceivingStatusReceivedType? ReceivedType { get; set; } = default!;
 
         /// <summary>
@@ -20867,7 +20867,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("reasonCode")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ReceivingStatusReasonCode? ReasonCode { get; set; } = default!;
 
     }
@@ -21366,7 +21366,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("labelFormat")]
         [System.ComponentModel.DataAnnotations.RegularExpression(@"PDF|ZPL|EPL")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ShipmentCreateRequestDtoLabelFormat? LabelFormat { get; set; } = default!;
 
         /// <summary>
@@ -21535,7 +21535,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("pageSize")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public LabelRequestDtoPageSize? PageSize { get; set; } = default!;
 
         /// <summary>
@@ -21558,7 +21558,7 @@ namespace JadeX.AllegroAPI
         public string? Waybill { get; set; } = default!;
 
         [JsonPropertyName("type")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PackageDtoType? Type { get; set; } = default!;
 
         [JsonPropertyName("length")]
@@ -21666,7 +21666,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("labelFormat")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ShipmentDtoLabelFormat? LabelFormat { get; set; } = default!;
 
         /// <summary>
@@ -21696,7 +21696,7 @@ namespace JadeX.AllegroAPI
         public string? CommandId { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CreateShipmentCommandStatusDtoStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -21726,7 +21726,7 @@ namespace JadeX.AllegroAPI
         public string? CommandId { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CancelShipmentCommandStatusDtoStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -21756,7 +21756,7 @@ namespace JadeX.AllegroAPI
         public string? CommandId { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CreatePickupCommandStatusDtoStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -21835,7 +21835,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("paymentType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public CashOnDeliveryLimitDtoPaymentType? PaymentType { get; set; } = default!;
 
         /// <summary>
@@ -21875,7 +21875,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("owner")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DeliveryServiceDtoOwner? Owner { get; set; } = default!;
 
         /// <summary>
@@ -21975,7 +21975,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("unit")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public WeightValueUnit Unit { get; set; } = default!;
 
     }
@@ -21996,7 +21996,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("unit")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DimensionValueUnit Unit { get; set; } = default!;
 
     }
@@ -22085,7 +22085,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("countryCode")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ResponsiblePersonAddressCountryCode? CountryCode { get; set; } = default!;
 
         /// <summary>
@@ -23769,7 +23769,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Response49Status? Status { get; set; } = default!;
 
         /// <summary>
@@ -24102,7 +24102,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Response64Status? Status { get; set; } = default!;
 
         /// <summary>
@@ -24435,7 +24435,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Response79Status? Status { get; set; } = default!;
 
         /// <summary>
@@ -25079,7 +25079,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("code")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RejectionCode Code { get; set; } = default!;
 
         /// <summary>
@@ -25416,7 +25416,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("inputType")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public SupportedCategoriesInputType? InputType { get; set; } = default!;
 
         /// <summary>
@@ -25525,7 +25525,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PriceAutomationRuleType Type { get; set; } = default!;
 
         /// <summary>
@@ -26583,7 +26583,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("strategy")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public JoinPolicyStrategy Strategy { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -26713,7 +26713,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("strategy")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public JoinPolicy2Strategy Strategy { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -26972,7 +26972,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("state")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public AdditionalMarketplacePublicationState? State { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -27425,7 +27425,7 @@ namespace JadeX.AllegroAPI
         public System.DateTimeOffset StartingAt { get; set; } = default!;
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OfferStatus? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -27675,7 +27675,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public OperationStatus? Status { get; set; } = default!;
 
         /// <summary>
@@ -27766,7 +27766,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Publication4Status? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28084,7 +28084,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("endedBy")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Publication5EndedBy EndedBy { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28202,7 +28202,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ProcessStatus? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28394,7 +28394,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("fileFormat")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public LabelFileFormat? FileFormat { get; set; } = default!;
 
         /// <summary>
@@ -28636,7 +28636,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("fileFormat")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Label2FileFormat? FileFormat { get; set; } = default!;
 
         /// <summary>
@@ -28790,7 +28790,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public ServicesType Type { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28813,7 +28813,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public RestrictionsType Type { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -28833,7 +28833,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("method")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PaymentsMethod Method { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -29172,7 +29172,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Status2? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -29215,7 +29215,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Status3? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -29246,7 +29246,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("status")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Status4? Status { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
@@ -29277,7 +29277,7 @@ namespace JadeX.AllegroAPI
     {
 
         [JsonPropertyName("consent")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public Consent? Consent { get; set; } = default!;
 
         [JsonPropertyName("qualification")]
@@ -30175,7 +30175,7 @@ namespace JadeX.AllegroAPI
         /// </summary>
 
         [JsonPropertyName("paymentPolicy")]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public DeliveryMethodsPaymentPolicy? PaymentPolicy { get; set; } = default!;
 
         /// <summary>
@@ -30495,7 +30495,7 @@ namespace JadeX.AllegroAPI
 
         [JsonPropertyName("type")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [JsonConverter(typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumMemberConverter))]
         public PriceAutomationRuleType Type { get; set; } = default!;
 
         private IDictionary<string, object>? _additionalProperties;
